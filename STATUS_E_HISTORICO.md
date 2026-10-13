@@ -162,6 +162,17 @@ O Design System foi integralmente extraído e padronizado em `.stitch/DESIGN.md`
   - A linha divisória inferior (`.navline`) configurada em preto com opacidade refinada (25%).
   - Efeitos de hover e foco invertem de forma limpa para pills pretas com texto/ícones em Volt Lime (`#D4FF32`), preservando o menu dropdown de serviços e os botões sociais com ícones SVG.
 
+- **Acentos Tipográficos & Botões Volt Lime (`#D4FF32`):**
+  - **Hero (Primeira Seção):**
+    - Palavras *"Entre agora"* em destaque com a cor **Volt Lime (`#D4FF32`)**.
+    - Texto *"estratégia digital"* em destaque com a cor **Volt Lime (`#D4FF32`)**.
+    - Botão *"Automações de microsserviços"* padronizado em **branco puro (`#FFFFFF`)** no estado padrão e transição suave para **Volt Lime (`#D4FF32`)** com texto em preto no hover.
+  - **Vitrine Sticky (Segunda Seção):**
+    - Slide 1: *"Automatização de"* configurado em **Volt Lime (`#D4FF32`)** com *"microsserviços"* mantido em outline branco.
+    - Slide 2: *"Editor de"* configurado em **Volt Lime (`#D4FF32`)** com *"vídeo"* em outline branco.
+    - Slide 3: *"Tráfego"* configurado em **Volt Lime (`#D4FF32`)** com *"pago"* em outline branco.
+    - Slide 4: *"Sites"* configurado em **Volt Lime (`#D4FF32`)** com *"& Conversão"* preservados.
+
 - **Seção "Como Trabalhamos" em Alto Contraste Volt Lime (`#D4FF32`):**
   - Fundo preenchido no tom primário **Volt Lime (`#D4FF32`)** criando um ponto de contraste gráfico de alto impacto editorial.
   - Tipografia de títulos, números em estilo display Anton e textos das 4 etapas configurados em **Preto Profundo (`#080B08`)**.

@@ -53,6 +53,10 @@ h1,h2,h3,h4,h5,h6{
   color:var(--pure-white);
   letter-spacing:-0.03em;
 }
+.volt-text{
+  color:var(--volt) !important;
+  -webkit-text-stroke:0 !important;
+}
 
 /* Botões Pílula de Alto Refinamento */
 .btn{
