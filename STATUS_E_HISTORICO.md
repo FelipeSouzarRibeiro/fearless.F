@@ -178,6 +178,17 @@ O Design System foi integralmente extraído e padronizado em `.stitch/DESIGN.md`
   - Tipografia de títulos, números em estilo display Anton e textos das 4 etapas configurados em **Preto Profundo (`#080B08`)**.
   - A linha animada contínua de progresso (`.steps-line`) redesenhada em **Preto (`#080B08`)** acompanhando a rolagem com precisão.
 
+- **Terceira Seção ("Atendimento Direto") em Fundo Preto Obsidian (`#080B08`):**
+  - Fundo alterado para preto profundo `#080B08`, integrando com a estética minimalista dark.
+  - Palavras *"Menos"* e *"mais"* no título principal destacadas na cor **Volt Lime (`#D4FF32`)** (`Menos promessa, mais resultado.`).
+  - Marca d'água vetorial "F" suavizada com iluminação interativa em Volt Lime no hover.
+
+- **Seção "Marcas com quem trabalho" (Grid Estático & Alto Relevo Tátil):**
+  - O antigo letreiro móvel (marquee contínuo) foi substituído por um **grid moderno e estático** (`.brands-grid`).
+  - Palavra *"trabalho"* no título principal destacada em **Volt Lime (`#D4FF32`)** (`Marcas com quem trabalho`).
+  - Cada marca é um cartão/link individual (`.brand-card`) direcionando para o site do parceiro/cliente em nova aba.
+  - **Interatividade Alto Relevo 3D & "Inflar":** Ao passar o cursor (`:hover`), o cartão se expande com física elástica (`transform: translateY(-8px) scale(1.05)`), ganhando chanfros de iluminação tátil superior (`inset 0 1px 1px rgba(255,255,255,0.5)`), chanfro de sombra inferior, elevação profunda e halo Volt Lime (`#D4FF32`), com o ícone e link iluminando em verde neon.
+
 
 ---
 

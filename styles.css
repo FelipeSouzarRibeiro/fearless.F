@@ -280,14 +280,32 @@ h1,h2,h3,h4,h5,h6{
 @media (max-width:640px){.vert{display:none}.cue{top:auto;bottom:22px;left:28px;right:auto}.num{right:2%}}
 @media (prefers-reduced-motion:reduce){.lab,.slide h2,.slide p,.ghost,.num{transition:none!important}}
 
-/* Destaque */
-.feature{background:var(--alt);padding:96px 0}
+/* Destaque (Terceira Seção) - Fundo Preto Obsidian #080B08 */
+.feature{
+  background:#080B08;
+  padding:100px 0;
+  position:relative;
+  border-top:1px solid rgba(255,255,255,0.06);
+}
 .feature .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
-.feature h2{font-family:var(--font-headline);font-size:clamp(2.6rem,7vw,5.2rem);line-height:.98;letter-spacing:-.04em;font-weight:700;margin:14px 0 22px}
-.feature p{max-width:40ch;margin:0 0 30px}
-.feature .line{fill:currentColor;height:340px;width:auto;justify-self:center;animation:ffade 4.5s ease-in-out infinite}
-@keyframes ffade{0%,100%{opacity:1}50%{opacity:.12}}
-.feature .line:hover{animation:none;opacity:1;filter:drop-shadow(0 0 10px var(--ink)) drop-shadow(0 0 26px var(--ink))}
+.feature h2{font-family:var(--font-headline);font-size:clamp(2.6rem,7vw,5.2rem);line-height:.98;letter-spacing:-.04em;font-weight:700;margin:14px 0 22px;color:#FFFFFF}
+.feature p{max-width:40ch;margin:0 0 30px;color:rgba(255,255,255,0.8)}
+.feature .line{
+  fill:currentColor;
+  color:rgba(255,255,255,0.18);
+  height:340px;
+  width:auto;
+  justify-self:center;
+  animation:ffade 4.5s ease-in-out infinite;
+  transition:all .35s ease;
+}
+@keyframes ffade{0%,100%{opacity:.8}50%{opacity:.2}}
+.feature .line:hover{
+  animation:none;
+  opacity:1;
+  color:var(--volt);
+  filter:drop-shadow(0 0 16px rgba(212,255,50,0.4));
+}
 .feature h2 .w{display:inline-block;opacity:0;transform:translateY(16px);filter:blur(6px);transition:opacity .6s ease,transform .6s ease,filter .6s ease;transition-delay:calc(var(--i,0) * .35s)}
 .feature.inview h2 .w{opacity:1;transform:translateY(0);filter:blur(0)}
 .feature .fblur{opacity:0;filter:blur(10px);transition:opacity .8s ease,filter .8s ease;transition-delay:1.05s}
@@ -1626,16 +1644,142 @@ footer .f{
 @keyframes fflip{0%,100%{transform:rotateY(0deg)}50%{transform:rotateY(180deg)}}
 .heroFull{min-height:100vh;min-height:100svh;display:flex;align-items:center}
 .heroFull .heroGrid{padding:32px 0;width:100%}
-.partners{padding:88px 0 72px}
-.partners .wrap{padding-bottom:40px}
-.partners h2{font-family:var(--font-headline);font-size:1.9rem;font-weight:700;letter-spacing:-.02em;margin:0;color:#FFFFFF}
-.marqwrap{overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-.marquee{display:flex;align-items:center;gap:72px;width:max-content;animation:mmove 24s linear infinite}
-.marquee:hover{animation-play-state:paused}
-.plogo{font-family:var(--font-headline);font-size:1.3rem;font-weight:700;letter-spacing:-.01em;opacity:.45;white-space:nowrap;filter:grayscale(1);color:#FFFFFF}
-.plogo img{height:30px;width:auto;display:block;opacity:.7;filter:grayscale(1);transition:opacity .25s ease}
-.plogo:hover img{opacity:1}
-@keyframes mmove{to{transform:translateX(-50%)}}
+/* Seção Marcas com quem trabalho */
+.partners{
+  padding:100px 0 90px;
+  background:#080B08;
+  position:relative;
+  border-top:1px solid rgba(255,255,255,0.06);
+}
+.partners .wrap{
+  padding-bottom:12px;
+}
+.partners-head{
+  margin-bottom:44px;
+}
+.partners h2{
+  font-family:var(--font-headline);
+  font-size:clamp(2rem, 5vw, 3rem);
+  font-weight:700;
+  letter-spacing:-.03em;
+  margin:0 0 12px;
+  color:#FFFFFF;
+}
+.partners-sub{
+  font-family:var(--font-body);
+  color:rgba(255,255,255,0.7);
+  font-size:1.02rem;
+  max-width:54ch;
+  margin:0;
+  line-height:1.6;
+}
+
+/* Grid Estático de Marcas (Sem Letreiro) */
+.brands-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+  gap:22px;
+  width:100%;
+}
+
+/* Cartão da Marca: Efeito Alto Relevo & Inflar no Hover */
+.brand-card{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:32px 24px;
+  text-decoration:none;
+  border-radius:20px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.015) 100%);
+  border:1px solid rgba(255,255,255,0.09);
+  color:#FFFFFF;
+  cursor:pointer;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.1),
+    inset 0 -1px 0 rgba(0,0,0,0.5),
+    0 8px 24px rgba(0,0,0,0.4);
+  transition:all .32s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change:transform, box-shadow;
+}
+
+.brand-badge-inner{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:14px;
+  text-align:center;
+  width:100%;
+}
+
+.brand-icon{
+  width:56px;
+  height:56px;
+  display:grid;
+  place-items:center;
+  border-radius:14px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.12);
+  color:rgba(255,255,255,0.75);
+  transition:all .3s ease;
+}
+
+.brand-name{
+  font-family:var(--font-headline);
+  font-size:1.18rem;
+  font-weight:700;
+  letter-spacing:-.01em;
+  color:rgba(255,255,255,0.85);
+  transition:color .25s ease;
+}
+
+.brand-link-hint{
+  font-family:var(--font-label);
+  font-size:.74rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-weight:600;
+  color:rgba(255,255,255,0.4);
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  transition:all .25s ease;
+}
+
+/* ESTADO HOVER: "INFLAR" + "ALTO RELEVO" TÁTIL 3D */
+.brand-card:hover,
+.brand-card:focus-visible{
+  /* "Infle um pouco" (expansão suave com elasticidade) */
+  transform:translateY(-8px) scale(1.05);
+  
+  /* "Alto Relevo": Iluminação superior, borda acentuada e camadas de sombra 3D */
+  background:linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.03) 100%);
+  border-color:rgba(212,255,50,0.45);
+  box-shadow:
+    inset 0 1px 1px rgba(255,255,255,0.5), /* Borda de luz no topo do alto relevo */
+    inset 0 -2px 4px rgba(0,0,0,0.8),       /* Chanfro de sombra inferior */
+    0 18px 38px rgba(0,0,0,0.75),           /* Elevação flutuante */
+    0 0 24px rgba(212,255,50,0.22);          /* Brilho halo Volt Lime */
+}
+
+.brand-card:hover .brand-icon{
+  background:rgba(212,255,50,0.12);
+  border-color:rgba(212,255,50,0.6);
+  color:#D4FF32;
+  transform:scale(1.1);
+  box-shadow:0 0 18px rgba(212,255,50,0.3);
+}
+
+.brand-card:hover .brand-name{
+  color:#FFFFFF;
+}
+
+.brand-card:hover .brand-link-hint{
+  color:#D4FF32;
+  transform:translateX(2px);
+}
+
 
 /* ===================================================
    Estilos Dedicados: Bot de Controle Financeiro (Feerless)
