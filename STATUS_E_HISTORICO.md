@@ -151,6 +151,11 @@ O Design System foi integralmente extraído e padronizado em `.stitch/DESIGN.md`
   - A faixa superior branca foi completamente removida, deixando o topo 100% no fundo preto minimalista obsidian (`#080B08`).
   - Os botões interativos de **WhatsApp**, **Instagram** e **Contato** (com ícones em máscara SVG) foram transferidos diretamente para o canto direito da barra de navegação principal, mantendo alinhamento perfeito, micro-animações de hover para branco invertido e responsividade inteligente para smartphones (ocultação de texto e exibição de ícones circulares compactos em telas menores que 560px).
 
+- **Footer Minimalista & Remoção da Seção Branca de Contato:**
+  - A antiga seção `<section class="contact">` de 110px de padding com fundo branco gigante foi totalmente eliminada.
+  - O rodapé (`<footer>`) foi reduzido a uma barra fina, elegante e minimalista de 26px de padding, com fundo preto obsidian contínuo (`#080B08`), stroke superior sutil de luz e os links rápidos essenciais (WhatsApp, Instagram, e-mail e copyright).
+  - O `id="contato"` foi mantido no próprio `<footer>`, garantindo que links do menu continuem ancorando suavemente até o final da página.
+
 ---
 
 ## 📋 5. Pendências & Próximos Passos Sugeridos
