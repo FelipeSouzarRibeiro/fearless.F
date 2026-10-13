@@ -1,0 +1,2135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Feerless | Sites, tráfego pago e marketing digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="pageview" class="pageview" hidden>
+  <video class="pv-bgv" id="pv-bgv" src="video/sessao-2.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+  <div class="pv-top">
+    <a class="pv-home" href="#" aria-label="Voltar ao início"><svg class="f" viewBox="0 0 300 208" width="40" height="28"><use href="#fm"/></svg></a>
+    <button class="pv-close" type="button" onclick="location.hash=''" aria-label="Fechar">&times;</button>
+  </div>
+  
+  <!-- Corpo genérico para outras abas (Sites, Tráfego Pago, Marketing Digital, Sobre mim) -->
+  <div class="pv-body" id="pv-generic-body">
+    <p class="pv-lab" id="pv-lab"></p>
+    <h1 id="pv-title"></h1>
+    <p id="pv-text"></p>
+    <a class="btn" id="pv-cta" href="#contato">Falar sobre esse serviço</a>
+  </div>
+
+  <!-- Página rica e dedicada: Automações de Microsserviços & Soluções com Bots -->
+  <div id="pv-bot-content" class="pv-vpage pvb-page" hidden>
+    
+    <!-- Cabeçalho Principal da Aba -->
+    <header class="pvb-hub-header">
+      <div class="pvv-container">
+        <div class="pvv-badge-row">
+          <span class="pvv-badge"><i class="pvv-dot pvb-dot" aria-hidden="true"></i> Automação & IA</span>
+          <span class="pvv-badge pvv-badge-alt">Soluções Sob Medida</span>
+        </div>
+        <h1 class="pvv-title">Automações de <span class="pvb-gradient-emerald">microsserviços</span> para acelerar sua operação.</h1>
+        <p class="pvv-lead">Da gestão financeira inteligente via WhatsApp a robôs de triagem 24/7, sincronização em tempo real e scripts customizados. Elimine tarefas repetitivas e coloque seu tempo onde ele realmente gera lucro.</p>
+        
+        <!-- Navegação rápida entre os serviços -->
+        <nav class="pvb-hub-nav" aria-label="Navegar pelos serviços de automação">
+          <a class="pvb-nav-pill active" href="#servico-bot-financeiro">
+            <span class="pvb-pill-dot dot-emerald"></span> Bot Financeiro
+          </a>
+          <a class="pvb-nav-pill" href="#servico-atendimento">
+            <span class="pvb-pill-dot dot-blue"></span> Atendimento 24/7
+          </a>
+          <a class="pvb-nav-pill" href="#servico-integracoes">
+            <span class="pvb-pill-dot dot-purple"></span> Integrações & APIs
+          </a>
+          <a class="pvb-nav-pill" href="#servico-microsservicos">
+            <span class="pvb-pill-dot dot-amber"></span> Scripts Sob Medida
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- SESSÃO 1: Bot de Controle Financeiro (Apresentação + Como Funciona com Chat e Mockup) -->
+    <!-- Ambas as partes unificadas sob a mesma cor de fundo / tema emerald -->
+    <section class="pvb-service-block pvb-theme-emerald" id="servico-bot-financeiro">
+      <div class="pvv-container">
+        
+        <!-- Parte 1A: Apresentação do Serviço -->
+        <div class="pvb-block-hero">
+          <div class="pvv-badge-row">
+            <span class="pvv-badge"><i class="pvv-dot pvb-dot" aria-hidden="true"></i> Finanças com IA</span>
+            <span class="pvv-badge pvv-badge-alt">WhatsApp & Dashboard</span>
+          </div>
+          <h2 class="pvb-service-title">Controle seu dinheiro com a facilidade de uma <span class="pvb-gradient-emerald">mensagem no WhatsApp</span>.</h2>
+          <p class="pvv-lead">Chega de planilhas esquecidas e aplicativos burocráticos. Registre gastos e receitas em segundos por texto ou áudio, receba relatórios automáticos e acompanhe tudo com clareza em tempo real pelo Dashboard Web.</p>
+          
+          <div class="pvv-hero-acts">
+            <!-- BOTAO 'SAIBA MAIS': PREPARADO PARA LINK DA WEBPAGE DO BOT FINANCEIRO (LOGIN / CADASTRO) -->
+            <!-- Substitua a URL abaixo pelo link oficial da aplicação quando estiver hospedada -->
+            <a class="btn pvv-btn-primary pvb-btn-emerald" id="btn-bot-webpage" href="https://app.feerlessfinancas.com.br" target="_blank" rel="noopener" title="Acessar webpage do Bot Financeiro (Login e Cadastro)">
+              <span>Saiba mais</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+            <a class="pvv-btn-ghost" href="#pvb-demo">Ver como funciona &darr;</a>
+          </div>
+
+          <div class="pvv-metrics">
+            <div class="pvv-metric-item pvb-metric-box">
+              <div class="pvv-metric-icon pvb-icon-box" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              </div>
+              <div>
+                <strong>Lançamento em 3 Segundos</strong>
+                <p>Envie "Almoço 45" ou "Gasolina 100" e o bot registra e calcula na hora</p>
+              </div>
+            </div>
+            <div class="pvv-metric-item pvb-metric-box">
+              <div class="pvv-metric-icon pvb-icon-box" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+              </div>
+              <div>
+                <strong>Reconhecimento de Áudio</strong>
+                <p>Mande áudio falando seus gastos do dia que a IA transcreve e organiza</p>
+              </div>
+            </div>
+            <div class="pvv-metric-item pvb-metric-box">
+              <div class="pvv-metric-icon pvb-icon-box" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+              </div>
+              <div>
+                <strong>Categorização Inteligente</strong>
+                <p>Classificação automática: Alimentação, Transporte, Moradia, Lazer e Negócios</p>
+              </div>
+            </div>
+            <div class="pvv-metric-item pvb-metric-box">
+              <div class="pvv-metric-icon pvb-icon-box" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+              </div>
+              <div>
+                <strong>Dashboard Web & Relatórios</strong>
+                <p>Gráficos, fechamento mensal consolidado e acesso via login e senha</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Linha divisória sutil com brilho da cor do tema -->
+        <div class="pvb-service-divider" aria-hidden="true"></div>
+
+        <!-- Parte 1B: Como Funciona na Prática (Chat + Fotos Descritivas de Engajamento) -->
+        <div class="pvb-block-body" id="pvb-demo">
+          <div class="pvv-sec-head">
+            <span class="pvv-sec-tag pvb-tag-emerald">Experiência Real</span>
+            <h3 class="pvv-sec-title">Veja como o Bot funciona na prática</h3>
+            <p class="pvv-sec-sub">Simplicidade máxima: você conversa no WhatsApp exatamente como fala com um amigo. Ele cuida de toda a matemática e você acompanha o panorama completo no Dashboard.</p>
+          </div>
+
+          <div class="pvb-demo-grid">
+            <!-- Simulador de Chat Interativo -->
+            <div class="pvb-chat-device">
+              <div class="pvb-chat-header">
+                <div class="pvb-chat-bot-avatar">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg>
+                  <span class="pvb-online-indicator"></span>
+                </div>
+                <div class="pvb-chat-info">
+                  <strong>Feerless Finanças Bot</strong>
+                  <span><svg width="10" height="10" viewBox="0 0 24 24" fill="#10b981" stroke="none"><circle cx="12" cy="12" r="10"/></svg> online • Assistente Ativo</span>
+                </div>
+                <span class="pvb-wa-badge">WhatsApp</span>
+              </div>
+
+              <div class="pvb-chat-body">
+                <div class="pvb-bubble pvb-msg-user">
+                  <p>Opa! Gastei 42,00 no almoço agora 🥗</p>
+                  <span class="pvb-msg-meta">12:35 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><polyline points="20 6 9 17 4 12"/><polyline points="20 12 9 23 4 18"/></svg></span>
+                </div>
+
+                <div class="pvb-bubble pvb-msg-bot">
+                  <div class="pvb-bot-badge">✅ Despesa Registrada!</div>
+                  <div class="pvb-data-list">
+                    <div class="pvb-data-item"><span>📁 Categoria:</span> <strong>Alimentação</strong></div>
+                    <div class="pvb-data-item"><span>💸 Valor:</span> <strong class="pvb-val-out">R$ 42,00</strong></div>
+                    <div class="pvb-data-item"><span>💳 Saldo do mês:</span> <strong class="pvb-val-bal">R$ 3.850,00</strong></div>
+                  </div>
+                  <p class="pvb-msg-tip">💡 <em>Você ainda tem 78% do seu orçamento de alimentação disponível este mês.</em></p>
+                  <span class="pvb-msg-meta">12:35</span>
+                </div>
+
+                <div class="pvb-bubble pvb-msg-user">
+                  <div class="pvb-audio-bubble">
+                    <span class="pvb-audio-play" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>
+                    <div class="pvb-audio-waves"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                    <span class="pvb-audio-time">0:05</span>
+                  </div>
+                  <p class="pvb-audio-transcription"><em>Áudio:</em> "Recebi 1.500 de freela e paguei 120 da conta de internet"</p>
+                  <span class="pvb-msg-meta">14:10 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><polyline points="20 6 9 17 4 12"/><polyline points="20 12 9 23 4 18"/></svg></span>
+                </div>
+
+                <div class="pvb-bubble pvb-msg-bot">
+                  <div class="pvb-bot-badge">🤖 2 Lançamentos Processados!</div>
+                  <div class="pvb-data-list">
+                    <div class="pvb-data-item"><span>💚 Entrada:</span> <strong class="pvb-val-in">+ R$ 1.500,00</strong> (Freela)</div>
+                    <div class="pvb-data-item"><span>🔻 Despesa:</span> <strong class="pvb-val-out">- R$ 120,00</strong> (Internet)</div>
+                    <div class="pvb-data-item"><span>💰 Saldo Atual:</span> <strong class="pvb-val-bal">R$ 5.230,00</strong></div>
+                  </div>
+                  <span class="pvb-msg-meta">14:10</span>
+                </div>
+
+                <div class="pvb-bubble pvb-msg-user">
+                  <p>Me mostra o resumo deste mês?</p>
+                  <span class="pvb-msg-meta">18:02 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><polyline points="20 6 9 17 4 12"/><polyline points="20 12 9 23 4 18"/></svg></span>
+                </div>
+
+                <div class="pvb-bubble pvb-msg-bot pvb-bubble-highlight">
+                  <div class="pvb-bot-badge">📊 Balanço Mensal Consolidado</div>
+                  <div class="pvb-report-preview">
+                    <div class="pvb-rep-row"><span>Entradas Totais:</span> <span class="pvb-val-in">R$ 6.700,00</span></div>
+                    <div class="pvb-rep-row"><span>Gastos Totais:</span> <span class="pvb-val-out">R$ 2.470,00</span></div>
+                    <div class="pvb-rep-bar"><div class="pvb-bar-fill" style="width:37%"></div></div>
+                    <div class="pvb-rep-row pvb-rep-total"><span>Lucro Líquido / Reserva:</span> <span class="pvb-val-bal">+ R$ 4.230,00 (63%)</span></div>
+                  </div>
+                  <span class="pvb-msg-meta">18:02</span>
+                </div>
+              </div>
+
+              <div class="pvb-chat-footer">
+                <span class="pvb-chat-input-placeholder">Envie um gasto, áudio ou comando...</span>
+                <span class="pvb-chat-mic-btn" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg></span>
+              </div>
+            </div>
+
+            <!-- Card Visual com Mockup Real em Lightbox -->
+            <div class="pvb-mockup-showcase">
+              <article class="pvs-card pvb-card" data-img-src="img/bot-chat.jpg" data-title="Interface Real do Bot de Controle Financeiro" data-desc="Mockup em smartphone de alta precisão mostrando as conversas de categorização automática, saldo consolidado e integração nativa com o WhatsApp.">
+                <div class="pvs-thumb-wrap">
+                  <img class="pvs-thumb" src="img/bot-chat.jpg" alt="Mockup do Bot Financeiro Feerless" loading="lazy">
+                  <div class="pvs-overlay">
+                    <span class="pvs-zoom-btn" title="Ampliar imagem">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    </span>
+                  </div>
+                  <span class="pvs-tag-badge">Interface WhatsApp</span>
+                </div>
+                <div class="pvs-card-body">
+                  <div class="pvs-card-top">
+                    <span class="pvs-card-cat pvb-cat-emerald">Demonstração Visual</span>
+                    <span class="pvs-card-tech">IA & Automação</span>
+                  </div>
+                  <h4 class="pvs-card-title">Smartphone View • Experiência 100% Dark Mode</h4>
+                  <p class="pvv-card-desc">Clique para inspecionar em tela cheia os detalhes das mensagens, respostas do bot e design de dados projetado para máxima leitura e praticidade.</p>
+                  <div class="pvs-card-tags">
+                    <span>Reconhecimento de Áudio</span>
+                    <span>Categorização</span>
+                    <span>Dashboard Web</span>
+                  </div>
+                </div>
+              </article>
+
+              <div class="pvb-highlights-card">
+                <h4>Por que o Bot supera aplicativos e planilhas?</h4>
+                <ul class="pvb-check-list">
+                  <li><span class="pvb-check">✓</span> <strong>Sem atrito:</strong> Você já passa o dia com o WhatsApp aberto, não precisa abrir app de banco ou planilha no computador.</li>
+                  <li><span class="pvb-check">✓</span> <strong>Totalmente natural:</strong> Escreva ou fale como preferir. Não existe menu engessado.</li>
+                  <li><span class="pvb-check">✓</span> <strong>Consistência real:</strong> 90% das pessoas abandonam planilhas em 2 semanas. Com o bot no WhatsApp, você mantém o controle ativo meses a fio.</li>
+                  <li><span class="pvb-check">✓</span> <strong>Web Dashboard integrado:</strong> Visualize gráficos de fluxo de caixa, despesas por categoria e exporte relatórios para Excel ou Google Sheets quando desejar.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SESSÃO 2: Bots de Atendimento & Triagem Comercial 24/7 -->
+    <section class="pvb-service-block pvb-theme-blue" id="servico-atendimento">
+      <div class="pvv-container">
+        <div class="pvb-block-hero">
+          <div class="pvv-badge-row">
+            <span class="pvv-badge"><i class="pvv-dot pvb-dot-blue" aria-hidden="true"></i> Atendimento Comercial</span>
+            <span class="pvv-badge pvv-badge-alt">WhatsApp & Instagram Direct</span>
+          </div>
+          <h2 class="pvb-service-title">Atenda, qualifique e converta clientes 24h por dia <span class="pvb-gradient-blue">sem filas de espera</span>.</h2>
+          <p class="pvv-lead">Não perca vendas por demorar para responder mensagens. Automatizamos o primeiro atendimento com inteligência artificial humanizada, apresentando serviços, tirando dúvidas frequentes, filtrando quem tem perfil de compra e agendando reuniões direto no seu calendário.</p>
+          
+          <div class="pvv-hero-acts">
+            <a class="btn pvv-btn-primary pvb-btn-blue" href="https://wa.me/5512987089203?text=Ol%C3%A1%20Felipe,%20quero%20uma%20automa%C3%A7%C3%A3o%20de%20atendimento%20e%20triagem%20para%20minha%20empresa!" target="_blank" rel="noopener">
+              <span>Solicitar Bot de Atendimento</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a class="pvv-btn-ghost" href="#servico-integracoes">Próximo serviço &darr;</a>
+          </div>
+
+          <div class="pvv-metrics">
+            <div class="pvv-metric-item pvb-metric-blue">
+              <div class="pvv-metric-icon pvb-icon-blue" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <div>
+                <strong>Resposta em &lt; 2 Segundos</strong>
+                <p>O lead recebe atenção imediata no segundo exato em que a curiosidade está no auge.</p>
+              </div>
+            </div>
+            <div class="pvv-metric-item pvb-metric-blue">
+              <div class="pvv-metric-icon pvb-icon-blue" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <div>
+                <strong>Triagem & Qualificação</strong>
+                <p>Perguntas estratégicas que separam curiosos de clientes com orçamento pronto.</p>
+              </div>
+            </div>
+            <div class="pvv-metric-item pvb-metric-blue">
+              <div class="pvv-metric-icon pvb-icon-blue" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
+              <div>
+                <strong>Agendamento Automático</strong>
+                <p>Integração com Google Calendar e Calendly: horários livres sincronizados sem vai-e-volta.</p>
+              </div>
+            </div>
+            <div class="pvv-metric-item pvb-metric-blue">
+              <div class="pvv-metric-icon pvb-icon-blue" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div>
+                <strong>Transbordo Humano Inteligente</strong>
+                <p>Se o cliente precisa de proposta personalizada, o bot notifica você ou seu atendente na hora.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pvb-service-divider divider-blue" aria-hidden="true"></div>
+
+        <!-- Demonstração Visual do Fluxo de Triagem -->
+        <div class="pvb-block-body">
+          <div class="pvv-sec-head">
+            <span class="pvv-sec-tag pvb-tag-blue">Fluxo de Conversão</span>
+            <h3 class="pvv-sec-title">Como a triagem automática funciona</h3>
+            <p class="pvv-sec-sub">Elimine conversas repetitivas e receba contatos prontos para fechar negócio com você.</p>
+          </div>
+
+          <div class="pvb-feature-cards-grid">
+            <div class="pvb-flow-card">
+              <div class="pvb-flow-step">Passo 1</div>
+              <h4>Captura & Saudação</h4>
+              <p>O cliente clica no anúncio ou manda DM. O bot responde cordialmente e identifica o interesse imediato.</p>
+            </div>
+            <div class="pvb-flow-card">
+              <div class="pvb-flow-step">Passo 2</div>
+              <h4>Qualificação por Perguntas</h4>
+              <p>O bot faz de 2 a 3 perguntas essenciais (segmento, faturamento, urgência) de forma natural.</p>
+            </div>
+            <div class="pvb-flow-card">
+              <div class="pvb-flow-step">Passo 3</div>
+              <h4>Direcionamento & Agenda</h4>
+              <p>Se qualificado, o bot oferece opções de horários ou direciona para o produto exato com link de checkout.</p>
+            </div>
+            <div class="pvb-flow-card">
+              <div class="pvb-flow-step">Passo 4</div>
+              <h4>Notificação Imediata</h4>
+              <p>Você recebe uma mensagem no seu WhatsApp particular com o resumo completo do lead pronto para reunião.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SESSÃO 3: Integrações de Sistemas & Sincronização em Tempo Real -->
+    <section class="pvb-service-block pvb-theme-purple" id="servico-integracoes">
+      <div class="pvv-container">
+        <div class="pvb-block-hero">
+          <div class="pvv-badge-row">
+            <span class="pvv-badge"><i class="pvv-dot pvb-dot-purple" aria-hidden="true"></i> Conexão de Dados</span>
+            <span class="pvv-badge pvv-badge-alt">Webhooks, APIs & CRMs</span>
+          </div>
+          <h2 class="pvb-service-title">Conecte suas plataformas e acabe com o <span class="pvb-gradient-purple">retrabalho manual</span>.</h2>
+          <p class="pvv-lead">Vendeu no site, capturou um lead ou emitiu um pagamento? Conectamos todas as suas ferramentas para que a informação transite sozinha entre gateways (Stripe, Kiwify, Asaas), CRMs, Google Sheets e alertas no WhatsApp em milissegundos.</p>
+          
+          <div class="pvv-hero-acts">
+            <a class="btn pvv-btn-primary pvb-btn-purple" href="https://wa.me/5512987089203?text=Ol%C3%A1%20Felipe,%20quero%20integrar%20meus%20sistemas%20e%20bancos%20de%20dados!" target="_blank" rel="noopener">
+              <span>Integrar Meus Sistemas</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a class="pvv-btn-ghost" href="#servico-microsservicos">Próximo serviço &darr;</a>
+          </div>
+
+          <div class="pvv-metrics">
+            <div class="pvv-metric-item pvb-metric-purple">
+              <div class="pvv-metric-icon pvb-icon-purple" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+              </div>
+              <div>
+                <strong>Webhooks & APIs Blindadas</strong>
+                <p>Integrações com tolerância a falhas e reprocessamento automático de eventos.</p>
+              </div>
+            </div>
+            <div class="pvv-metric-item pvb-metric-purple">
+              <div class="pvv-metric-icon pvb-icon-purple" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3z"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></svg>
+              </div>
+              <div>
+                <strong>Google Sheets & Bancos Sincronizados</strong>
+                <p>Linhas adicionadas na hora: veja seu faturamento e lista de contatos em tempo real.</p>
+              </div>
+            </div>
+            <div class="pvv-metric-item pvb-metric-purple">
+              <div class="pvv-metric-icon pvb-icon-purple" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+              </div>
+              <div>
+                <strong>Alertas de Vendas no WhatsApp</strong>
+                <p>Receba no bolso uma notificação estruturada com nome do comprador, produto e valor líquido.</p>
+              </div>
+            </div>
+            <div class="pvv-metric-item pvb-metric-purple">
+              <div class="pvv-metric-icon pvb-icon-purple" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <strong>Zero Erros de Digitação</strong>
+                <p>Elimine perdas financeiras e dados duplicados causados por preenchimento manual.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pvb-service-divider divider-purple" aria-hidden="true"></div>
+
+        <!-- Demonstração de Plataformas Integradas -->
+        <div class="pvb-block-body">
+          <div class="pvv-sec-head">
+            <span class="pvv-sec-tag pvb-tag-purple">Ecossistema Conectado</span>
+            <h3 class="pvv-sec-title">Plataformas que conectamos sem atrito</h3>
+            <p class="pvv-sec-sub">Se sua ferramenta tem API ou Webhook, nós integramos com o resto da sua operação.</p>
+          </div>
+
+          <div class="pvb-integration-tags">
+            <span>WhatsApp Business Cloud</span>
+            <span>Meta Ads & Conversões</span>
+            <span>Google Sheets</span>
+            <span>ActiveCampaign</span>
+            <span>Kommo (AmoCRM)</span>
+            <span>HubSpot</span>
+            <span>Kiwify</span>
+            <span>Hotmart</span>
+            <span>Stripe</span>
+            <span>Asaas</span>
+            <span>Supabase / PostgreSQL</span>
+            <span>Notion API</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SESSÃO 4: Microsserviços & Scripts Sob Medida -->
+    <section class="pvb-service-block pvb-theme-amber" id="servico-microsservicos">
+      <div class="pvv-container">
+        <div class="pvb-block-hero">
+          <div class="pvv-badge-row">
+            <span class="pvv-badge"><i class="pvv-dot pvb-dot-amber" aria-hidden="true"></i> Engenharia Sob Medida</span>
+            <span class="pvv-badge pvv-badge-alt">Scripts & Nuvem</span>
+          </div>
+          <h2 class="pvb-service-title">Aplicações e microsserviços exclusivos para as <span class="pvb-gradient-amber">demandas do seu dia a dia</span>.</h2>
+          <p class="pvv-lead">Tem um processo maçante na sua empresa que consome horas diárias da equipe? Desenvolvemos robôs sob demanda e rotinas que rodam 24 horas por dia em nuvem: web scraping de dados públicos, geradores de contratos em PDF, monitoramento de concorrentes e cron jobs inteligentes.</p>
+          
+          <div class="pvv-hero-acts">
+            <a class="btn pvv-btn-primary pvb-btn-amber" href="https://wa.me/5512987089203?text=Ol%C3%A1%20Felipe,%20preciso%20de%20um%20microsservi%C3%A7o%20sob%20medida%20para%20minha%20empresa!" target="_blank" rel="noopener">
+              <span>Criar Microsserviço Customizado</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a class="pvv-btn-ghost" href="#pvb-processo-auto">Como é feita a entrega &darr;</a>
+          </div>
+
+          <div class="pvv-metrics">
+            <div class="pvv-metric-item pvb-metric-amber">
+              <div class="pvv-metric-icon pvb-icon-amber" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <div>
+                <strong>Web Scraping & Monitoramento</strong>
+                <p>Colete preços de concorrentes, listas e atualizações da web de maneira 100% autônoma.</p>
+              </div>
+            </div>
+            <div class="pvv-metric-item pvb-metric-amber">
+              <div class="pvv-metric-icon pvb-icon-amber" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </div>
+              <div>
+                <strong>Geração de PDFs & Contratos</strong>
+                <p>Gere documentos, faturas e relatórios estruturados em segundos a partir de modelos dinâmicos.</p>
+              </div>
+            </div>
+            <div class="pvv-metric-item pvb-metric-amber">
+              <div class="pvv-metric-icon pvb-icon-amber" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <strong>Cron Jobs & Rotinas na Nuvem</strong>
+                <p>Scripts programados para rodar de madrugada ou nos dias combinados, sem precisar de computador ligado.</p>
+              </div>
+            </div>
+            <div class="pvv-metric-item pvb-metric-amber">
+              <div class="pvv-metric-icon pvb-icon-amber" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+              </div>
+              <div>
+                <strong>Arquitetura Leve & Enxuta</strong>
+                <p>Código otimizado e focado no seu problema: zero dependências desnecessárias ou servidores caros.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pvb-service-divider divider-amber" aria-hidden="true"></div>
+
+        <!-- Comparativo Antes e Depois -->
+        <div class="pvb-block-body">
+          <div class="pvb-comparison-box">
+            <div class="pvb-comp-col pvb-comp-before">
+              <span class="pvb-comp-tag">Como costuma ser (Manual)</span>
+              <h4>4 Horas de Esforço Repetitivo</h4>
+              <ul>
+                <li>❌ Funcionário copiando e colando dados entre janelas</li>
+                <li>❌ Planilhas com dados desatualizados e fórmulas quebradas</li>
+                <li>❌ Falhas de digitação e esquecimentos frequentes</li>
+              </ul>
+            </div>
+            <div class="pvb-comp-arrow" aria-hidden="true">&rarr;</div>
+            <div class="pvb-comp-col pvb-comp-after">
+              <span class="pvb-comp-tag pvb-tag-amber">Com Microsserviço Feerless</span>
+              <h4>12 Segundos e 100% Autônomo</h4>
+              <ul>
+                <li>✅ Script roda na nuvem no horário certo automaticamente</li>
+                <li>✅ Dados validados e consolidados sem nenhuma intervenção</li>
+                <li>✅ Relatório pronto entregue no seu WhatsApp ou e-mail</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metodologia Geral de Entrega das Automações -->
+    <section class="pvv-process-sec" id="pvb-processo-auto">
+      <div class="pvv-container">
+        <div class="pvv-sec-head">
+          <span class="pvv-sec-tag pvb-tag-emerald">Método de Trabalho</span>
+          <h2 class="pvv-sec-title">Como construímos suas automações</h2>
+          <p class="pvv-sec-sub">Processo claro do primeiro alinhamento até a entrega e monitoramento do seu microsserviço no ar.</p>
+        </div>
+
+        <div class="pvv-steps-grid">
+          <div class="pvv-step-card">
+            <div class="pvv-step-num pvb-num-emerald">01</div>
+            <h3>Diagnóstico do Gargalo</h3>
+            <p>Mapeamos exatamente onde sua operação perde tempo, dinheiro ou comete erros repetitivos.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvv-step-num pvb-num-emerald">02</div>
+            <h3>Arquitetura do Fluxo</h3>
+            <p>Desenhamos o fluxo lógico da automação, escolhendo as APIs, gatilhos e microsserviços ideais.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvv-step-num pvb-num-emerald">03</div>
+            <h3>Desenvolvimento & Testes</h3>
+            <p>Construímos a automação com código robusto e testamos exaustivamente todos os cenários possíveis.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvv-step-num pvb-num-emerald">04</div>
+            <h3>Implantação & Acompanhamento</h3>
+            <p>Colocamos no ar com monitoramento contínuo para garantir que tudo funcione com 100% de estabilidade.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Interativo Geral de Automações & Microsserviços -->
+    <section class="pvs-faq-sec" id="pvb-faq">
+      <div class="pvv-container">
+        <div class="pvv-sec-head">
+          <span class="pvv-sec-tag pvb-tag-emerald">Tire suas Dúvidas</span>
+          <h2 class="pvv-sec-title">Perguntas Frequentes sobre Automações</h2>
+          <p class="pvv-sec-sub">Tudo o que você precisa saber sobre o Bot Financeiro e microsserviços Feerless.</p>
+        </div>
+
+        <div class="pvs-faq-grid">
+          <div class="pvs-faq-card">
+            <h4>Como funciona o acesso à webpage do Bot Financeiro?</h4>
+            <p>Você pode clicar em "Saiba mais" para abrir nossa plataforma oficial. Lá você faz login com sua conta ou cria seu cadastro para acompanhar seu Dashboard Web e vincular seu número de WhatsApp.</p>
+          </div>
+          <div class="pvs-faq-card">
+            <h4>O Bot Financeiro precisa de senhas bancárias?</h4>
+            <p>Nunca! Ele não solicita nenhuma senha ou acesso à sua conta de banco. Ele funciona como seu assistente de registro e inteligência gerencial, garantindo total privacidade e segurança.</p>
+          </div>
+          <div class="pvs-faq-card">
+            <h4>Os bots de atendimento funcionam com o WhatsApp Business?</h4>
+            <p>Sim! Integramos tanto com números convencionais quanto via WhatsApp Business Cloud API oficial, garantindo estabilidade e risco zero de bloqueios para seu negócio.</p>
+          </div>
+          <div class="pvs-faq-card">
+            <h4>Se eu já uso CRM ou planilhas, posso conectar?</h4>
+            <p>Com certeza. Desenvolvemos microsserviços e webhooks compatíveis com Kommo, ActiveCampaign, HubSpot, Google Sheets, bancos SQL e ferramentas no-code.</p>
+          </div>
+          <div class="pvs-faq-card">
+            <h4>Preciso manter meu computador ligado para os scripts rodarem?</h4>
+            <p>Não. Todas as automações e microsserviços sob medida são hospedados em servidores em nuvem de alta disponibilidade (AWS, Railway, Vercel), operando 24 horas por dia, 7 dias por semana.</p>
+          </div>
+          <div class="pvs-faq-card">
+            <h4>Como solicito um orçamento para o meu caso específico?</h4>
+            <p>Basta clicar no botão abaixo para conversar diretamente com o Felipe no WhatsApp. Entendemos sua necessidade e apresentamos o plano ideal de implementação.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner Final CTA Automações -->
+    <section class="pvv-cta-banner">
+      <div class="pvv-container">
+        <div class="pvv-cta-box pvb-cta-box">
+          <span class="pvv-badge pvb-badge-emerald">Eficiência & Escala</span>
+          <h2>Pronto para colocar seus processos no piloto automático?</h2>
+          <p>Fale diretamente com o Felipe agora mesmo no WhatsApp e descubra qual microsserviço vai economizar mais tempo na sua rotina.</p>
+          <div class="pvv-cta-actions">
+            <a class="btn pvv-btn-primary pvb-btn-emerald" href="https://wa.me/5512987089203?text=Ol%C3%A1%20Felipe,%20quero%20conversar%20sobre%20automa%C3%A7%C3%B5es%20de%20microsservi%C3%A7os%20para%20minha%20empresa!" target="_blank" rel="noopener">
+              Falar com Felipe no WhatsApp
+            </a>
+            <a class="pvv-btn-ghost" href="mailto:felipe.srll@hotmail.com">
+              felipe.srll@hotmail.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Página rica e dedicada para Edição de Vídeo com Portfólio -->
+  <div id="pv-video-content" class="pv-vpage" hidden>
+    <section class="pvv-hero">
+      <div class="pvv-container">
+        <div class="pvv-badge-row">
+          <span class="pvv-badge"><i class="pvv-dot" aria-hidden="true"></i> Serviço Audiovisual</span>
+          <span class="pvv-badge pvv-badge-alt">Motion & Storytelling</span>
+        </div>
+        <h1 class="pvv-title">Edição de vídeo com ritmo, corte e <span class="pvv-gradient">alta retenção</span>.</h1>
+        <p class="pvv-lead">Transformo gravações brutas em conteúdos magnéticos. Cortes precisos, sound design cinematográfico, legendas dinâmicas e ritmo que converte visualizações em autoridade e clientes.</p>
+        <div class="pvv-hero-acts">
+          <a class="btn pvv-btn-primary" href="https://wa.me/5512987089203?text=Ol%C3%A1%20Felipe,%20quero%20um%20or%C3%A7amento%20para%20edi%C3%A7%C3%A3o%20de%20v%C3%ADdeos!" target="_blank" rel="noopener">
+            <span>Solicitar orçamento</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a class="pvv-btn-ghost" href="#pvv-portfolio">Explorar portfólio &darr;</a>
+        </div>
+
+        <div class="pvv-metrics">
+          <div class="pvv-metric-item">
+            <div class="pvv-metric-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <div>
+              <strong>Hook & Retenção</strong>
+              <p>Primeiros 3 segundos projetados para vencer o scroll</p>
+            </div>
+          </div>
+          <div class="pvv-metric-item">
+            <div class="pvv-metric-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h3l3 8 4-16 4 12 3-4h3"/></svg>
+            </div>
+            <div>
+              <strong>Sound Design & SFX</strong>
+              <p>Impacto sonoro limpo e trilhas sincronizadas no beat</p>
+            </div>
+          </div>
+          <div class="pvv-metric-item">
+            <div class="pvv-metric-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 8h10M7 12h10M7 16h6"/></svg>
+            </div>
+            <div>
+              <strong>Motion & Legendas</strong>
+              <p>Animações fluidas e legendas palavra por palavra</p>
+            </div>
+          </div>
+          <div class="pvv-metric-item">
+            <div class="pvv-metric-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="3"/><circle cx="12" cy="18" r="1"/></svg>
+            </div>
+            <div>
+              <strong>9:16 & 16:9 4K</strong>
+              <p>Entrega otimizada para Reels, TikTok, YouTube e Ads</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Portfólio / Amostras -->
+    <section class="pvv-portfolio-sec" id="pvv-portfolio">
+      <div class="pvv-container">
+        <div class="pvv-sec-head">
+          <span class="pvv-sec-tag">Portfólio & Prévias</span>
+          <h2 class="pvv-sec-title">Veja amostras do que podemos criar</h2>
+          <p class="pvv-sec-sub">Clique em qualquer prévia para assistir aos detalhes e sentir a dinâmica do ritmo e sound design.</p>
+          
+          <div class="pvv-filters" role="tablist" aria-label="Filtro de vídeos">
+            <button class="pvv-filter-btn active" type="button" data-filter="all">Todos <span class="pvv-count">4</span></button>
+            <button class="pvv-filter-btn" type="button" data-filter="reels">Reels & TikTok (9:16)</button>
+            <button class="pvv-filter-btn" type="button" data-filter="institucional">Institucional (16:9)</button>
+            <button class="pvv-filter-btn" type="button" data-filter="comercial">Comerciais & Ads</button>
+          </div>
+        </div>
+
+        <div class="pvv-grid" id="pvv-grid">
+          <!-- Card 1 (Vertical 9:16 - Fitness / Lifestyle) -->
+          <article class="pvv-card pvv-card-vertical" data-category="reels" data-video-src="video/sessao-2.mp4" data-title="Reel de Alta Energia & Dinâmica" data-desc="Edição com cortes na batida sonora, SFX imersivos de impacto e gradação de cores contrastante.">
+            <div class="pvv-thumb-wrap">
+              <img class="pvv-thumb" src="img/thumb-fitness.jpg" alt="Prévia de Reel Dinâmico de Treino e Lifestyle" loading="lazy">
+              <div class="pvv-overlay">
+                <span class="pvv-time">0:30</span>
+                <div class="pvv-play-btn" aria-label="Assistir prévia">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 20,12 6,20"/></svg>
+                </div>
+              </div>
+              <div class="pvv-pill">Reels / 9:16</div>
+            </div>
+            <div class="pvv-card-info">
+              <span class="pvv-card-category">Fitness & Lifestyle</span>
+              <h3 class="pvv-card-title">Reel de Alta Energia & Ritmo</h3>
+              <p class="pvv-card-desc">Cortes no beat, transições sem costura e sound design que prende o espectador do início ao fim.</p>
+              <div class="pvv-tags">
+                <span>Cortes Rápidos</span>
+                <span>Sound Design</span>
+                <span>Color Grading</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 (Vertical 9:16 - Creator / Podcast) -->
+          <article class="pvv-card pvv-card-vertical" data-category="reels" data-video-src="video/movimento-arvore.mp4" data-title="Corte Viral de Podcast & Storytelling" data-desc="Formato com legendas destacadas palavra a palavra, zoom contínuo para manter ritmo e hook irresistível.">
+            <div class="pvv-thumb-wrap">
+              <img class="pvv-thumb" src="img/thumb-creator.jpg" alt="Prévia de Corte de Podcast com legendas animadas" loading="lazy">
+              <div class="pvv-overlay">
+                <span class="pvv-time">0:45</span>
+                <div class="pvv-play-btn" aria-label="Assistir prévia">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 20,12 6,20"/></svg>
+                </div>
+              </div>
+              <div class="pvv-pill">Creator / 9:16</div>
+            </div>
+            <div class="pvv-card-info">
+              <span class="pvv-card-category">Criadores & Infoprodutores</span>
+              <h3 class="pvv-card-title">Corte Viral de Podcast & Storytelling</h3>
+              <p class="pvv-card-desc">Legendas dinâmicas com destaque de cores, efeitos sonoros sutis e retenção máxima.</p>
+              <div class="pvv-tags">
+                <span>Legendas Animadas</span>
+                <span>Hook Forte</span>
+                <span>Storytelling</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 (Horizontal 16:9 - Institucional / Widescreen) -->
+          <article class="pvv-card pvv-card-wide" data-category="institucional" data-video-src="video/sessao-2.mp4" data-title="Vídeo Institucional & Manifesto de Marca" data-desc="Produção cinematográfica para empresas e marcas que buscam credibilidade premium e autoridade de mercado.">
+            <div class="pvv-thumb-wrap">
+              <img class="pvv-thumb" src="img/thumb-institucional.jpg" alt="Prévia de Vídeo Institucional Corporativo" loading="lazy">
+              <div class="pvv-overlay">
+                <span class="pvv-time">1:15</span>
+                <div class="pvv-play-btn" aria-label="Assistir prévia">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 20,12 6,20"/></svg>
+                </div>
+              </div>
+              <div class="pvv-pill">Institucional / 16:9</div>
+            </div>
+            <div class="pvv-card-info">
+              <span class="pvv-card-category">Empresas & Negócios</span>
+              <h3 class="pvv-card-title">Vídeo Institucional & Manifesto de Marca</h3>
+              <p class="pvv-card-desc">Visual cinematográfico, montagem elegante, narrativa envolvente e correção de cor profissional.</p>
+              <div class="pvv-tags">
+                <span>Cinematográfico</span>
+                <span>Trilha Exclusiva</span>
+                <span>Autoridade</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 (Vertical 9:16 - Comercial / Tráfego Pago) -->
+          <article class="pvv-card pvv-card-vertical" data-category="comercial" data-video-src="video/movimento-arvore.mp4" data-title="Criativo de Alta Conversão para Ads" data-desc="Formato desenhado para campanhas no Meta Ads e TikTok: ritmo veloz, demonstração de produto e chamada para ação forte.">
+            <div class="pvv-thumb-wrap">
+              <img class="pvv-thumb" src="img/thumb-product.jpg" alt="Prévia de Anúncio Comercial de Produto" loading="lazy">
+              <div class="pvv-overlay">
+                <span class="pvv-time">0:25</span>
+                <div class="pvv-play-btn" aria-label="Assistir prévia">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 20,12 6,20"/></svg>
+                </div>
+              </div>
+              <div class="pvv-pill">Tráfego Pago / 9:16</div>
+            </div>
+            <div class="pvv-card-info">
+              <span class="pvv-card-category">E-commerce & Lançamentos</span>
+              <h3 class="pvv-card-title">Criativo de Alta Conversão para Ads</h3>
+              <p class="pvv-card-desc">Direto ao ponto e construído para gerar cliques imediatos no link com alto retorno sobre investimento.</p>
+              <div class="pvv-tags">
+                <span>Meta & TikTok Ads</span>
+                <span>Chamada de Ação</span>
+                <span>Motion Design</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Como Funciona o Fluxo de Trabalho -->
+    <section class="pvv-process-sec">
+      <div class="pvv-container">
+        <div class="pvv-sec-head">
+          <span class="pvv-sec-tag">Metodologia</span>
+          <h2 class="pvv-sec-title">Como funciona o fluxo de trabalho</h2>
+          <p class="pvv-sec-sub">Simplicidade, rapidez e comunicação direta comigo em todas as etapas.</p>
+        </div>
+
+        <div class="pvv-steps-grid">
+          <div class="pvv-step-card">
+            <div class="pvv-step-num">01</div>
+            <h4>Envio & Briefing</h4>
+            <p>Você envia as gravações brutas pelo Google Drive ou WeTransfer com as orientações do projeto.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvv-step-num">02</div>
+            <h4>Decupagem & Corte</h4>
+            <p>Eliminação de pausas e estruturação de uma linha narrativa contínua e dinâmica.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvv-step-num">03</div>
+            <h4>Motion, SFX & Áudio</h4>
+            <p>Inclusão de legendas estilizadas, trilha sincronizada, efeitos sonoros e color grading.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvv-step-num">04</div>
+            <h4>Revisão & Entrega</h4>
+            <p>Você confere a prévia, alinhamos ajustes e você recebe o arquivo pronto em qualidade máxima.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pacotes & Formatos de Contratação -->
+    <section class="pvv-packages-sec">
+      <div class="pvv-container">
+        <div class="pvv-sec-head">
+          <span class="pvv-sec-tag">Modelos de Parceria</span>
+          <h2 class="pvv-sec-title">Escolha o formato ideal para seu objetivo</h2>
+        </div>
+
+        <div class="pvv-plans-grid">
+          <div class="pvv-plan-card">
+            <div class="pvv-plan-head">
+              <span class="pvv-plan-badge">Recorrência</span>
+              <h3>Pacote Criador</h3>
+              <p class="pvv-plan-for">Ideal para quem quer consistência semanal com Reels, Shorts e TikTok.</p>
+            </div>
+            <ul class="pvv-plan-list">
+              <li><span>&check;</span> 8 a 12 vídeos verticais por mês</li>
+              <li><span>&check;</span> Legendas dinâmicas estilizadas</li>
+              <li><span>&check;</span> Sound design e trilhas no beat</li>
+              <li><span>&check;</span> Entregas semanais organizadas</li>
+              <li><span>&check;</span> Até 2 rodadas de ajustes por vídeo</li>
+            </ul>
+            <a class="pvv-plan-btn" href="https://wa.me/5512987089203?text=Ol%C3%A1%20Felipe,%20gostaria%20de%20saber%20valores%20para%20o%20Pacote%20Criador!" target="_blank" rel="noopener">Consultar disponibilidade</a>
+          </div>
+
+          <div class="pvv-plan-card pvv-plan-featured">
+            <div class="pvv-plan-popular">Mais Escolhido</div>
+            <div class="pvv-plan-head">
+              <span class="pvv-plan-badge">Alta Performance</span>
+              <h3>Pacote Escala</h3>
+              <p class="pvv-plan-for">Para produtores e negócios que buscam crescimento acelerado e volume estratégico.</p>
+            </div>
+            <ul class="pvv-plan-list">
+              <li><span>&check;</span> 16 a 24 vídeos verticais por mês</li>
+              <li><span>&check;</span> Consultoria de ganchos (hooks) e retenção</li>
+              <li><span>&check;</span> Motion graphics e animações de tela</li>
+              <li><span>&check;</span> Prioridade na fila de edição e render</li>
+              <li><span>&check;</span> Formatos para Meta Ads e Orgânico</li>
+            </ul>
+            <a class="pvv-plan-btn pvv-plan-btn-featured" href="https://wa.me/5512987089203?text=Ol%C3%A1%20Felipe,%20quero%20um%20or%C3%A7amento%20para%20o%20Pacote%20Escala%20de%20v%C3%ADdeos!" target="_blank" rel="noopener">Garantir vaga mensal</a>
+          </div>
+
+          <div class="pvv-plan-card">
+            <div class="pvv-plan-head">
+              <span class="pvv-plan-badge">Sob Demanda</span>
+              <h3>Projetos Pontuais</h3>
+              <p class="pvv-plan-for">Perfeito para lançamentos, campanhas de tráfego, vídeos institucionais ou podcasts.</p>
+            </div>
+            <ul class="pvv-plan-list">
+              <li><span>&check;</span> Vídeos avulsos conforme sua demanda</li>
+              <li><span>&check;</span> Institucionais, manifestos e VSLs</li>
+              <li><span>&check;</span> Edição de YouTube e Podcasts longos</li>
+              <li><span>&check;</span> Decupagem de material extenso</li>
+              <li><span>&check;</span> Orçamento sob medida para seu escopo</li>
+            </ul>
+            <a class="pvv-plan-btn" href="https://wa.me/5512987089203?text=Ol%C3%A1%20Felipe,%20tenho%20um%20projeto%20pontual%20de%20v%C3%ADdeo%20e%20gostaria%20de%20um%20or%C3%A7amento!" target="_blank" rel="noopener">Pedir orçamento avulso</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner Final de CTA -->
+    <section class="pvv-cta-banner">
+      <div class="pvv-container">
+        <div class="pvv-cta-box">
+          <span class="pvv-badge">Próximo Passo</span>
+          <h2>Pronto para elevar a qualidade dos seus vídeos?</h2>
+          <p>Mande uma mensagem no WhatsApp com sua ideia ou referências. Analiso seu material e montamos a melhor estratégia.</p>
+          <div class="pvv-cta-actions">
+            <a class="btn pvv-btn-primary" href="https://wa.me/5512987089203?text=Ol%C3%A1%20Felipe,%20quero%20conversar%20sobre%20edi%C3%A7%C3%A3o%20de%20v%C3%ADdeos%20com%20voc%C3%AA!" target="_blank" rel="noopener">
+              Falar no WhatsApp direto
+            </a>
+            <a class="pvv-btn-ghost" href="mailto:felipe.srll@hotmail.com">
+              felipe.srll@hotmail.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- Página rica e dedicada para Sites (Venda e Portfólio de Sites) -->
+  <div id="pv-sites-content" class="pv-vpage pvs-page" hidden>
+    <section class="pvv-hero">
+      <div class="pvv-container">
+        <h1 class="pvv-title">Sites que transformam <span class="pvv-gradient">visitas em clientes</span>.</h1>
+        <p class="pvv-lead">Sites estratégicos para transformar visitantes em clientes. Design exclusivo, alta performance, responsividade e integração com WhatsApp e anúncios.</p>
+        <div class="pvv-hero-acts">
+          <a class="btn pvv-btn-primary" href="https://wa.me/5512987089203?text=Ol%C3%A1%20Felipe,%20quero%20um%20or%C3%A7amento%20para%20cria%C3%A7%C3%A3o%20de%20site!" target="_blank" rel="noopener">
+            <span>Pedir orçamento no WhatsApp</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a class="pvv-btn-ghost" href="#pvs-portfolio">Ver modelos & portfólio &darr;</a>
+        </div>
+
+        <div class="pvv-metrics">
+          <div class="pvv-metric-item">
+            <div class="pvv-metric-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <strong>Velocidade Extrema (PageSpeed)</strong>
+              <p>Carregamento em menos de 1 segundo para não perder leads</p>
+            </div>
+          </div>
+          <div class="pvv-metric-item">
+            <div class="pvv-metric-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="3"/><circle cx="12" cy="18" r="1"/></svg>
+            </div>
+            <div>
+              <strong>100% Mobile First</strong>
+              <p>Experiência perfeita na palma da mão onde seu cliente navega</p>
+            </div>
+          </div>
+          <div class="pvv-metric-item">
+            <div class="pvv-metric-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+            </div>
+            <div>
+              <strong>Foco em Conversão</strong>
+              <p>Estrutura pensada para transformar visitantes em contatos</p>
+            </div>
+          </div>
+          <div class="pvv-metric-item">
+            <div class="pvv-metric-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <div>
+              <strong>Pixels & Rastreamento</strong>
+              <p>Google Analytics e Meta Pixel prontos para anúncios</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfólio de Sites / Modelos -->
+    <section class="pvv-portfolio-sec" id="pvs-portfolio">
+      <div class="pvv-container">
+        <div class="pvv-sec-head">
+          <span class="pvv-sec-tag">Modelos & Portfólio</span>
+          <h2 class="pvv-sec-title">Estruturas digitais que geram autoridade</h2>
+          <p class="pvv-sec-sub">Clique em qualquer projeto para abrir em tamanho expandido e ver as funcionalidades inclusas.</p>
+          
+          <div class="pvv-filters" role="tablist" aria-label="Filtro de sites">
+            <button class="pvs-filter-btn active" type="button" data-filter="all">Todos <span class="pvv-count">4</span></button>
+            <button class="pvs-filter-btn" type="button" data-filter="landing">Landing Pages (Vendas)</button>
+            <button class="pvs-filter-btn" type="button" data-filter="institucional">Institucional (Empresas)</button>
+            <button class="pvs-filter-btn" type="button" data-filter="especialistas">Especialistas & Clínicas</button>
+          </div>
+        </div>
+
+        <div class="pvs-grid" id="pvs-grid">
+          <!-- Card 1: Landing Page SaaS / Tech -->
+          <article class="pvs-card" data-category="landing" data-img-src="img/site-saas.jpg" data-title="Landing Page de Alta Conversão SaaS & Tech" data-desc="Página com narrativa persuasiva, contraste moderno dark mode e botões estratégicos desenhados para transformar cliques de anúncios em cadastros e vendas.">
+            <div class="pvs-thumb-wrap">
+              <img class="pvs-thumb" src="img/site-saas.jpg" alt="Prévia de Landing Page de Tecnologia e Conversão" loading="lazy">
+              <div class="pvv-overlay">
+                <div class="pvs-zoom-btn" aria-label="Ver detalhes do site">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                </div>
+              </div>
+              <div class="pvv-pill">Landing Page / Vendas</div>
+            </div>
+            <div class="pvv-card-info">
+              <span class="pvv-card-category">Tech, SaaS & Infoprodutos</span>
+              <h3 class="pvv-card-title">Landing Page de Alta Conversão</h3>
+              <p class="pvv-card-desc">Design dark mode de alto padrão, formulário direto, carregamento relâmpago e chamada de ação otimizada.</p>
+              <div class="pvv-tags">
+                <span>Meta Ads Ready</span>
+                <span>Taxa de Conversão Alta</span>
+                <span>PageSpeed 98</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Institucional Corporativo -->
+          <article class="pvs-card" data-category="institucional" data-img-src="img/site-corporate.jpg" data-title="Site Institucional de Alto Padrão" data-desc="Presença digital imponente para empresas, escritórios e marcas que necessitam de credibilidade e autoridade inquestionáveis.">
+            <div class="pvs-thumb-wrap">
+              <img class="pvs-thumb" src="img/site-corporate.jpg" alt="Prévia de Site Institucional Corporativo de Alto Padrão" loading="lazy">
+              <div class="pvv-overlay">
+                <div class="pvs-zoom-btn" aria-label="Ver detalhes do site">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                </div>
+              </div>
+              <div class="pvv-pill">Institucional / Multi-Páginas</div>
+            </div>
+            <div class="pvv-card-info">
+              <span class="pvv-card-category">Arquitetura, Engenharia & Negócios</span>
+              <h3 class="pvv-card-title">Site Institucional de Alto Padrão</h3>
+              <p class="pvv-card-desc">Layout sofisticado com vitrine de projetos, narrativa institucional envolvente, otimização de busca e contato seguro.</p>
+              <div class="pvv-tags">
+                <span>Design Exclusivo</span>
+                <span>SEO Google</span>
+                <span>Autoridade Máxima</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Especialistas & Clínicas -->
+          <article class="pvs-card" data-category="especialistas" data-img-src="img/site-clinic.jpg" data-title="Estrutura Digital para Médicos & Especialistas" data-desc="Página desenhada para transmitir confiança e segurança, com apresentação profissional, depoimentos reais e agendamento direto de consultas pelo WhatsApp.">
+            <div class="pvs-thumb-wrap">
+              <img class="pvs-thumb" src="img/site-clinic.jpg" alt="Prévia de Site para Clínica e Especialista Médico" loading="lazy">
+              <div class="pvv-overlay">
+                <div class="pvs-zoom-btn" aria-label="Ver detalhes do site">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                </div>
+              </div>
+              <div class="pvv-pill">Especialistas / Agendamento</div>
+            </div>
+            <div class="pvv-card-info">
+              <span class="pvv-card-category">Clínicas, Médicos & Consultoria</span>
+              <h3 class="pvv-card-title">Estrutura Digital para Especialistas</h3>
+              <p class="pvv-card-desc">Construção de autoridade, catálogo de tratamentos/especialidades e botão direto para secretária no WhatsApp.</p>
+              <div class="pvv-tags">
+                <span>Agendamento Fácil</span>
+                <span>Depoimentos Reais</span>
+                <span>Localização & Mapa</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Produto / E-commerce -->
+          <article class="pvs-card" data-category="landing" data-img-src="img/site-ecommerce.jpg" data-title="Página de Lançamento & Venda de Produto" data-desc="Layout imersivo construído para produtos físicos ou digitais, destacando cada detalhe e direcionando o cliente para a compra imediata.">
+            <div class="pvs-thumb-wrap">
+              <img class="pvs-thumb" src="img/site-ecommerce.jpg" alt="Prévia de Página de Lançamento de Produto" loading="lazy">
+              <div class="pvv-overlay">
+                <div class="pvs-zoom-btn" aria-label="Ver detalhes do site">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                </div>
+              </div>
+              <div class="pvv-pill">Lançamento / Produto</div>
+            </div>
+            <div class="pvv-card-info">
+              <span class="pvv-card-category">E-commerce, Moda & Lançamentos</span>
+              <h3 class="pvv-card-title">Página de Lançamento & Produto</h3>
+              <p class="pvv-card-desc">Visual arrojado de alta definição, especificações técnicas claras, gatilhos de urgência e checkout simplificado.</p>
+              <div class="pvv-tags">
+                <span>Foco em Conversão</span>
+                <span>Checkout Integrado</span>
+                <span>Ultra Fluido</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- O que está incluso em todo site -->
+    <section class="pvv-process-sec">
+      <div class="pvv-container">
+        <div class="pvv-sec-head">
+          <span class="pvv-sec-tag">Padrão de Qualidade</span>
+          <h2 class="pvv-sec-title">O que está incluso no seu site</h2>
+          <p class="pvv-sec-sub">Você recebe uma estrutura profissional completa, pronta para gerar vendas sem surpresas no caminho.</p>
+        </div>
+
+        <div class="pvs-features-grid">
+          <div class="pvv-step-card">
+            <div class="pvs-feat-icon" aria-hidden="true">&check;</div>
+            <h4>Design 100% Exclusivo</h4>
+            <p>Nada de templates batidos do WordPress. Seu site terá a identidade e sofisticação única da sua marca.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvs-feat-icon" aria-hidden="true">&check;</div>
+            <h4>Botão WhatsApp Inteligente</h4>
+            <p>Posicionado para fácil clique no celular, já com mensagem personalizada pronta para iniciar o atendimento.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvs-feat-icon" aria-hidden="true">&check;</div>
+            <h4>SEO & Indexação no Google</h4>
+            <p>Configuração das tags, títulos e metadados para sua empresa ser encontrada nas buscas do Google.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvs-feat-icon" aria-hidden="true">&check;</div>
+            <h4>Segurança SSL Gratuita</h4>
+            <p>Certificado de criptografia (cadeado seguro) que garante a proteção dos dados dos seus visitantes.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvs-feat-icon" aria-hidden="true">&check;</div>
+            <h4>Rastreamento de Anúncios</h4>
+            <p>Meta Pixel (Facebook/Instagram) e Google Analytics 4 instalados para você medir cada lead que chega.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvs-feat-icon" aria-hidden="true">&check;</div>
+            <h4>O Site é 100% Seu</h4>
+            <p>Sem mensalidades obrigatórias de aluguel de plataforma. O código e os arquivos pertencem a você.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metodologia (Como Funciona o Desenvolvimento) -->
+    <section class="pvv-process-sec" style="background:transparent;border-top:none">
+      <div class="pvv-container">
+        <div class="pvv-sec-head">
+          <span class="pvv-sec-tag">Metodologia</span>
+          <h2 class="pvv-sec-title">Como funciona a criação do seu site</h2>
+          <p class="pvv-sec-sub">Processo ágil, direto comigo e sem intermediários.</p>
+        </div>
+
+        <div class="pvv-steps-grid">
+          <div class="pvv-step-card">
+            <div class="pvv-step-num">01</div>
+            <h4>Briefing & Estratégia</h4>
+            <p>Conversamos sobre suas metas, seu cliente ideal, serviços e referências visuais que você mais gosta.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvv-step-num">02</div>
+            <h4>Layout & Identidade</h4>
+            <p>Desenvolvimento da estrutura visual com foco em persuasão, tipografia refinada e hierarquia clara.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvv-step-num">03</div>
+            <h4>Código & Otimização</h4>
+            <p>Programação do site, testes rigorosos em celular e desktop, compactação de fotos e instalação de tags.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvv-step-num">04</div>
+            <h4>Publicação & Entrega</h4>
+            <p>Conexão com seu domínio próprio, testes finais de formulários e entrega das chaves da sua nova casa digital.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pacotes / Formatos de Venda de Sites -->
+    <section class="pvv-packages-sec">
+      <div class="pvv-container">
+        <div class="pvv-sec-head">
+          <span class="pvv-sec-tag">Opções de Projeto</span>
+          <h2 class="pvv-sec-title">Escolha o modelo ideal para seu negócio</h2>
+        </div>
+
+        <div class="pvv-plans-grid">
+          <div class="pvv-plan-card">
+            <div class="pvv-plan-head">
+              <span class="pvv-plan-badge">Venda Rápida</span>
+              <h3>Landing Page Express</h3>
+              <p class="pvv-plan-for">Perfeito para quem vai anunciar no Google ou Meta e precisa de uma página única focada em converter.</p>
+            </div>
+            <ul class="pvv-plan-list">
+              <li><span>&check;</span> 1 página contínua de alta conversão</li>
+              <li><span>&check;</span> 100% responsiva para celular e desktop</li>
+              <li><span>&check;</span> Botão de WhatsApp flutuante</li>
+              <li><span>&check;</span> Pixel do Meta e Google Analytics instalados</li>
+              <li><span>&check;</span> Entrega ágil em até 7 dias úteis</li>
+            </ul>
+            <a class="pvv-plan-btn" href="https://wa.me/5512987089203?text=Ol%C3%A1%20Felipe,%20quero%20um%20or%C3%A7amento%20para%20uma%20Landing%20Page%20Express!" target="_blank" rel="noopener">Pedir orçamento de Landing Page</a>
+          </div>
+
+          <div class="pvv-plan-card pvv-plan-featured">
+            <div class="pvv-plan-popular">Mais Escolhido</div>
+            <div class="pvv-plan-head">
+              <span class="pvv-plan-badge">Autoridade Máxima</span>
+              <h3>Site Institucional</h3>
+              <p class="pvv-plan-for">Ideal para empresas, clínicas e profissionais que precisam de presença sólida e credibilidade no mercado.</p>
+            </div>
+            <ul class="pvv-plan-list">
+              <li><span>&check;</span> Até 5 seções estruturadas (Início, Sobre, Serviços, Portfólio, Contato)</li>
+              <li><span>&check;</span> Design exclusivo sob medida</li>
+              <li><span>&check;</span> Otimização completa para busca no Google (SEO)</li>
+              <li><span>&check;</span> Formulário de contato inteligente + WhatsApp</li>
+              <li><span>&check;</span> Painel facilitado para edição de textos e imagens</li>
+            </ul>
+            <a class="pvv-plan-btn pvv-plan-btn-featured" href="https://wa.me/5512987089203?text=Ol%C3%A1%20Felipe,%20quero%20um%20or%C3%A7amento%20para%20um%20Site%20Institucional!" target="_blank" rel="noopener">Quero meu Site Institucional</a>
+          </div>
+
+          <div class="pvv-plan-card">
+            <div class="pvv-plan-head">
+              <span class="pvv-plan-badge">Personalizado</span>
+              <h3>Estrutura sob Medida</h3>
+              <p class="pvv-plan-for">Para negócios com necessidades específicas, catálogos, agendamentos complexos ou e-commerce.</p>
+            </div>
+            <ul class="pvv-plan-list">
+              <li><span>&check;</span> Lojas virtuais e catálogos interativos</li>
+              <li><span>&check;</span> Integração de pagamento e checkout</li>
+              <li><span>&check;</span> Sistemas de agendamento online</li>
+              <li><span>&check;</span> Múltiplas páginas e recursos avançados</li>
+              <li><span>&check;</span> Escopo e orçamento desenhados sob medida</li>
+            </ul>
+            <a class="pvv-plan-btn" href="https://wa.me/5512987089203?text=Ol%C3%A1%20Felipe,%20tenho%20um%20projeto%20sob%20medida%20de%20site%20e%20gostaria%20de%20um%20or%C3%A7amento!" target="_blank" rel="noopener">Consultar projeto personalizado</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ / Perguntas Frequentes -->
+    <section class="pvs-faq-sec">
+      <div class="pvv-container">
+        <div class="pvv-sec-head">
+          <span class="pvv-sec-tag">Tire Suas Dúvidas</span>
+          <h2 class="pvv-sec-title">Perguntas frequentes sobre criação de sites</h2>
+        </div>
+
+        <div class="pvs-faq-grid">
+          <div class="pvs-faq-card">
+            <h4>Em quanto tempo meu site fica pronto?</h4>
+            <p>Landing pages costumam ser entregues entre 5 a 8 dias úteis após o recebimento dos materiais. Sites institucionais mais completos levam em média de 8 a 15 dias úteis.</p>
+          </div>
+          <div class="pvs-faq-card">
+            <h4>O site funciona bem em qualquer celular?</h4>
+            <p>Sim! Desenvolvemos com metodologia Mobile First, garantindo que o site carregue super rápido e se adapte com perfeição a qualquer tela de smartphone, tablet ou computador.</p>
+          </div>
+          <div class="pvs-faq-card">
+            <h4>Preciso pagar alguma mensalidade?</h4>
+            <p>Não cobramos mensalidade obrigatória pelo desenvolvimento. O site é 100% de sua propriedade. Os únicos custos recorrentes normais na internet são o seu domínio anual (cerca de R$ 40/ano no Registro.br) e a hospedagem.</p>
+          </div>
+          <div class="pvs-faq-card">
+            <h4>Você me ajuda a configurar o domínio e e-mail?</h4>
+            <p>Sim, cuido de toda a parte técnica de apontamento de DNS, instalação do certificado SSL de segurança e configuração para que você não precise se preocupar com nada técnico.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner Final de CTA -->
+    <section class="pvv-cta-banner">
+      <div class="pvv-container">
+        <div class="pvv-cta-box">
+          <span class="pvv-badge">Vamos construir sua presença?</span>
+          <h2>Pronto para ter um site que transforma visitantes em clientes?</h2>
+          <p>Mande uma mensagem no WhatsApp. Vamos bater um papo rápido sobre o seu negócio e monto uma proposta pensada exatamente para sua meta.</p>
+          <div class="pvv-cta-actions">
+            <a class="btn pvv-btn-primary" href="https://wa.me/5512987089203?text=Ol%C3%A1%20Felipe,%20quero%20conversar%20sobre%20a%20cria%C3%A7%C3%A3o%20do%20meu%20site!" target="_blank" rel="noopener">
+              Falar com Felipe no WhatsApp
+            </a>
+            <a class="pvv-btn-ghost" href="mailto:felipe.srll@hotmail.com">
+              felipe.srll@hotmail.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Página rica e dedicada para Tráfego Pago -->
+  <div id="pv-trafego-content" class="pv-vpage pvt-page" hidden>
+    <section class="pvv-hero">
+      <div class="pvv-container">
+        <div class="pvv-badge-row">
+          <span class="pvv-badge"><i class="pvv-dot" aria-hidden="true"></i> Performance Digital</span>
+          <span class="pvv-badge pvv-badge-alt">Google & Meta Ads</span>
+        </div>
+        <h1 class="pvv-title">Campanhas que colocam sua oferta na frente de <span class="pvv-gradient">quem quer comprar</span>.</h1>
+        <p class="pvv-lead">Gestão profissional de anúncios no Google, Instagram e Facebook orientada a dados. Atraia leads qualificados no WhatsApp todos os dias, escale vendas e maximize o retorno sobre o investimento (ROAS).</p>
+        <div class="pvv-hero-acts">
+          <a class="btn pvv-btn-primary" href="https://wa.me/5512987089203?text=Ol%C3%A1%20Felipe,%20quero%20um%20or%C3%A7amento%20para%20gest%C3%A3o%20de%20Tr%C3%A1fego%20Pago!" target="_blank" rel="noopener">
+            <span>Pedir análise de tráfego</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a class="pvv-btn-ghost" href="#pvt-portfolio">Ver estratégias & cases &darr;</a>
+        </div>
+
+        <div class="pvv-metrics">
+          <div class="pvv-metric-item">
+            <div class="pvv-metric-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+            <div>
+              <strong>Segmentação Cirúrgica</strong>
+              <p>Anúncios entregues para o público com intenção real de compra</p>
+            </div>
+          </div>
+          <div class="pvv-metric-item">
+            <div class="pvv-metric-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            </div>
+            <div>
+              <strong>Foco em ROAS Positivo</strong>
+              <p>Otimização diária para reduzir custo por lead e custo por venda</p>
+            </div>
+          </div>
+          <div class="pvv-metric-item">
+            <div class="pvv-metric-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+            </div>
+            <div>
+              <strong>Testes A/B Constantes</strong>
+              <p>Validação sistemática de criativos, vídeos e copies que vendem</p>
+            </div>
+          </div>
+          <div class="pvv-metric-item">
+            <div class="pvv-metric-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <div>
+              <strong>Relatórios Transparentes</strong>
+              <p>Acompanhamento claro sem termos difíceis ou métricas de vaidade</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfólio / Estratégias & Cases de Tráfego -->
+    <section class="pvv-portfolio-sec" id="pvt-portfolio">
+      <div class="pvv-container">
+        <div class="pvv-sec-head">
+          <span class="pvv-sec-tag">Estratégias & Painéis</span>
+          <h2 class="pvv-sec-title">Como estruturamos campanhas lucrativas</h2>
+          <p class="pvv-sec-sub">Clique em qualquer estratégia para visualizar os detalhes técnicos e as métricas de performance.</p>
+          
+          <div class="pvv-filters" role="tablist" aria-label="Filtro de tráfego pago">
+            <button class="pvt-filter-btn active" type="button" data-filter="all">Todos <span class="pvv-count">4</span></button>
+            <button class="pvt-filter-btn" type="button" data-filter="leads">Leads no WhatsApp</button>
+            <button class="pvt-filter-btn" type="button" data-filter="google">Google Ads (Pesquisa)</button>
+            <button class="pvt-filter-btn" type="button" data-filter="escala">Escala & E-commerce</button>
+          </div>
+        </div>
+
+        <div class="pvt-grid" id="pvt-grid">
+          <!-- Card 1: Dashboard de ROAS 5.8x -->
+          <article class="pvt-card" data-category="escala" data-img-src="img/ads-dashboard.jpg" data-title="Painel Geral de Performance & ROAS 5.8x" data-desc="Estrutura multi-canal sincronizando Google Ads e Meta Ads com redução do CPA (custo por aquisição) e foco em margem de lucro real.">
+            <div class="pvt-thumb-wrap">
+              <img class="pvt-thumb" src="img/ads-dashboard.jpg" alt="Painel de Performance de Tráfego Pago" loading="lazy">
+              <div class="pvv-overlay">
+                <div class="pvt-zoom-btn" aria-label="Ver detalhes da estratégia">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                </div>
+              </div>
+              <div class="pvv-pill">Performance / ROAS 5.8x</div>
+            </div>
+            <div class="pvv-card-info">
+              <span class="pvv-card-category">Gestão de Tráfego Orientada a Dados</span>
+              <h3 class="pvv-card-title">Painel Geral de Performance & ROAS 5.8x</h3>
+              <p class="pvv-card-desc">Controle em tempo real de faturamento, volume de conversões e custo por cliente adquirido com previsibilidade.</p>
+              <div class="pvv-tags">
+                <span>Google & Meta</span>
+                <span>ROAS Alto</span>
+                <span>Otimização Diária</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Google Ads Fundo de Funil -->
+          <article class="pvt-card" data-category="google" data-img-src="img/ads-google.jpg" data-title="Campanha de Google Ads & Fundo de Funil" data-desc="Captura de clientes que já estão buscando ativamente pelo seu serviço ou produto na barra de pesquisa do Google.">
+            <div class="pvt-thumb-wrap">
+              <img class="pvt-thumb" src="img/ads-google.jpg" alt="Campanha de Busca no Google Ads" loading="lazy">
+              <div class="pvv-overlay">
+                <div class="pvt-zoom-btn" aria-label="Ver detalhes da estratégia">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                </div>
+              </div>
+              <div class="pvv-pill">Google Ads / Alta Intenção</div>
+            </div>
+            <div class="pvv-card-info">
+              <span class="pvv-card-category">Rede de Pesquisa & Intenção de Compra</span>
+              <h3 class="pvv-card-title">Campanha de Google Ads & Fundo de Funil</h3>
+              <p class="pvv-card-desc">Palavras-chave qualificadas com negativação rigorosa de termos irrelevantes para economizar verba e maximizar cliques compradores.</p>
+              <div class="pvv-tags">
+                <span>Google Search</span>
+                <span>CTR 8.3%+</span>
+                <span>Leads Quentes</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Meta Ads Leads WhatsApp -->
+          <article class="pvt-card" data-category="leads" data-img-src="img/ads-meta.jpg" data-title="Funil Meta Ads para Geração de Leads no WhatsApp" data-desc="Anúncios no Instagram Stories e Feed desenhados para atrair clientes locais direto para o WhatsApp comercial da sua empresa.">
+            <div class="pvt-thumb-wrap">
+              <img class="pvt-thumb" src="img/ads-meta.jpg" alt="Campanha Meta Ads para WhatsApp" loading="lazy">
+              <div class="pvv-overlay">
+                <div class="pvt-zoom-btn" aria-label="Ver detalhes da estratégia">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                </div>
+              </div>
+              <div class="pvv-pill">Meta Ads / WhatsApp Direto</div>
+            </div>
+            <div class="pvv-card-info">
+              <span class="pvv-card-category">Negócios Locais, Clínicas & Prestadores</span>
+              <h3 class="pvv-card-title">Funil Meta Ads para WhatsApp</h3>
+              <p class="pvv-card-desc">Segmentação por raio de quilômetros, criativo visual chamativo e botão de mensagem com atendimento humanizado imediato.</p>
+              <div class="pvv-tags">
+                <span>184 Leads/mês</span>
+                <span>CPA Baixo</span>
+                <span>Instagram & FB</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Escala de E-commerce -->
+          <article class="pvt-card" data-category="escala" data-img-src="img/ads-scale.jpg" data-title="Multi-Canal & Escala de Vendas para E-commerce" data-desc="Combinação de aquisição fria via TikTok/Instagram com remarketing dinâmico de catálogo e Google Shopping.">
+            <div class="pvt-thumb-wrap">
+              <img class="pvt-thumb" src="img/ads-scale.jpg" alt="Escala de Vendas para E-commerce" loading="lazy">
+              <div class="pvv-overlay">
+                <div class="pvt-zoom-btn" aria-label="Ver detalhes da estratégia">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                </div>
+              </div>
+              <div class="pvv-pill">E-commerce / Multi-Canal</div>
+            </div>
+            <div class="pvv-card-info">
+              <span class="pvv-card-category">Lojas Virtuais & Lançamentos</span>
+              <h3 class="pvv-card-title">Multi-Canal & Escala para E-commerce</h3>
+              <p class="pvv-card-desc">Recuperação de carrinho abandonado, catálogo de produtos atualizado e escala vertical com ROAS médio acima de 6x.</p>
+              <div class="pvv-tags">
+                <span>TikTok & Meta</span>
+                <span>Catálogo Dinâmico</span>
+                <span>Escala Segura</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- O que está incluso na gestão -->
+    <section class="pvv-process-sec">
+      <div class="pvv-container">
+        <div class="pvv-sec-head">
+          <span class="pvv-sec-tag">Serviço Completo</span>
+          <h2 class="pvv-sec-title">O que está incluso na gestão de tráfego</h2>
+          <p class="pvv-sec-sub">Estrutura técnica profissional para blindar sua conta e garantir que cada centavo investido gere retorno.</p>
+        </div>
+
+        <div class="pvs-features-grid">
+          <div class="pvv-step-card">
+            <div class="pvs-feat-icon" aria-hidden="true">&check;</div>
+            <h4>Configuração dos Gerenciadores</h4>
+            <p>Verificação de domínio, contas de anúncios no Meta e Google estruturadas com proteção contra bloqueios.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvs-feat-icon" aria-hidden="true">&check;</div>
+            <h4>Pixels & API de Conversão</h4>
+            <p>Rastreamento avançado de eventos (cliques em WhatsApp, cadastros e compras) para alimentar o algoritmo.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvs-feat-icon" aria-hidden="true">&check;</div>
+            <h4>Estratégia & Criação de Copies</h4>
+            <p>Textos persuasivos para os anúncios que chamam a atenção do seu cliente ideal e quebram objeções.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvs-feat-icon" aria-hidden="true">&check;</div>
+            <h4>Otimização Diária de Lances</h4>
+            <p>Ajustes constantes nos orçamentos para cortar o que gasta sem vender e dobrar a aposta no que dá lucro.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvs-feat-icon" aria-hidden="true">&check;</div>
+            <h4>Funil de Remarketing Ativo</h4>
+            <p>Anúncios específicos para quem já visitou seu site ou Instagram, recuperando vendas quase perdidas.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvs-feat-icon" aria-hidden="true">&check;</div>
+            <h4>Relatórios Semanais Diretos</h4>
+            <p>Você acompanha os números sem enrolação: quanto investiu, quantos contatos recebeu e quanto faturou.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metodologia (Como Funciona o Tráfego) -->
+    <section class="pvv-process-sec" style="background:transparent;border-top:none">
+      <div class="pvv-container">
+        <div class="pvv-sec-head">
+          <span class="pvv-sec-tag">Metodologia</span>
+          <h2 class="pvv-sec-title">Como funciona o ciclo de tráfego pago</h2>
+          <p class="pvv-sec-sub">Passo a passo testado para colocar campanhas no ar com velocidade e consistência.</p>
+        </div>
+
+        <div class="pvv-steps-grid">
+          <div class="pvv-step-card">
+            <div class="pvv-step-num">01</div>
+            <h4>Diagnóstico & Público</h4>
+            <p>Análise do seu modelo de negócio, ticket médio e identificação de onde seu cliente compra (Google vs. Instagram).</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvv-step-num">02</div>
+            <h4>Setup & Rastreamento</h4>
+            <p>Instalação de tags, validação de segurança e subida dos primeiros conjuntos de anúncios e criativos.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvv-step-num">03</div>
+            <h4>Testes & Validação</h4>
+            <p>Período de inteligência dos algoritmos para descobrir quais criativos e públicos trazem o menor custo por lead.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvv-step-num">04</div>
+            <h4>Escala & Retorno</h4>
+            <p>Aumento seguro de orçamento nas campanhas validadas para acelerar o volume diário de contatos e vendas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Planos de Tráfego Pago -->
+    <section class="pvv-packages-sec">
+      <div class="pvv-container">
+        <div class="pvv-sec-head">
+          <span class="pvv-sec-tag">Formatos de Gestão</span>
+          <h2 class="pvv-sec-title">Escolha o plano ideal para a sua verba</h2>
+        </div>
+
+        <div class="pvv-plans-grid">
+          <div class="pvv-plan-card">
+            <div class="pvv-plan-head">
+              <span class="pvv-plan-badge">Negócios Locais</span>
+              <h3>Plano Leads Locais</h3>
+              <p class="pvv-plan-for">Ideal para prestadores de serviços, clínicas, escritórios e comércios locais que querem mensagens no WhatsApp.</p>
+            </div>
+            <ul class="pvv-plan-list">
+              <li><span>&check;</span> Gestão no Meta Ads (Instagram & Facebook)</li>
+              <li><span>&check;</span> Foco exclusivo em mensagens no WhatsApp</li>
+              <li><span>&check;</span> Segmentação por região e público-alvo</li>
+              <li><span>&check;</span> Criação de copies e orientações de criativos</li>
+              <li><span>&check;</span> Relatório de desempenho semanal</li>
+            </ul>
+            <a class="pvv-plan-btn" href="https://wa.me/5512987089203?text=Ol%C3%A1%20Felipe,%20quero%20um%20or%C3%A7amento%20para%20o%20Plano%20Leads%20Locais%20de%20Tr%C3%A1fego!" target="_blank" rel="noopener">Quero Leads no WhatsApp</a>
+          </div>
+
+          <div class="pvv-plan-card pvv-plan-featured">
+            <div class="pvv-plan-popular">Mais Escolhido</div>
+            <div class="pvv-plan-head">
+              <span class="pvv-plan-badge">Performance Multi-Canal</span>
+              <h3>Plano Performance Pro</h3>
+              <p class="pvv-plan-for">Para empresas e marcas que querem estar presentes tanto no Google Search quanto nas redes sociais com remarketing.</p>
+            </div>
+            <ul class="pvv-plan-list">
+              <li><span>&check;</span> Gestão completa de Google Ads + Meta Ads</li>
+              <li><span>&check;</span> Fundo de funil no Google (quem já procura)</li>
+              <li><span>&check;</span> Campanhas de remarketing ativas</li>
+              <li><span>&check;</span> Testes A/B avançados de copies e formatos</li>
+              <li><span>&check;</span> Alinhamento de conversões semanal direto comigo</li>
+            </ul>
+            <a class="pvv-plan-btn pvv-plan-btn-featured" href="https://wa.me/5512987089203?text=Ol%C3%A1%20Felipe,%20quero%20um%20or%C3%A7amento%20para%20o%20Plano%20Performance%20Pro%20de%20Tr%C3%A1fego!" target="_blank" rel="noopener">Contratar Plano Pro</a>
+          </div>
+
+          <div class="pvv-plan-card">
+            <div class="pvv-plan-head">
+              <span class="pvv-plan-badge">E-commerce & Escala</span>
+              <h3>Plano Escala & Vendas</h3>
+              <p class="pvv-plan-for">Perfeito para lojas virtuais, infoprodutos e operações com alto volume de vendas online.</p>
+            </div>
+            <ul class="pvv-plan-list">
+              <li><span>&check;</span> Gestão em Meta Ads, Google Shopping e TikTok</li>
+              <li><span>&check;</span> Otimização avançada de ROAS e margem</li>
+              <li><span>&check;</span> Rastreamento via API de Conversões server-side</li>
+              <li><span>&check;</span> Campanhas de recuperação de carrinho</li>
+              <li><span>&check;</span> Acompanhamento contínuo de métricas chave</li>
+            </ul>
+            <a class="pvv-plan-btn" href="https://wa.me/5512987089203?text=Ol%C3%A1%20Felipe,%20quero%20um%20or%C3%A7amento%20para%20o%20Plano%20Escala%20de%20Tr%C3%A1fego!" target="_blank" rel="noopener">Consultar Plano Escala</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Tráfego Pago -->
+    <section class="pvs-faq-sec">
+      <div class="pvv-container">
+        <div class="pvv-sec-head">
+          <span class="pvv-sec-tag">Tire Suas Dúvidas</span>
+          <h2 class="pvv-sec-title">Perguntas frequentes sobre tráfego pago</h2>
+        </div>
+
+        <div class="pvs-faq-grid">
+          <div class="pvs-faq-card">
+            <h4>Quanto preciso investir em anúncios por mês?</h4>
+            <p>O valor pago às plataformas (Google/Meta) depende da sua meta. Para negócios locais, recomendamos começar com uma verba a partir de R$ 20 a R$ 30 por dia para gerar dados e contatos consistentes.</p>
+          </div>
+          <div class="pvs-faq-card">
+            <h4>Qual plataforma é melhor: Google ou Instagram?</h4>
+            <p>O Google é imbatível para capturar pessoas com intenção imediata ("dentista perto de mim"). O Instagram é excelente para gerar desejo e alcançar milhares de pessoas com ofertas visuais atrativas. Usamos o melhor de cada um.</p>
+          </div>
+          <div class="pvs-faq-card">
+            <h4>Em quanto tempo começam a chegar clientes?</h4>
+            <p>Diferente de estratégias orgânicas lentas, os anúncios entram no ar e já no mesmo dia começam a gerar impressões, cliques e mensagens no seu WhatsApp comercial.</p>
+          </div>
+          <div class="pvs-faq-card">
+            <h4>A verba dos anúncios é paga a você ou às plataformas?</h4>
+            <p>A verba de anúncios é paga diretamente por você ao Google e ao Meta através do cartão de crédito ou boleto na sua própria conta. Você tem 100% de controle e transparência do seu investimento.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner Final CTA Tráfego -->
+    <section class="pvv-cta-banner">
+      <div class="pvv-container">
+        <div class="pvv-cta-box">
+          <span class="pvv-badge">Hora de Vender Mais</span>
+          <h2>Pronto para colocar sua marca na frente dos clientes certos?</h2>
+          <p>Mande uma mensagem no WhatsApp. Analiso gratuitamente a situação atual do seu negócio e traço um plano de anúncios personalizado.</p>
+          <div class="pvv-cta-actions">
+            <a class="btn pvv-btn-primary" href="https://wa.me/5512987089203?text=Ol%C3%A1%20Felipe,%20quero%20conversar%20sobre%20Tr%C3%A1fego%20Pago%20para%20meu%20neg%C3%B3cio!" target="_blank" rel="noopener">
+              Falar com Felipe no WhatsApp
+            </a>
+            <a class="pvv-btn-ghost" href="mailto:felipe.srll@hotmail.com">
+              felipe.srll@hotmail.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Página rica e dedicada para Marketing Digital -->
+  <div id="pv-mkt-content" class="pv-vpage pvm-page" hidden>
+    <section class="pvv-hero">
+      <div class="pvv-container">
+        <div class="pvv-badge-row">
+          <span class="pvv-badge"><i class="pvv-dot" aria-hidden="true"></i> Estrutura Digital 360</span>
+          <span class="pvv-badge pvv-badge-alt">Branding & Conversão</span>
+        </div>
+        <h1 class="pvv-title">Sua marca com presença magnética e <span class="pvv-gradient">autoridade no mercado</span>.</h1>
+        <p class="pvv-lead">Muito além de posts soltos: planejo e executo sua presença digital completa. Posicionamento de marca, design refinado, linha editorial estratégica e funis que transformam atenção em oportunidades reais de contrato.</p>
+        <div class="pvv-hero-acts">
+          <a class="btn pvv-btn-primary" href="https://wa.me/5512987089203?text=Ol%C3%A1%20Felipe,%20quero%20conversar%20sobre%20a%20estrat%C3%A9gia%20de%20Marketing%20Digital%20do%20meu%20neg%C3%B3cio!" target="_blank" rel="noopener">
+            <span>Montar estratégia no WhatsApp</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a class="pvv-btn-ghost" href="#pvm-portfolio">Ver entregáveis & portfólio &darr;</a>
+        </div>
+
+        <div class="pvv-metrics">
+          <div class="pvv-metric-item">
+            <div class="pvv-metric-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <div>
+              <strong>Posicionamento de Autoridade</strong>
+              <p>Comunicação visual e verbal que permite cobrar mais caro</p>
+            </div>
+          </div>
+          <div class="pvv-metric-item">
+            <div class="pvv-metric-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </div>
+            <div>
+              <strong>Linha Editorial com Método</strong>
+              <p>Conteúdos que educam o cliente e quebram objeções de venda</p>
+            </div>
+          </div>
+          <div class="pvv-metric-item">
+            <div class="pvv-metric-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
+            <div>
+              <strong>Design & Identidade Visual</strong>
+              <p>Carrosséis modernos, capas e estética minimalista de alto nível</p>
+            </div>
+          </div>
+          <div class="pvv-metric-item">
+            <div class="pvv-metric-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <div>
+              <strong>Funil Social & Conversão</strong>
+              <p>Stories e links que levam o seguidor direto para fechar negócio</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfólio / Entregáveis de Marketing -->
+    <section class="pvv-portfolio-sec" id="pvm-portfolio">
+      <div class="pvv-container">
+        <div class="pvv-sec-head">
+          <span class="pvv-sec-tag">Entregáveis & Portfólio</span>
+          <h2 class="pvv-sec-title">Estrutura visual e estratégica na prática</h2>
+          <p class="pvv-sec-sub">Clique em qualquer amostra para visualizar o design completo e a estratégia aplicada.</p>
+          
+          <div class="pvv-filters" role="tablist" aria-label="Filtro de marketing digital">
+            <button class="pvm-filter-btn active" type="button" data-filter="all">Todos <span class="pvv-count">4</span></button>
+            <button class="pvm-filter-btn" type="button" data-filter="feed">Identidade & Feed</button>
+            <button class="pvm-filter-btn" type="button" data-filter="estrategia">Planejamento Editorial</button>
+            <button class="pvm-filter-btn" type="button" data-filter="stories">Stories & Funil</button>
+          </div>
+        </div>
+
+        <div class="pvm-grid" id="pvm-grid">
+          <!-- Card 1: Feed Aesthetic & Identidade -->
+          <article class="pvm-card" data-category="feed" data-img-src="img/mkt-feed.jpg" data-title="Grid de Feed & Identidade Visual Minimalista" data-desc="Padronização visual e estética dark luxury para marcas e especialistas que buscam percepção de alto valor imediata.">
+            <div class="pvm-thumb-wrap">
+              <img class="pvm-thumb" src="img/mkt-feed.jpg" alt="Identidade Visual de Feed no Instagram" loading="lazy">
+              <div class="pvv-overlay">
+                <div class="pvm-zoom-btn" aria-label="Ver detalhes do entregável">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                </div>
+              </div>
+              <div class="pvv-pill">Branding / Feed Coeso</div>
+            </div>
+            <div class="pvv-card-info">
+              <span class="pvv-card-category">Design & Percepção de Valor</span>
+              <h3 class="pvv-card-title">Grid de Feed & Identidade Visual</h3>
+              <p class="pvv-card-desc">Criação de paleta cromática sofisticada, destaques personalizados, biografia estratégica e tipografia refinada.</p>
+              <div class="pvv-tags">
+                <span>Dark Luxury</span>
+                <span>Bio Persuasiva</span>
+                <span>Engajamento Alto</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Estratégia de Marca & Calendário Editorial -->
+          <article class="pvm-card" data-category="estrategia" data-img-src="img/mkt-strategy.jpg" data-title="Guia de Estratégia de Marca & Calendário Editorial" data-desc="Planejamento de temas, datas, ganchos de engajamento e personas bem definidas para nunca faltar conteúdo relevante.">
+            <div class="pvm-thumb-wrap">
+              <img class="pvm-thumb" src="img/mkt-strategy.jpg" alt="Calendário Editorial e Estratégia de Marca" loading="lazy">
+              <div class="pvv-overlay">
+                <div class="pvm-zoom-btn" aria-label="Ver detalhes do entregável">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                </div>
+              </div>
+              <div class="pvv-pill">Estratégia / Editorial</div>
+            </div>
+            <div class="pvv-card-info">
+              <span class="pvv-card-category">Planejamento & Posicionamento</span>
+              <h3 class="pvv-card-title">Guia de Estratégia & Calendário</h3>
+              <p class="pvv-card-desc">Organização completa mês a mês com temas voltados para atração, quebra de objeções e ofertas ativas.</p>
+              <div class="pvv-tags">
+                <span>Cronograma Mensal</span>
+                <span>Tom de Voz</span>
+                <span>Conteúdo de Valor</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Stories & Funil de Conversão -->
+          <article class="pvm-card" data-category="stories" data-img-src="img/mkt-stories.jpg" data-title="Sequências Estratégicas de Stories para Venda" data-desc="Estruturação de enquetes, caixas de perguntas e narrativa envolvente que direciona o público dos Stories direto para o direct e WhatsApp.">
+            <div class="pvm-thumb-wrap">
+              <img class="pvm-thumb" src="img/mkt-stories.jpg" alt="Sequência de Stories para Conversão" loading="lazy">
+              <div class="pvv-overlay">
+                <div class="pvm-zoom-btn" aria-label="Ver detalhes do entregável">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                </div>
+              </div>
+              <div class="pvv-pill">Stories / Funil Direto</div>
+            </div>
+            <div class="pvv-card-info">
+              <span class="pvv-card-category">Engajamento & Vendas Diárias</span>
+              <h3 class="pvv-card-title">Sequências Estratégicas de Stories</h3>
+              <p class="pvv-card-desc">Roteirização de 3 a 5 stories em formato de mini-aula ou diagnóstico com chamada clara para ação.</p>
+              <div class="pvv-tags">
+                <span>Enquetes Interativas</span>
+                <span>Conversão no Direct</span>
+                <span>Storytelling</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Conteúdo de Vídeo & Roteiros de Reels -->
+          <article class="pvm-card" data-category="feed" data-img-src="img/thumb-creator.jpg" data-title="Planejamento de Vídeos & Roteiros para Reels" data-desc="Direcionamento de temas virais com roteiros estruturados segundo os primeiros 3 segundos de gancho (hook) e retenção.">
+            <div class="pvm-thumb-wrap">
+              <img class="pvm-thumb" src="img/thumb-creator.jpg" alt="Roteiros de Conteúdo para Reels" loading="lazy">
+              <div class="pvv-overlay">
+                <div class="pvm-zoom-btn" aria-label="Ver detalhes do entregável">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                </div>
+              </div>
+              <div class="pvv-pill">Reels / Alcance Viral</div>
+            </div>
+            <div class="pvv-card-info">
+              <span class="pvv-card-category">Produção Audiovisual & Autoridade</span>
+              <h3 class="pvv-card-title">Planejamento de Conteúdo em Vídeo</h3>
+              <p class="pvv-card-desc">Você só precisa apertar o play e gravar seguindo nossos roteiros práticos. Nós cuidamos da edição dinâmica e publicação.</p>
+              <div class="pvv-tags">
+                <span>Roteiros Prontos</span>
+                <span>Ganchos Virais</span>
+                <span>Autoridade em Vídeo</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- O que está incluso no Marketing -->
+    <section class="pvv-process-sec">
+      <div class="pvv-container">
+        <div class="pvv-sec-head">
+          <span class="pvv-sec-tag">Ecossistema Completo</span>
+          <h2 class="pvv-sec-title">O que está incluso na gestão de marketing</h2>
+          <p class="pvv-sec-sub">Construímos uma presença sólida onde cada post, story e link tem uma função estratégica de venda.</p>
+        </div>
+
+        <div class="pvs-features-grid">
+          <div class="pvv-step-card">
+            <div class="pvs-feat-icon" aria-hidden="true">&check;</div>
+            <h4>Diagnóstico & Otimização de Bio</h4>
+            <p>Reestruturação completa da sua biografia, foto de perfil, links e destaques estratégicos.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvs-feat-icon" aria-hidden="true">&check;</div>
+            <h4>Calendário Mensal Planejado</h4>
+            <p>Datas, formatos (carrosséis, estáticos, reels) e tópicos aprovados com antecedência.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvs-feat-icon" aria-hidden="true">&check;</div>
+            <h4>Design de Alto Padrão</h4>
+            <p>Artes autorais criadas sob medida com tipografia moderna, diagramação profissional e elegância.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvs-feat-icon" aria-hidden="true">&check;</div>
+            <h4>Roteirização de Vídeos (Reels)</h4>
+            <p>Diretrizes de gravação com ganchos atrativos para você gravar com confiança e rapidez.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvs-feat-icon" aria-hidden="true">&check;</div>
+            <h4>Estratégias de Venda nos Stories</h4>
+            <p>Roteiros para converter a audiência mais quente e atenta que já acompanha seu dia a dia.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvs-feat-icon" aria-hidden="true">&check;</div>
+            <h4>Conexão com Site & WhatsApp</h4>
+            <p>Integração fluida para que nenhum seguidor interessado fique perdido sem saber como te contratar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metodologia Marketing -->
+    <section class="pvv-process-sec" style="background:transparent;border-top:none">
+      <div class="pvv-container">
+        <div class="pvv-sec-head">
+          <span class="pvv-sec-tag">Metodologia</span>
+          <h2 class="pvv-sec-title">Como funciona o fluxo de trabalho mensal</h2>
+          <p class="pvv-sec-sub">Rotina organizada para você não perder tempo com tarefas operacionais.</p>
+        </div>
+
+        <div class="pvv-steps-grid">
+          <div class="pvv-step-card">
+            <div class="pvv-step-num">01</div>
+            <h4>Imersão & Branding</h4>
+            <p>Entendimento da essência da sua marca, concorrentes, persona e tom de voz ideal.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvv-step-num">02</div>
+            <h4>Planejamento Editorial</h4>
+            <p>Elaboração da pauta mensal com foco em temas que seus clientes realmente procuram e compram.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvv-step-num">03</div>
+            <h4>Design & Produção</h4>
+            <p>Desenvolvimento das artes, redação das legendas envolventes e entrega para sua aprovação ágil.</p>
+          </div>
+          <div class="pvv-step-card">
+            <div class="pvv-step-num">04</div>
+            <h4>Análise & Refinamento</h4>
+            <p>Monitoramento das métricas de alcance e salvamentos para aprimorar as próximas postagens.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Planos de Marketing Digital -->
+    <section class="pvv-packages-sec">
+      <div class="pvv-container">
+        <div class="pvv-sec-head">
+          <span class="pvv-sec-tag">Modelos de Assessoria</span>
+          <h2 class="pvv-sec-title">Escolha o formato ideal para seu crescimento</h2>
+        </div>
+
+        <div class="pvv-plans-grid">
+          <div class="pvv-plan-card">
+            <div class="pvv-plan-head">
+              <span class="pvv-plan-badge">Presença Básica</span>
+              <h3>Plano Presença</h3>
+              <p class="pvv-plan-for">Ideal para profissionais que precisam manter o perfil ativo, confiável e profissional com consistência.</p>
+            </div>
+            <ul class="pvv-plan-list">
+              <li><span>&check;</span> 8 postagens estratégicas por mês (carrosséis e estáticos)</li>
+              <li><span>&check;</span> Otimização completa da Bio e Capas de Destaques</li>
+              <li><span>&check;</span> Redação persuasiva de todas as legendas</li>
+              <li><span>&check;</span> Calendário mensal aprovado previamente</li>
+              <li><span>&check;</span> Design autoral exclusivo para sua marca</li>
+            </ul>
+            <a class="pvv-plan-btn" href="https://wa.me/5512987089203?text=Ol%C3%A1%20Felipe,%20quero%20um%20or%C3%A7amento%20para%20o%20Plano%20Presen%C3%A7a%20de%20Marketing!" target="_blank" rel="noopener">Consultar Plano Presença</a>
+          </div>
+
+          <div class="pvv-plan-card pvv-plan-featured">
+            <div class="pvv-plan-popular">Mais Escolhido</div>
+            <div class="pvv-plan-head">
+              <span class="pvv-plan-badge">Autoridade & Crescimento</span>
+              <h3>Plano Autoridade Pro</h3>
+              <p class="pvv-plan-for">Para negócios e especialistas que desejam se tornar a principal referência do seu nicho de atuação.</p>
+            </div>
+            <ul class="pvv-plan-list">
+              <li><span>&check;</span> 14 a 18 conteúdos mensais (Carrosséis + Reels)</li>
+              <li><span>&check;</span> Roteiros dinâmicos e edição profissional de vídeos</li>
+              <li><span>&check;</span> Estratégia semanal de Stories com funil de vendas</li>
+              <li><span>&check;</span> Suporte direto via WhatsApp com Felipe</li>
+              <li><span>&check;</span> Alinhamento de ofertas e lançamentos pontuais</li>
+            </ul>
+            <a class="pvv-plan-btn pvv-plan-btn-featured" href="https://wa.me/5512987089203?text=Ol%C3%A1%20Felipe,%20quero%20um%20or%C3%A7amento%20para%20o%20Plano%20Autoridade%20Pro%20de%20Marketing!" target="_blank" rel="noopener">Quero Autoridade Pro</a>
+          </div>
+
+          <div class="pvv-plan-card">
+            <div class="pvv-plan-head">
+              <span class="pvv-plan-badge">Estrutura 360</span>
+              <h3>Plano Ecossistema 360</h3>
+              <p class="pvv-plan-for">A solução definitiva: união de posicionamento de conteúdo com tráfego pago para atrair clientes em massa.</p>
+            </div>
+            <ul class="pvv-plan-list">
+              <li><span>&check;</span> Gestão completa de Marketing de Conteúdo</li>
+              <li><span>&check;</span> Gestão de Tráfego Pago (Meta Ads & Google Ads)</li>
+              <li><span>&check;</span> Integração com Site e Landing Page</li>
+              <li><span>&check;</span> Estrutura completa de captação de leads</li>
+              <li><span>&check;</span> Consultoria estratégica quinzenal</li>
+            </ul>
+            <a class="pvv-plan-btn" href="https://wa.me/5512987089203?text=Ol%C3%A1%20Felipe,%20quero%20um%20or%C3%A7amento%20para%20o%20Plano%20Ecossistema%20360!" target="_blank" rel="noopener">Quero Ecossistema 360</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Marketing Digital -->
+    <section class="pvs-faq-sec">
+      <div class="pvv-container">
+        <div class="pvv-sec-head">
+          <span class="pvv-sec-tag">Tire Suas Dúvidas</span>
+          <h2 class="pvv-sec-title">Perguntas frequentes sobre marketing digital</h2>
+        </div>
+
+        <div class="pvs-faq-grid">
+          <div class="pvs-faq-card">
+            <h4>Eu preciso obrigatoriamente aparecer ou gravar vídeos?</h4>
+            <p>Não é obrigatório. Construímos estratégias sólidas com carrosséis aprofundados, artigos visuais e designs autorais. Porém, se você topar gravar, entregamos os roteiros mastigados para tornar tudo rápido e sem estresse.</p>
+          </div>
+          <div class="pvs-faq-card">
+            <h4>Quem escreve os textos e produz as artes?</h4>
+            <p>Nós cuidamos de toda a redação publicitária (copywriting) e criação gráfica. Você não precisa se preocupar em criar nada do zero.</p>
+          </div>
+          <div class="pvs-faq-card">
+            <h4>Posso aprovar os posts antes de irem para o ar?</h4>
+            <p>Com certeza! Todo o conteúdo do mês é apresentado para você com antecedência para que você possa aprovar ou pedir qualquer ajuste.</p>
+          </div>
+          <div class="pvs-faq-card">
+            <h4>Como o marketing digital se conecta com as vendas?</h4>
+            <p>O marketing qualifica o visitante, constrói confiança prévia e quebra objeções. Quando a pessoa clica no seu link do WhatsApp, ela já chega sabendo o que quer e disposta a fechar negócio.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner Final CTA Marketing -->
+    <section class="pvv-cta-banner">
+      <div class="pvv-container">
+        <div class="pvv-cta-box">
+          <span class="pvv-badge">Transforme sua Presença</span>
+          <h2>Pronto para transformar sua marca em uma autoridade desejada?</h2>
+          <p>Mande uma mensagem no WhatsApp. Vamos bater um papo sobre seus objetivos e desenhar o posicionamento ideal para seu negócio.</p>
+          <div class="pvv-cta-actions">
+            <a class="btn pvv-btn-primary" href="https://wa.me/5512987089203?text=Ol%C3%A1%20Felipe,%20quero%20conversar%20sobre%20a%20estrat%C3%A9gia%20de%20Marketing%20Digital!" target="_blank" rel="noopener">
+              Falar com Felipe no WhatsApp
+            </a>
+            <a class="pvv-btn-ghost" href="mailto:felipe.srll@hotmail.com">
+              felipe.srll@hotmail.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- Modal Lightbox de Mídia (Vídeo e Imagem) -->
+<div id="pv-lightbox" class="pv-lightbox" hidden role="dialog" aria-modal="true" aria-label="Visualizador de Mídia">
+  <div class="pv-lightbox-backdrop" id="pv-lightbox-backdrop"></div>
+  <div class="pv-lightbox-dialog">
+    <button class="pv-lightbox-close" id="pv-lightbox-close" type="button" aria-label="Fechar prévia">&times;</button>
+    <div class="pv-lightbox-player">
+      <video id="pv-lightbox-video" controls playsinline style="display:none"></video>
+      <img id="pv-lightbox-img" class="pv-lightbox-img" alt="Prévia do Projeto" style="display:none">
+    </div>
+    <div class="pv-lightbox-meta">
+      <div>
+        <h3 id="pv-lightbox-title">Título do Projeto</h3>
+        <p id="pv-lightbox-desc">Descrição e técnicas aplicadas neste projeto.</p>
+      </div>
+      <a class="btn pvv-btn-primary" id="pv-lightbox-wa" href="https://wa.me/5512987089203" target="_blank" rel="noopener">
+        Quero um projeto neste estilo
+      </a>
+    </div>
+  </div>
+</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="igs" viewBox="0 0 24 24"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.25" fill="currentColor"/></symbol></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="fm" viewBox="0 0 300 208"><path d="M9.2 199.0 L65.5 199.2 L66.2 198.8 L66.8 197.8 L66.8 197.0 L68.2 193.5 L68.2 192.3 L68.7 191.3 L68.8 190.0 L69.5 188.8 L69.5 187.5 L70.5 184.7 L70.5 183.3 L71.5 181.7 L72.0 178.3 L72.5 177.5 L72.5 176.5 L73.2 175.3 L73.2 174.3 L73.5 173.8 L73.5 172.3 L74.5 170.7 L74.5 169.5 L75.2 168.3 L75.2 167.3 L75.7 166.2 L75.5 165.5 L76.2 164.2 L76.2 163.0 L77.2 160.5 L77.2 159.3 L78.2 157.5 L78.5 154.5 L79.2 153.3 L79.2 152.2 L80.5 148.7 L80.5 147.7 L81.7 144.3 L82.3 140.7 L83.5 137.8 L83.5 136.3 L84.2 135.3 L84.2 134.0 L84.7 133.3 L85.2 130.2 L86.5 126.7 L86.7 125.2 L88.0 122.7 L188.7 122.5 L189.3 122.2 L194.7 121.5 L196.0 120.8 L199.7 120.0 L203.5 118.0 L204.8 117.8 L207.2 116.5 L208.0 115.7 L209.5 115.2 L210.5 114.0 L213.3 112.2 L218.8 106.8 L220.0 104.8 L221.8 103.0 L223.5 99.3 L224.8 97.5 L225.0 96.5 L225.8 95.7 L226.2 94.2 L227.2 92.3 L227.2 91.2 L229.2 85.2 L229.0 83.2 L228.5 82.7 L72.5 82.7 L70.3 83.3 L69.2 83.2 L67.8 83.7 L65.7 83.7 L63.2 84.3 L59.5 85.8 L58.0 86.0 L52.3 88.7 L48.3 91.8 L47.5 92.2 L46.3 93.3 L45.3 93.7 L40.8 98.3 L40.3 99.5 L37.8 102.2 L37.2 103.8 L34.7 107.3 L33.5 109.7 L33.3 111.5 L32.3 113.0 L32.3 114.3 L31.7 115.3 L31.7 116.7 L30.7 118.3 L30.3 121.3 L29.7 122.5 L29.7 123.5 L28.3 127.3 L28.0 129.8 L27.3 131.0 L27.3 132.5 L26.7 133.3 L26.7 134.7 L25.8 137.3 L25.3 138.0 L25.3 139.5 L24.7 140.5 L24.7 141.5 L23.2 146.3 L23.2 147.2 L22.3 149.0 L22.3 150.5 L21.7 151.5 L21.7 152.7 L21.0 154.0 L20.7 156.7 L19.3 160.3 L19.3 161.3 L18.7 162.3 L18.7 163.7 L18.2 164.5 L17.7 167.7 L15.3 174.3 L15.0 176.7 L14.0 179.2 L14.0 180.8 L12.5 184.8 L12.2 187.3 L11.0 190.3 L11.0 191.5 L10.3 192.5 L10.3 193.7 L9.0 197.5ZM48.8 54.3 L50.0 54.8 L248.2 54.8 L253.2 53.8 L254.5 53.8 L256.0 53.3 L257.3 53.3 L258.5 52.7 L262.8 51.5 L266.3 49.5 L267.3 49.3 L269.0 48.0 L271.2 46.8 L273.7 45.0 L275.8 42.7 L276.7 42.3 L279.3 39.2 L281.2 37.5 L281.5 36.3 L282.7 35.3 L283.5 33.5 L284.8 32.0 L286.5 28.7 L286.8 27.0 L287.8 25.5 L289.2 21.5 L289.2 20.3 L290.7 16.2 L291.3 12.5 L292.5 9.5 L291.7 8.7 L90.2 8.7 L89.7 9.0 L87.7 9.0 L79.2 11.3 L74.0 13.8 L69.3 16.8 L66.8 19.0 L65.5 19.7 L62.2 23.0 L61.8 23.8 L58.5 27.7 L54.5 34.7 L54.2 36.2 L53.3 37.5 L53.3 38.3 L52.7 39.5 L52.7 40.7 L50.7 46.3 L50.7 47.3 L49.3 51.2 L49.3 52.5Z"/></symbol></svg>
+
+<div class="wrap">
+  <nav class="nav" aria-label="Principal">
+    <div class="l"><div class="drop"><button class="dbtn" type="button" aria-haspopup="true" aria-expanded="false">Serviços</button><div class="dmenu"><a href="#/servico/bot-financeiro" class="dmenu-highlight">⚡ Automações de microsserviços</a><a href="#/servico/edicao-de-video">Edição de vídeo</a><a href="#/servico/trafego-pago">Tráfego Pago</a><a href="#/servico/sites">Sites & Landing Pages</a><a href="#/servico/marketing-digital">Marketing digital</a></div></div><a href="#processo">Como trabalhamos</a><a href="#/sobre">Sobre mim</a></div>
+    <a href="#" aria-label="Feerless, início"><svg class="f" viewBox="0 0 300 208" width="49" height="34"><use href="#fm"/></svg></a>
+    <div class="r">
+      <a class="igl" href="https://wa.me/5512987089203" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="mi mi-wa" aria-hidden="true"></i><span>WhatsApp</span></a>
+      <a class="igl" href="https://www.instagram.com/felipe.srll" target="_blank" rel="noopener" aria-label="Instagram"><i class="mi mi-ig" aria-hidden="true"></i><span>Instagram</span></a>
+      <a class="igl" href="#contato" aria-label="Contato"><i class="mi mi-ph" aria-hidden="true"></i><span>Contato</span></a>
+    </div>
+  </nav>
+  <div class="navline" aria-hidden="true"></div>
+
+  <header class="heroFull">
+    <div class="wrap heroGrid">
+      <div class="heroCol heroRotator" id="hero-rotator">
+        <div class="heroSlideWrapper">
+          <div class="heroSlide heroSlide-1 active" id="hero-slide-1">
+            <span class="lab heroKicker">Marketing digital</span>
+            <h1 class="heroTitle">Entre agora no<br>mundo da <span class="heroAccent">internet</span>.</h1>
+            <p class="heroSub">Sua estrutura digital pensada para transformar atenção em oportunidades.</p>
+            <div class="heroActs">
+              <a class="btn" href="https://wa.me/5512987089203?text=Ol%C3%A1%20Felipe,%20quero%20conversar%20sobre%20minha%20estrutura%20digital!" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+              <a class="ghost2" href="#servicos">Ver serviços <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </div>
+
+          <div class="heroSlide heroSlide-2" id="hero-slide-2">
+            <span class="lab heroKicker">Automações & Soluções Digitais</span>
+            <h1 class="heroTitle">Controle financeiro inteligente &<br><span class="heroAccent">estratégia digital</span>.</h1>
+            <p class="heroSub">Do bot inteligente de finanças no WhatsApp ao audiovisual e tráfego pago que impulsionam o seu negócio.</p>
+            <div class="heroActs">
+              <a class="btn pvb-btn-emerald" href="#/servico/bot-financeiro">Automações de microsserviços</a>
+              <a class="ghost2" href="#servicos">Explorar serviços <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="heroDots" role="tablist" aria-label="Alternar destaque">
+          <button class="heroDot active" type="button" aria-label="1: Entrar no mundo da internet" data-slide="0"><span class="heroDotBar"></span></button>
+          <button class="heroDot" type="button" aria-label="2: Controle financeiro inteligente" data-slide="1"><span class="heroDotBar"></span></button>
+        </div>
+      </div>
+      <div class="heroVisual" aria-hidden="true">
+        <div class="ring"></div>
+        <div class="ring ring2"></div>
+        <svg class="nodes" viewBox="0 0 360 360">
+          <g class="nline"><line x1="180" y1="180" x2="180" y2="26"/><text x="180" y="14">Bot Financeiro</text></g>
+          <g class="nline" style="--d:.5s"><line x1="180" y1="180" x2="314" y2="100"/><text x="314" y="88" text-anchor="middle">Automações</text></g>
+          <g class="nline" style="--d:1s"><line x1="180" y1="180" x2="334" y2="252"/><text x="334" y="268" text-anchor="middle">Tráfego pago</text></g>
+          <g class="nline" style="--d:1.5s"><line x1="180" y1="180" x2="180" y2="346"/><text x="180" y="358">Edição de Vídeo</text></g>
+          <g class="nline" style="--d:2s"><line x1="180" y1="180" x2="26" y2="252"/><text x="26" y="268" text-anchor="middle">Conversões</text></g>
+          <g class="nline" style="--d:2.5s"><line x1="180" y1="180" x2="46" y2="100"/><text x="46" y="88" text-anchor="middle">Sites & Estratégia</text></g>
+        </svg>
+        <svg class="f heroF" viewBox="0 0 300 208"><use href="#fm"/></svg>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main>
+  <section class="pin" id="servicos" aria-label="Serviços">
+  <div class="show">
+    <img class="bgv" src="img/foto-hero.jpeg" alt="" aria-hidden="true">
+    <div class="shade"></div>
+    <div class="vert"><a href="mailto:felipe.srll@hotmail.com">felipe.srll@hotmail.com</a></div>
+    <div class="slide s1 on"><div class="in"><span class="lab">Aplicações & Automação</span><h2>Automatização de <span class="out">microsserviços</span></h2><p>Criação de aplicações sob medida e automatização de microsserviços para descomplicar rotinas: bots inteligentes e ferramentas ágeis.</p><a class="ghost" href="#/servico/bot-financeiro">Explorar soluções</a></div></div>
+    <div class="slide s2"><div class="in"><span class="lab">Video maker</span><h2>Editor de <span class="out">vídeo</span></h2><p>Vídeos com ritmo, corte e impacto para prender a atenção e fazer sua marca ser lembrada.</p><a class="ghost" href="#/servico/edicao-de-video">Ver serviço</a></div></div>
+    <div class="slide s3"><div class="in"><span class="lab">Anúncios & Performance</span><h2>Tráfego <span class="out">pago</span></h2><p>Campanhas no Google e no Instagram que colocam sua oferta na frente de quem procura.</p><a class="ghost" href="#/servico/trafego-pago">Ver serviço</a></div></div>
+    <div class="slide s4"><div class="in"><span class="lab">Estratégia Digital</span><h2>Sites & <span class="out">Conversão</span></h2><p>Estrutura digital pensada para transformar atenção em oportunidades reais e clientes.</p><a class="ghost" href="#/servico/sites">Ver serviço</a></div></div>
+    <div class="cue"><span>Role</span><i><b></b></i></div>
+  </div>
+</section>
+
+  <section class="feature">
+    <div class="wrap">
+      <div>
+        <span class="small">Atendimento direto</span>
+        <h2><span class="w" style="--i:0">Menos</span> <span class="w" style="--i:0">promessa,</span> <span class="w" style="--i:1">mais</span> <span class="w" style="--i:1">resultado.</span></h2>
+        <p class="fblur">Você fala direto comigo, sem intermediários. Do seu bot de gestão financeira às campanhas de anúncios e edições de vídeo de alta retenção.</p>
+        <a class="btn" href="https://wa.me/5512987089203" target="_blank" rel="noopener">Pedir orçamento</a>
+      </div>
+      <svg class="f line" viewBox="0 0 300 208" aria-hidden="true"><use href="#fm"/></svg>
+    </div>
+  </section>
+
+  <section class="proc" id="processo">
+    <div class="wrap">
+      <h2>Como trabalhamos</h2>
+      <div class="steps-line" aria-hidden="true"></div>
+      <ol class="steps">
+        <li><strong>Conversa</strong>Entendo seu negócio, seu cliente e sua meta de vendas.</li>
+        <li><strong>Plano</strong>Você recebe a proposta com o que será feito e quanto custa.</li>
+        <li><strong>Execução</strong>Site no ar e campanhas rodando, com você acompanhando.</li>
+        <li><strong>Ajustes</strong>Analiso os números e melhoro o que traz mais retorno.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="partners" id="parceiros">
+    <div class="wrap">
+      <span class="lab">Parceiros</span>
+      <h2>Marcas que já confiaram no trabalho</h2>
+    </div>
+    <div class="marqwrap">
+      <div class="marquee">
+        <span class="plogo">Empresa A</span>
+        <span class="plogo">Empresa B</span>
+        <span class="plogo">Empresa C</span>
+        <span class="plogo">Empresa D</span>
+        <span class="plogo">Empresa E</span>
+        <span class="plogo">Empresa F</span>
+        <span class="plogo" aria-hidden="true">Empresa A</span>
+        <span class="plogo" aria-hidden="true">Empresa B</span>
+        <span class="plogo" aria-hidden="true">Empresa C</span>
+        <span class="plogo" aria-hidden="true">Empresa D</span>
+        <span class="plogo" aria-hidden="true">Empresa E</span>
+        <span class="plogo" aria-hidden="true">Empresa F</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contato">
+    <div class="wrap">
+      <h2>Vamos conversar sobre o seu projeto?</h2>
+      <div class="acts">
+        <a class="btn" href="https://wa.me/5512987089203" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        <a class="ul igl" href="https://www.instagram.com/felipe.srll" target="_blank" rel="noopener"><svg class="igi" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><use href="#igs"/></svg>@felipe.srll</a>
+        <a class="ul" href="mailto:felipe.srll@hotmail.com">felipe.srll@hotmail.com</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><svg class="f" viewBox="0 0 300 208" width="32" height="22" aria-label="Feerless"><use href="#fm"/></svg><a class="igl" href="https://www.instagram.com/felipe.srll" target="_blank" rel="noopener" aria-label="Instagram"><svg class="igi" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><use href="#igs"/></svg>@felipe.srll</a><span>© 2026 Feerless. Todos os direitos reservados.</span></div></footer>
+<script src="script.js"></script>
+</body>
+</html>
