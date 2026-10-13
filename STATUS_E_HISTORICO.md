@@ -156,10 +156,17 @@ O Design System foi integralmente extraído e padronizado em `.stitch/DESIGN.md`
   - O rodapé (`<footer>`) foi reduzido a uma barra fina, elegante e minimalista de 26px de padding, com fundo preto obsidian contínuo (`#080B08`), stroke superior sutil de luz e os links rápidos essenciais (WhatsApp, Instagram, e-mail e copyright).
   - O `id="contato"` foi mantido no próprio `<footer>`, garantindo que links do menu continuem ancorando suavemente até o final da página.
 
+- **Menu Superior / Navbar em Alto Contraste Volt Lime (`#D4FF32`):**
+  - Toda a barra de navegação superior (`.site-header`) foi atualizada para o fundo **Volt Lime (`#D4FF32`)** de largura total (100% viewport).
+  - Logotipo em vetor Feerless (`.nav .f`), tipografia e botões/links configurados em **Preto Profundo (`#080B08`)**.
+  - A linha divisória inferior (`.navline`) configurada em preto com opacidade refinada (25%).
+  - Efeitos de hover e foco invertem de forma limpa para pills pretas com texto/ícones em Volt Lime (`#D4FF32`), preservando o menu dropdown de serviços e os botões sociais com ícones SVG.
+
 - **Seção "Como Trabalhamos" em Alto Contraste Volt Lime (`#D4FF32`):**
   - Fundo preenchido no tom primário **Volt Lime (`#D4FF32`)** criando um ponto de contraste gráfico de alto impacto editorial.
   - Tipografia de títulos, números em estilo display Anton e textos das 4 etapas configurados em **Preto Profundo (`#080B08`)**.
   - A linha animada contínua de progresso (`.steps-line`) redesenhada em **Preto (`#080B08`)** acompanhando a rolagem com precisão.
+
 
 ---
 
