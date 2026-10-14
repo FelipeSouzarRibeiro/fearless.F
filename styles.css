@@ -494,33 +494,39 @@ footer .f{
   color:#080B08;
   padding-left:26px;
 }
-.nav .l .drop .dmenu a.dmenu-highlight{
-  color:var(--volt);
-  font-weight:700;
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-.nav .l .drop .dmenu a.dmenu-highlight:hover{
-  background:#D4FF32;
-  color:#080B08;
-}
 .navline{height:1px;background:#080B08;opacity:0.25}
 
 /* Páginas de serviço / sobre */
-.pageview{position:fixed;inset:0;background:var(--bg);color:var(--ink);z-index:60;overflow:auto}
-.pv-bgv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;z-index:0;display:none;transition:opacity .4s ease}
-.pageview.pv-video{background:#080B08;color:#FFFFFF;display:block;min-height:100vh}
+.pageview,
+.pageview.pv-video{
+  position:fixed;
+  inset:0;
+  background:#000000 !important;
+  color:#FFFFFF;
+  z-index:60;
+  overflow:auto;
+  min-height:100vh;
+}
+.pv-bgv,
+.pageview .pv-bgv,
+.pageview.pv-video .pv-bgv{
+  display:none !important;
+  opacity:0 !important;
+  visibility:hidden !important;
+  pointer-events:none;
+}
+.pageview .pv-top,
 .pageview.pv-video .pv-top{
   position:sticky;
   top:0;
   color:#FFFFFF;
-  background:rgba(8,11,8,0.88);
+  background:rgba(0,0,0,0.92);
   backdrop-filter:blur(18px);
   -webkit-backdrop-filter:blur(18px);
   border-bottom:1px solid rgba(255,255,255,0.12);
   z-index:50;
 }
+.pageview .pv-close,
 .pageview.pv-video .pv-close{
   border:1px solid rgba(255,255,255,0.22);
   background:rgba(255,255,255,0.06);
@@ -535,24 +541,13 @@ footer .f{
   cursor:pointer;
   transition:all .22s ease;
 }
+.pageview .pv-close:hover,
 .pageview.pv-video .pv-close:hover{
   background:#FFFFFF;
   color:#080B08;
   border-color:#FFFFFF;
   transform:scale(1.08);
   box-shadow:0 6px 18px rgba(255,255,255,0.25);
-}
-.pageview.pv-video .pv-bgv{
-  display:block;
-  position:fixed;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  opacity:.12;
-  filter:brightness(.85) contrast(1.1);
-  pointer-events:none;
-  z-index:0;
 }
 
 .pv-top,.pv-body{position:relative;z-index:1}
@@ -580,7 +575,7 @@ footer .f{
   box-shadow:0 6px 18px rgba(255,255,255,0.25);
 }
 .pv-body{max-width:680px;margin:0 auto;padding:60px 28px 100px;text-align:center}
-#pv-lab{font-family:var(--font-label);font-size:.76rem;letter-spacing:.28em;text-transform:uppercase;font-weight:700;margin-bottom:14px;color:rgba(255,255,255,0.85)}
+#pv-lab{display:none !important}
 #pv-title{font-family:var(--font-headline);font-size:clamp(2.2rem,6vw,3.6rem);font-weight:700;letter-spacing:-.035em;margin:0 0 20px;color:#FFFFFF}
 #pv-text{font-family:var(--font-body);max-width:46ch;margin:0 auto 32px;color:rgba(255,255,255,0.82);line-height:1.6}
 
@@ -593,25 +588,7 @@ footer .f{
 /* Hero */
 .pvv-hero{padding:54px 0 68px;text-align:center;position:relative}
 .pvs-page .pvv-hero{padding:16px 0 60px}
-.pvv-badge-row{display:flex;justify-content:center;align-items:center;gap:12px;margin-bottom:24px;flex-wrap:wrap}
-.pvv-badge{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:8px 18px;
-  border-radius:9999px;
-  font-family:var(--font-label);
-  font-size:.76rem;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  font-weight:600;
-  background:rgba(255,255,255,0.06);
-  border:1px solid rgba(255,255,255,0.18);
-  color:#FFFFFF;
-  backdrop-filter:blur(10px);
-  -webkit-backdrop-filter:blur(10px);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,0.14);
-}
+.pvv-badge-row,.pvv-badge{display:none !important}
 .pvv-badge-alt{border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.85)}
 .pvv-dot{
   width:8px;
@@ -1210,6 +1187,810 @@ footer .f{
   flex-wrap:wrap;
 }
 
+/* ===================================================
+   Tema Volt Lime (#D4FF32) para a Aba Edição de Vídeo
+   =================================================== */
+.pageview.pv-theme-volt,
+.pageview:has(#pv-video-content:not([hidden])) {
+  background: #D4FF32 !important;
+  color: #080B08 !important;
+}
+
+/* Top bar em preto */
+.pageview.pv-theme-volt .pv-top,
+.pageview:has(#pv-video-content:not([hidden])) .pv-top {
+  background: #000000 !important;
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+}
+.pageview.pv-theme-volt .pv-home,
+.pageview:has(#pv-video-content:not([hidden])) .pv-home {
+  color: #FFFFFF;
+}
+.pageview.pv-theme-volt .pv-home .f,
+.pageview:has(#pv-video-content:not([hidden])) .pv-home .f {
+  fill: #FFFFFF !important;
+}
+.pageview.pv-theme-volt .pv-close,
+.pageview:has(#pv-video-content:not([hidden])) .pv-close {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #FFFFFF;
+}
+.pageview.pv-theme-volt .pv-close:hover,
+.pageview.pv-theme-volt .pv-close:focus-visible,
+.pageview:has(#pv-video-content:not([hidden])) .pv-close:hover,
+.pageview:has(#pv-video-content:not([hidden])) .pv-close:focus-visible {
+  background: #FFFFFF;
+  color: #080B08;
+  border-color: #FFFFFF;
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.25);
+}
+
+/* Tipografia e cabeçalhos no Hero */
+.pageview.pv-theme-volt #pv-video-content,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content {
+  color: #080B08;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-title,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-title {
+  color: #080B08;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-gradient,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-gradient {
+  background: linear-gradient(135deg, #080B08 0%, #202b1c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 3px solid rgba(8, 11, 8, 0.7);
+  padding-bottom: 2px;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-lead,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-lead {
+  color: rgba(8, 11, 8, 0.86);
+  font-weight: 500;
+}
+
+/* Botões do Hero */
+.pageview.pv-theme-volt #pv-video-content .pvv-btn-primary,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-btn-primary {
+  background: #080B08;
+  color: #FFFFFF;
+  border-color: #080B08;
+  box-shadow: 0 10px 28px rgba(8, 11, 8, 0.25);
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-btn-primary:hover,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-btn-primary:hover {
+  background: #FFFFFF;
+  color: #080B08;
+  border-color: #080B08;
+  box-shadow: 0 14px 32px rgba(8, 11, 8, 0.35);
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-btn-ghost,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-btn-ghost {
+  background: rgba(8, 11, 8, 0.06);
+  border: 1.5px solid rgba(8, 11, 8, 0.4);
+  color: #080B08;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-btn-ghost:hover,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-btn-ghost:hover {
+  background: #080B08;
+  color: #D4FF32;
+  border-color: #080B08;
+  box-shadow: 0 10px 24px rgba(8, 11, 8, 0.25);
+}
+
+/* Cards de Métricas (Hero) em Obsidian Glass */
+.pageview.pv-theme-volt #pv-video-content .pvv-metric-item,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-metric-item {
+  background: #080B08;
+  border: 1px solid rgba(8, 11, 8, 0.3);
+  color: #FFFFFF;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.16);
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-metric-item:hover,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-metric-item:hover {
+  border-color: #080B08;
+  transform: translateY(-3px);
+  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.25);
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-metric-icon,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-metric-icon {
+  background: rgba(212, 255, 50, 0.12);
+  border: 1px solid rgba(212, 255, 50, 0.3);
+  color: #D4FF32;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-metric-item:hover .pvv-metric-icon,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-metric-item:hover .pvv-metric-icon {
+  background: #D4FF32;
+  color: #080B08;
+  border-color: #D4FF32;
+  box-shadow: 0 0 14px rgba(212, 255, 50, 0.4);
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-metric-item strong,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-metric-item strong {
+  color: #FFFFFF;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-metric-item p,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-metric-item p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* Seção de Portfólio */
+.pageview.pv-theme-volt #pv-video-content .pvv-sec-tag,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-sec-tag {
+  color: rgba(8, 11, 8, 0.75);
+  font-weight: 800;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-sec-title,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-sec-title {
+  color: #080B08;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-sec-sub,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-sec-sub {
+  color: rgba(8, 11, 8, 0.84);
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-filter-btn,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-filter-btn {
+  background: rgba(8, 11, 8, 0.08);
+  border: 1.5px solid rgba(8, 11, 8, 0.22);
+  color: #080B08;
+  font-weight: 600;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-filter-btn:hover,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-filter-btn:hover {
+  background: rgba(8, 11, 8, 0.16);
+  border-color: #080B08;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-filter-btn.active,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-filter-btn.active {
+  background: #080B08;
+  color: #D4FF32;
+  border-color: #080B08;
+  box-shadow: 0 8px 22px rgba(8, 11, 8, 0.25);
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-count,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-count {
+  background: rgba(8, 11, 8, 0.14);
+  color: #080B08;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-filter-btn.active .pvv-count,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-filter-btn.active .pvv-count {
+  background: rgba(212, 255, 50, 0.25);
+  color: #D4FF32;
+}
+
+/* Cards do Portfólio */
+.pageview.pv-theme-volt #pv-video-content .pvv-card,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-card {
+  background: #080B08;
+  border: 1px solid rgba(8, 11, 8, 0.3);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-card:hover,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-card:hover {
+  border-color: #080B08;
+  transform: translateY(-6px);
+  box-shadow: 0 26px 55px rgba(0, 0, 0, 0.28), 0 0 0 2px #080B08;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-card-category,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-card-category {
+  color: #D4FF32;
+  font-weight: 700;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-card-title,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-card-title {
+  color: #FFFFFF;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-card-desc,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-card-desc {
+  color: rgba(255, 255, 255, 0.78);
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-tags span,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-tags span {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: rgba(255, 255, 255, 0.9);
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-card:hover .pvv-tags span,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-card:hover .pvv-tags span {
+  border-color: rgba(212, 255, 50, 0.4);
+  color: #D4FF32;
+}
+
+/* Seção de Processo / Metodologia */
+.pageview.pv-theme-volt #pv-video-content .pvv-process-sec,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-process-sec {
+  background: rgba(8, 11, 8, 0.04);
+  border-top: 1px solid rgba(8, 11, 8, 0.14);
+  border-bottom: 1px solid rgba(8, 11, 8, 0.14);
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-step-card,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-step-card {
+  background: #080B08;
+  border: 1px solid rgba(8, 11, 8, 0.25);
+  color: #FFFFFF;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.15);
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-step-card:hover,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-step-card:hover {
+  border-color: #080B08;
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-step-num,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-step-num {
+  color: #D4FF32;
+  opacity: 0.85;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-step-card:hover .pvv-step-num,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-step-card:hover .pvv-step-num {
+  opacity: 1;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-step-card h4,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-step-card h4 {
+  color: #FFFFFF;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-step-card p,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-step-card p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* Planos / Pacotes */
+.pageview.pv-theme-volt #pv-video-content .pvv-packages-sec .pvv-sec-tag,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-packages-sec .pvv-sec-tag {
+  color: rgba(8, 11, 8, 0.75);
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-packages-sec .pvv-sec-title,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-packages-sec .pvv-sec-title {
+  color: #080B08;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-plan-card,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-plan-card {
+  background: #080B08;
+  border: 1px solid rgba(8, 11, 8, 0.25);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
+  color: #FFFFFF;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-plan-card:hover,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-plan-card:hover {
+  border-color: #080B08;
+  transform: translateY(-4px);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.25);
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-plan-badge,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-plan-badge {
+  color: #D4FF32;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-plan-head h3,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-plan-head h3 {
+  color: #FFFFFF;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-plan-for,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-plan-for {
+  color: rgba(255, 255, 255, 0.78);
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-plan-list li,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-plan-list li {
+  color: rgba(255, 255, 255, 0.88);
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-plan-list li span,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-plan-list li span {
+  color: #D4FF32;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-plan-btn,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-plan-btn {
+  border: 1.5px solid rgba(212, 255, 50, 0.45);
+  color: #D4FF32;
+  background: rgba(212, 255, 50, 0.08);
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-plan-btn:hover,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-plan-btn:hover {
+  background: #D4FF32;
+  color: #080B08;
+  border-color: #D4FF32;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-plan-featured,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-plan-featured {
+  background: #040604;
+  border: 2px solid #080B08;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.32);
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-plan-popular,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-plan-popular {
+  background: #D4FF32;
+  color: #080B08;
+  border: 1px solid #080B08;
+  font-weight: 800;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-plan-btn-featured,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-plan-btn-featured {
+  background: #D4FF32;
+  color: #080B08;
+  border: 1px solid #D4FF32;
+  font-weight: 700;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-plan-btn-featured:hover,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-plan-btn-featured:hover {
+  background: #FFFFFF;
+  color: #080B08;
+  border-color: #FFFFFF;
+}
+
+/* Banner de CTA Final */
+.pageview.pv-theme-volt #pv-video-content .pvv-cta-box,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-cta-box {
+  background: #080B08;
+  border: 1px solid rgba(8, 11, 8, 0.3);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.25);
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-cta-box h2,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-cta-box h2 {
+  color: #FFFFFF;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-cta-box p,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-cta-box p {
+  color: rgba(255, 255, 255, 0.82);
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-cta-actions .pvv-btn-primary,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-cta-actions .pvv-btn-primary {
+  background: #D4FF32;
+  color: #080B08;
+  border-color: #D4FF32;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-cta-actions .pvv-btn-primary:hover,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-cta-actions .pvv-btn-primary:hover {
+  background: #FFFFFF;
+  color: #080B08;
+  border-color: #FFFFFF;
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-cta-actions .pvv-btn-ghost,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-cta-actions .pvv-btn-ghost {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.06);
+}
+.pageview.pv-theme-volt #pv-video-content .pvv-cta-actions .pvv-btn-ghost:hover,
+.pageview:has(#pv-video-content:not([hidden])) #pv-video-content .pvv-cta-actions .pvv-btn-ghost:hover {
+  background: #FFFFFF;
+  color: #080B08;
+  border-color: #FFFFFF;
+}
+
+/* Área de Ferramentas de Edição & Stack */
+.pvv-tools-box {
+  padding: 64px 32px 54px;
+}
+.pvv-tools-box .pvv-sec-tag {
+  color: #D4FF32;
+  font-weight: 800;
+  display: block;
+  margin-bottom: 12px;
+}
+.pvv-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 980px;
+  margin: 40px auto 44px;
+}
+@media (min-width: 580px) {
+  .pvv-tools-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+}
+@media (min-width: 880px) {
+  .pvv-tools-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+  }
+}
+
+/* Card de Ferramenta com efeito "inflar" (inspirado no padrão de empresas parceiras) */
+.pvv-tool-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 14px 20px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.015) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  cursor: pointer;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.5),
+    0 8px 24px rgba(0, 0, 0, 0.4);
+  transition: all .32s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: transform, box-shadow;
+  text-align: center;
+}
+
+/* Efeito de "inflar" no hover */
+.pvv-tool-card:hover,
+.pvv-tool-card:focus-visible {
+  transform: translateY(-8px) scale(1.06);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.03) 100%);
+  border-color: #D4FF32;
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.5),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.8),
+    0 18px 38px rgba(0, 0, 0, 0.75),
+    0 0 24px rgba(212, 255, 50, 0.25);
+  outline: none;
+}
+
+.pvv-tool-icon-wrap {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  margin-bottom: 14px;
+  background: #080B08;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  transition: all .32s cubic-bezier(0.34, 1.56, 0.64, 1);
+  flex-shrink: 0;
+}
+
+.pvv-tool-icon-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .32s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.pvv-tool-card:hover .pvv-tool-icon-wrap {
+  border-color: rgba(212, 255, 50, 0.6);
+  transform: scale(1.1);
+  box-shadow: 0 0 18px rgba(212, 255, 50, 0.35);
+}
+
+.pvv-tool-card:hover .pvv-tool-icon-wrap img {
+  transform: scale(1.06);
+}
+
+.pvv-tool-name {
+  font-family: var(--font-headline);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -.015em;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+  line-height: 1.25;
+  transition: color .25s ease;
+}
+
+.pvv-tool-card:hover .pvv-tool-name {
+  color: #D4FF32;
+}
+
+.pvv-tool-role {
+  font-family: var(--font-label);
+  font-size: .72rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* ===================================================
+   Tema Tráfego Pago (#D4FF32 Top Bar & Seções Intercaladas)
+   =================================================== */
+
+/* Barra superior na cor #D4FF32 */
+.pageview.pv-theme-trafego .pv-top,
+.pageview:has(#pv-trafego-content:not([hidden])) .pv-top {
+  background: #D4FF32 !important;
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(8, 11, 8, 0.18);
+  color: #080B08;
+}
+.pageview.pv-theme-trafego .pv-home,
+.pageview:has(#pv-trafego-content:not([hidden])) .pv-home {
+  color: #080B08;
+}
+.pageview.pv-theme-trafego .pv-home .f,
+.pageview:has(#pv-trafego-content:not([hidden])) .pv-home .f {
+  fill: #080B08 !important;
+}
+.pageview.pv-theme-trafego .pv-close,
+.pageview:has(#pv-trafego-content:not([hidden])) .pv-close {
+  background: rgba(8, 11, 8, 0.08);
+  border: 1px solid rgba(8, 11, 8, 0.22);
+  color: #080B08;
+}
+.pageview.pv-theme-trafego .pv-close:hover,
+.pageview.pv-theme-trafego .pv-close:focus-visible,
+.pageview:has(#pv-trafego-content:not([hidden])) .pv-close:hover,
+.pageview:has(#pv-trafego-content:not([hidden])) .pv-close:focus-visible {
+  background: #080B08;
+  color: #D4FF32;
+  border-color: #080B08;
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(8, 11, 8, 0.25);
+}
+
+/* Remover padding extra inferior para acabamento rente */
+#pv-trafego-content {
+  padding-bottom: 0;
+}
+
+/* SEÇÃO 1: PRETO (Hero) */
+#pv-trafego-content .pvt-sec-hero {
+  background: #000000;
+  color: #FFFFFF;
+  padding: 54px 0 72px;
+}
+#pv-trafego-content .pvt-sec-hero .pvv-title {
+  color: #FFFFFF;
+}
+#pv-trafego-content .pvt-sec-hero .pvv-lead {
+  color: rgba(255, 255, 255, 0.82);
+}
+#pv-trafego-content .pvt-sec-hero .pvv-metric-item {
+  background: var(--surface-glass);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+}
+#pv-trafego-content .pvt-sec-hero .pvv-metric-item strong {
+  color: #FFFFFF;
+}
+#pv-trafego-content .pvt-sec-hero .pvv-metric-item p {
+  color: rgba(255, 255, 255, 0.75);
+}
+#pv-trafego-content .pvt-sec-hero .pvv-metric-icon {
+  background: rgba(212, 255, 50, 0.12);
+  border: 1px solid rgba(212, 255, 50, 0.3);
+  color: #D4FF32;
+}
+
+/* SEÇÃO 2: #D4FF32 (Estratégias & Portfólio) */
+#pv-trafego-content .pvt-sec-portfolio {
+  background: #D4FF32 !important;
+  color: #080B08 !important;
+  padding: 80px 0 96px;
+}
+#pv-trafego-content .pvt-sec-portfolio .pvv-sec-tag {
+  color: rgba(8, 11, 8, 0.75);
+  font-weight: 800;
+}
+#pv-trafego-content .pvt-sec-portfolio .pvv-sec-title {
+  color: #080B08;
+}
+#pv-trafego-content .pvt-sec-portfolio .pvv-sec-sub {
+  color: rgba(8, 11, 8, 0.84);
+}
+#pv-trafego-content .pvt-sec-portfolio .pvt-filter-btn {
+  background: rgba(8, 11, 8, 0.08);
+  border: 1.5px solid rgba(8, 11, 8, 0.22);
+  color: #080B08;
+  font-weight: 600;
+}
+#pv-trafego-content .pvt-sec-portfolio .pvt-filter-btn:hover {
+  background: rgba(8, 11, 8, 0.16);
+  border-color: #080B08;
+}
+#pv-trafego-content .pvt-sec-portfolio .pvt-filter-btn.active {
+  background: #080B08;
+  color: #D4FF32;
+  border-color: #080B08;
+  box-shadow: 0 8px 22px rgba(8, 11, 8, 0.25);
+}
+#pv-trafego-content .pvt-sec-portfolio .pvv-count {
+  background: rgba(8, 11, 8, 0.14);
+  color: #080B08;
+}
+#pv-trafego-content .pvt-sec-portfolio .pvt-filter-btn.active .pvv-count {
+  background: rgba(212, 255, 50, 0.25);
+  color: #D4FF32;
+}
+#pv-trafego-content .pvt-sec-portfolio .pvt-card {
+  background: #080B08;
+  border: 1px solid rgba(8, 11, 8, 0.3);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
+}
+#pv-trafego-content .pvt-sec-portfolio .pvt-card:hover {
+  border-color: #080B08;
+  transform: translateY(-6px);
+  box-shadow: 0 26px 55px rgba(0, 0, 0, 0.28), 0 0 0 2px #080B08;
+}
+#pv-trafego-content .pvt-sec-portfolio .pvv-card-category {
+  color: #D4FF32;
+  font-weight: 700;
+}
+#pv-trafego-content .pvt-sec-portfolio .pvv-card-title {
+  color: #FFFFFF;
+}
+#pv-trafego-content .pvt-sec-portfolio .pvv-card-desc {
+  color: rgba(255, 255, 255, 0.78);
+}
+#pv-trafego-content .pvt-sec-portfolio .pvv-tags span {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: rgba(255, 255, 255, 0.9);
+}
+#pv-trafego-content .pvt-sec-portfolio .pvt-card:hover .pvv-tags span {
+  border-color: rgba(212, 255, 50, 0.4);
+  color: #D4FF32;
+}
+
+/* SEÇÃO 3: PRETO (O que está incluso na gestão) */
+#pv-trafego-content .pvt-sec-incluso {
+  background: #000000 !important;
+  color: #FFFFFF !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 80px 0 96px;
+}
+#pv-trafego-content .pvt-sec-incluso .pvv-sec-tag {
+  color: rgba(212, 255, 50, 0.9);
+}
+#pv-trafego-content .pvt-sec-incluso .pvv-sec-title {
+  color: #FFFFFF;
+}
+#pv-trafego-content .pvt-sec-incluso .pvv-sec-sub {
+  color: rgba(255, 255, 255, 0.8);
+}
+#pv-trafego-content .pvt-sec-incluso .pvv-step-card {
+  background: var(--surface-glass);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+}
+#pv-trafego-content .pvt-sec-incluso .pvv-step-card h4 {
+  color: #FFFFFF;
+}
+#pv-trafego-content .pvt-sec-incluso .pvv-step-card p {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+/* SEÇÃO 4: #D4FF32 (Metodologia / Ciclo de Tráfego) */
+#pv-trafego-content .pvt-sec-metodologia {
+  background: #D4FF32 !important;
+  color: #080B08 !important;
+  border-top: none;
+  border-bottom: none;
+  padding: 84px 0 96px;
+}
+#pv-trafego-content .pvt-sec-metodologia .pvv-sec-tag {
+  color: rgba(8, 11, 8, 0.75);
+  font-weight: 800;
+}
+#pv-trafego-content .pvt-sec-metodologia .pvv-sec-title {
+  color: #080B08;
+}
+#pv-trafego-content .pvt-sec-metodologia .pvv-sec-sub {
+  color: rgba(8, 11, 8, 0.84);
+}
+#pv-trafego-content .pvt-sec-metodologia .pvv-step-card {
+  background: #080B08;
+  border: 1px solid rgba(8, 11, 8, 0.25);
+  color: #FFFFFF;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.15);
+}
+#pv-trafego-content .pvt-sec-metodologia .pvv-step-card:hover {
+  border-color: #080B08;
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+}
+#pv-trafego-content .pvt-sec-metodologia .pvv-step-num {
+  color: #D4FF32;
+  opacity: 0.85;
+}
+#pv-trafego-content .pvt-sec-metodologia .pvv-step-card:hover .pvv-step-num {
+  opacity: 1;
+}
+#pv-trafego-content .pvt-sec-metodologia .pvv-step-card h4 {
+  color: #FFFFFF;
+}
+#pv-trafego-content .pvt-sec-metodologia .pvv-step-card p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* SEÇÃO 5: PRETO (Planos de Tráfego Pago) */
+#pv-trafego-content .pvt-sec-planos {
+  background: #000000 !important;
+  color: #FFFFFF !important;
+  padding: 84px 0 100px;
+}
+#pv-trafego-content .pvt-sec-planos .pvv-sec-tag {
+  color: rgba(212, 255, 50, 0.9);
+}
+#pv-trafego-content .pvt-sec-planos .pvv-sec-title {
+  color: #FFFFFF;
+}
+#pv-trafego-content .pvt-sec-planos .pvv-plan-card {
+  background: var(--surface-glass);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+}
+#pv-trafego-content .pvt-sec-planos .pvv-plan-card:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+}
+#pv-trafego-content .pvt-sec-planos .pvv-plan-featured {
+  background: rgba(17, 26, 18, 0.9);
+  border-color: #D4FF32;
+  box-shadow: inset 0 1px 0 rgba(212, 255, 50, 0.4), 0 24px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(212, 255, 50, 0.15);
+}
+#pv-trafego-content .pvt-sec-planos .pvv-plan-popular {
+  background: #D4FF32;
+  color: #080B08;
+}
+#pv-trafego-content .pvt-sec-planos .pvv-plan-btn-featured {
+  background: #D4FF32;
+  color: #080B08;
+  border-color: #D4FF32;
+}
+
+/* SEÇÃO 6: #D4FF32 (FAQ Tráfego Pago) */
+#pv-trafego-content .pvt-sec-faq {
+  background: #D4FF32 !important;
+  color: #080B08 !important;
+  padding: 84px 0 96px;
+}
+#pv-trafego-content .pvt-sec-faq .pvv-sec-tag {
+  color: rgba(8, 11, 8, 0.75);
+  font-weight: 800;
+}
+#pv-trafego-content .pvt-sec-faq .pvv-sec-title {
+  color: #080B08;
+}
+#pv-trafego-content .pvt-sec-faq .pvs-faq-card {
+  background: #080B08;
+  border: 1px solid rgba(8, 11, 8, 0.25);
+  color: #FFFFFF;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.15);
+}
+#pv-trafego-content .pvt-sec-faq .pvs-faq-card:hover {
+  border-color: #080B08;
+  transform: translateY(-3px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.22);
+}
+#pv-trafego-content .pvt-sec-faq .pvs-faq-card h4 {
+  color: #FFFFFF;
+}
+#pv-trafego-content .pvt-sec-faq .pvs-faq-card p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* SEÇÃO 7: PRETO (Banner Final CTA) */
+#pv-trafego-content .pvt-sec-cta {
+  background: #000000 !important;
+  color: #FFFFFF !important;
+  padding: 72px 0 96px;
+}
+#pv-trafego-content .pvt-sec-cta .pvv-cta-box {
+  background: linear-gradient(135deg, rgba(20, 28, 21, 0.95) 0%, rgba(10, 14, 10, 0.98) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #FFFFFF;
+}
+#pv-trafego-content .pvt-sec-cta .pvv-cta-box h2 {
+  color: #FFFFFF;
+}
+#pv-trafego-content .pvt-sec-cta .pvv-cta-box p {
+  color: rgba(255, 255, 255, 0.8);
+}
+#pv-trafego-content .pvt-sec-cta .pvv-btn-primary {
+  background: #D4FF32;
+  color: #080B08;
+  border-color: #D4FF32;
+}
+#pv-trafego-content .pvt-sec-cta .pvv-btn-primary:hover {
+  background: #FFFFFF;
+  color: #080B08;
+  border-color: #FFFFFF;
+}
+
 /* Modal Lightbox */
 .pv-lightbox{
   position:fixed;
@@ -1622,7 +2403,7 @@ footer .f{
 .heroVisual{position:relative;display:grid;place-items:center;aspect-ratio:1/1;max-width:360px;margin:0 auto;width:100%;perspective:900px}
 .ring{position:absolute;inset:4%;border-radius:50%;border:1px solid rgba(255,255,255,0.25);opacity:.3}
 .ring2{inset:16%;opacity:.5}
-.heroF{width:32%;height:auto;color:#FFFFFF;position:relative;z-index:1;transition:filter .35s ease}
+.heroF{width:32%;height:auto;color:#FFFFFF;position:relative;z-index:1;transition:filter .35s ease;transform-box:fill-box;transform-origin:center}
 @media (max-width:820px){
   .heroGrid{grid-template-columns:1fr;text-align:center;padding:44px 0 36px}
   .heroRotator{min-height:380px}
@@ -2270,9 +3051,23 @@ footer .f{
 /* Temas Visuais */
 /* 1. Emerald (Bot Financeiro) */
 .pvb-theme-emerald{
-  background:linear-gradient(180deg,rgba(16,185,129,0.08) 0%,rgba(10,22,18,0.95) 40%,rgba(8,12,12,0.98) 100%);
-  border:1px solid rgba(16,185,129,0.22);
-  box-shadow:0 24px 60px rgba(0,0,0,0.65), inset 0 1px 0 rgba(16,185,129,0.25);
+  background:
+    radial-gradient(ellipse 90% 45% at 50% 0%, rgba(16,185,129,0.24) 0%, transparent 70%),
+    linear-gradient(180deg, rgba(16,185,129,0.18) 0%, rgba(11,36,27,0.94) 35%, rgba(9,26,20,0.96) 75%, rgba(7,18,14,0.98) 100%);
+  border:1px solid rgba(16,185,129,0.36);
+  box-shadow:0 24px 60px rgba(0,0,0,0.65), inset 0 1px 0 rgba(16,185,129,0.4), 0 0 50px rgba(16,185,129,0.12);
+}
+.pvb-theme-emerald .pvv-metric-item{
+  background:rgba(16,185,129,0.07);
+  border-color:rgba(16,185,129,0.2);
+}
+.pvb-theme-emerald .pvb-icon-box{
+  background:rgba(16,185,129,0.16);
+  color:#34D399;
+}
+.pvb-theme-emerald .pvb-highlights-card{
+  background:rgba(16,185,129,0.06);
+  border-color:rgba(16,185,129,0.22);
 }
 
 /* 2. Electric Blue (Atendimento & Triagem) */

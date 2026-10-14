@@ -201,35 +201,31 @@ function route(){
  if(r){
   pv.hidden=false;document.body.style.overflow='hidden';pv.scrollTop=0;
   hideAllSubpages();
+  pv.classList.add('pv-video');
+  pv.classList.remove('pv-theme-volt');
+  pv.classList.remove('pv-theme-trafego');
   if(location.hash==='#/servico/bot-financeiro'||location.hash==='#/servico/automacoes'){
-   pv.classList.add('pv-video');
    if(pvBotContent) pvBotContent.hidden=false;
-   if(pvBgv){pvBgv.preload='auto';pvBgv.play&&pvBgv.play().catch(function(){});}
   }else if(location.hash==='#/servico/edicao-de-video'){
-   pv.classList.add('pv-video');
+   pv.classList.add('pv-theme-volt');
    if(pvVideoContent) pvVideoContent.hidden=false;
-   if(pvBgv){pvBgv.preload='auto';pvBgv.play&&pvBgv.play().catch(function(){});}
   }else if(location.hash==='#/servico/sites'){
-   pv.classList.add('pv-video');
    if(pvSitesContent) pvSitesContent.hidden=false;
-   if(pvBgv){pvBgv.preload='auto';pvBgv.play&&pvBgv.play().catch(function(){});}
   }else if(location.hash==='#/servico/trafego-pago'){
-   pv.classList.add('pv-video');
+   pv.classList.add('pv-theme-trafego');
    if(pvTrafegoContent) pvTrafegoContent.hidden=false;
-   if(pvBgv){pvBgv.preload='auto';pvBgv.play&&pvBgv.play().catch(function(){});}
   }else if(location.hash==='#/servico/marketing-digital'){
-   pv.classList.add('pv-video');
    if(pvMktContent) pvMktContent.hidden=false;
-   if(pvBgv){pvBgv.preload='auto';pvBgv.play&&pvBgv.play().catch(function(){});}
   }else{
-   pv.classList.remove('pv-video');
    if(pvGenericBody) pvGenericBody.hidden=false;
    pvLab.textContent=r.lab;pvTitle.textContent=r.title;pvText.textContent=r.text;
-   if(pvBgv) pvBgv.pause&&pvBgv.pause();
   }
+  if(pvBgv) pvBgv.pause&&pvBgv.pause();
  }else{
   pv.hidden=true;document.body.style.overflow='';
   pv.classList.remove('pv-video');
+  pv.classList.remove('pv-theme-volt');
+  pv.classList.remove('pv-theme-trafego');
   if(pvBgv) pvBgv.pause&&pvBgv.pause();
   closeLightbox();
  }
