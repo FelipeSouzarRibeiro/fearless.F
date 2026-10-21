@@ -48,13 +48,23 @@ Todas as 5 abas de serviços foram transformadas de simples textos genéricos pa
 ---
 
 ### 💻 B. Criação de Sites & Landing Pages (`#/servico/sites`)
-- **Hero & Diferenciais:** Foco em páginas rápidas, ultra-otimizadas para mobile e preparadas para conversão/tráfego.
-- **Vitrine de Projetos (Templates & Modelos):**
+- **Identidade Visual & Tema Volt Lime (`#D4FF32`):**
+  - **Fundo Verde Padrão da Feerless:** Fundo da página em `#D4FF32` com barra superior preta fixa (`#000000`) e logotipo/botão fechar em branco.
+  - **Cards em Preto com Alto Relevo Tátil:** Todos os cartões de sites em preto profundo (`#080B08`) com efeito 3D em alto relevo no `:hover` (chanfros de luz no topo, sombra inferior e halo luminoso).
+  - **Lupa Reposicionada:** Ícone de zoom transferido do centro para o **canto inferior direito** da imagem do card, garantindo visão 100% livre do layout do site.
+- **Hero & Ações de Conversão Reordenadas:**
+  - 1º Botão (Primário): *"Ver empresas parceiras ↓"* apontando direto para o carrossel.
+  - 2º Botão (Secundário): *"Solicite seu orçamento →"* direcionando para o WhatsApp.
+- **Seção "Parceiros" (Carrossel Horizontal com Navegação por Setas):**
+  - **Inversão de Hierarquia:** Tag superior *"Estruturas digitais que geram autoridade"* e título principal `<h2>Parceiros</h2>`.
+  - **Design Limpo e Minimalista:** Removidas as pílulas sobrepostas nas fotos e tags excessivas para deixar a imagem de prévia e os dados dos sites em destaque sem poluição visual.
+  - **Trilha Horizontal com Setas:** Controles circulares de navegação anterior/próximo (`←` e `→`) com scroll suave, efeito snap magnético e suporte a touch/drag em celulares e tablets.
+  - *Espaço Íris – Haute Coiffure & Atelier de Beleza* (`img/site-espaco-iris.jpg`) — Caso real no ar com botão direto para visitar o site oficial (`https://felipesouzarribeiro.github.io/espe-o_iris/`).
   - *Landing Page SaaS & Tech* (`img/site-saas.jpg`)
-  - *Portal Corporativo & Advocacia* (`img/site-corporate.jpg`)
-  - *Página para Clínicas & Especialistas* (`img/site-clinic.jpg`)
-  - *Landing Page de Produto & E-commerce* (`img/site-ecommerce.jpg`)
-- **Lightbox de Demonstração:** Modal fullscreen para inspeção de layout com botão WhatsApp personalizado ("*Quero um site similar a este...*").
+  - *Portal Corporativo & Negócios* (`img/site-corporate.jpg`)
+  - *Estrutura Digital para Clínicas & Especialistas* (`img/site-clinic.jpg`)
+  - *Página de Lançamento & E-commerce* (`img/site-ecommerce.jpg`)
+- **Lightbox de Demonstração:** Modal fullscreen para inspeção de layout com botão WhatsApp personalizado e botão direto *"Visitar site no ar"*.
 - **Diferenciais Inclusos:** Design exclusivo, carregamento relâmpago, copy persuasiva e SEO técnico.
 - **Metodologia (4 passos):** Wireframe ➔ Design UI no Figma ➔ Código Limpo ➔ Publicação & Domínio.
 - **Pacotes Comerciais:** *Landing Page Express*, *Site Institucional Pro* e *Web App & Escala*.
@@ -183,11 +193,27 @@ O Design System foi integralmente extraído e padronizado em `.stitch/DESIGN.md`
   - Palavras *"Menos"* e *"mais"* no título principal destacadas na cor **Volt Lime (`#D4FF32`)** (`Menos promessa, mais resultado.`).
   - Marca d'água vetorial "F" suavizada com iluminação interativa em Volt Lime no hover.
 
-- **Seção "Marcas com quem trabalho" (Grid Estático & Alto Relevo Tátil):**
-  - O antigo letreiro móvel (marquee contínuo) foi substituído por um **grid moderno e estático** (`.brands-grid`).
-  - Palavra *"trabalho"* no título principal destacada em **Volt Lime (`#D4FF32`)** (`Marcas com quem trabalho`).
-  - Cada marca é um cartão/link individual (`.brand-card`) direcionando para o site do parceiro/cliente em nova aba.
-  - **Interatividade Alto Relevo 3D & "Inflar":** Ao passar o cursor (`:hover`), o cartão se expande com física elástica (`transform: translateY(-8px) scale(1.05)`), ganhando chanfros de iluminação tátil superior (`inset 0 1px 1px rgba(255,255,255,0.5)`), chanfro de sombra inferior, elevação profunda e halo Volt Lime (`#D4FF32`), com o ícone e link iluminando em verde neon.
+- **Seção "Marcas com quem trabalho" (Carrossel Horizontal com Auto-Scroll no Hover & Alto Relevo):**
+  - **Layout Horizontal Contínuo:** Os cartões das marcas parceiras agora estão dispostos em uma única linha horizontal elegante (`display: flex; overflow-x: auto`), eliminando a quebra em múltiplas linhas verticais e mantendo a composição minimalista e limpa.
+  - **Efeito Auto-Scroll ao Passar o Mouse:** Ao pousar o cursor sobre as **2 últimas empresas visíveis à direita**, o carrossel rola automaticamente para o lado de forma suave (`requestAnimationFrame`), revelando as empresas seguintes sem necessidade de clique ou arrasto. Ao aproximar o cursor das primeiras empresas à esquerda, o carrossel recua de volta suavemente.
+  - **Setas Circulares de Navegação:** Adicionados botões circulares elegantes no canto superior direito (`#brands-arrow-prev` e `#brands-arrow-next`) com estados ativos/desabilitados sincronizados em tempo real com a rolagem.
+  - **Interatividade Alto Relevo 3D & "Inflar":** Preservado o efeito tátil: ao passar o cursor sobre qualquer cartão (`:hover`), ele se expande com física elástica (`transform: translateY(-8px) scale(1.05)`), ganhando chanfro de iluminação superior, elevação profunda e halo Volt Lime (`#D4FF32`).
+
+- **Aba de Sites & Conversão (`#/servico/sites`) — Atualização de Navegação Direta & Contraste:**
+  - **Navegação Direta sem Lightbox/Vídeo:**
+    - O clique nos cards de portfólio agora abre diretamente o site de destino em uma nova aba (`_blank`), eliminando qualquer modal/lightbox de vídeo ou foto.
+    - O primeiro card foi vinculado diretamente ao link oficial do **Espaço Íris**: `https://felipesouzarribeiro.github.io/espe-o_iris/`.
+    - Os demais cards foram preparados com o atributo `data-live-url=""`. Ao inserir o link de qualquer novo site futuro diretamente no HTML (`data-live-url="https://novosite.com"`), o sistema detecta automaticamente, altera o botão para *"Acessar site no ar"* e passa a abrir o site de destino no clique.
+    - O ícone circular na miniatura foi atualizado para uma seta diagonal de link externo (`↗`), alinhando o feedback visual com o comportamento de clique.
+  - **Seção "O que está incluso no seu site" em Fundo Preto com Cards Volt:**
+    - Fundo da seção configurado em **Preto Profundo (`#080B08`)**, com bordas sutis e títulos em alto contraste.
+    - Cards configurados no tom **Volt Lime (`#D4FF32`)**.
+    - Toda a tipografia interna (título `h4` e descrição `p`) e ícones de checkmark configurados em **Preto Profundo (`#080B08`)**, criando um contraste nítido, elegante e de fácil leitura.
+  - **Remoção de Faixas de Fundo nos Títulos:**
+    - Removidas todas as faixas e barras de fundo (`background`) e bordas sobre as tags/super-títulos (`.pvv-sec-tag`).
+    - Na seção *"O que está incluso no seu site"*, a tag *"PADRÃO DE QUALIDADE"* agora fica em **Branco Puro (`#FFFFFF`)** limpo sobre o fundo preto, sem qualquer faixa verde.
+  - **Botão de E-mail Padronizado em Volt Lime (`#D4FF32`):**
+    - O botão de contato via e-mail no banner final de CTA foi totalmente alinhado com o botão principal do WhatsApp: formato pill com ícone SVG de e-mail, preenchimento em **Volt Lime (`#D4FF32`)**, tipografia em preto (`#080B08`) e transição em hover para branco (`#FFFFFF`).
 
 
 ---
@@ -197,7 +223,7 @@ O Design System foi integralmente extraído e padronizado em `.stitch/DESIGN.md`
 1. **Aba "Sobre mim" (`#/sobre`):**
    - Atualmente usa o contêiner genérico. Pode ser transformada em uma biografia visual marcante contando a trajetória do Felipe, suas ferramentas (Premiere, After Effects, Figma, Meta Ads, Google Ads) e visão de trabalho.
 2. **Substituição de Logos de Parceiros:**
-   - Inserir logotipos reais em vetor/SVG na seção de parceiros da home.
+   - **Espaço Íris** inserido como primeiro parceiro oficial na Home e na aba de Sites com link ativo e logotipo oficial. Próximos parceiros reais podem seguir o mesmo formato.
 3. **Depoimentos Reais:**
    - Inserir avaliações ou prints de feedbacks de clientes reais.
 

@@ -27,9 +27,9 @@ var ROUTES={
 };
 var pv=document.getElementById('pageview'),pvLab=document.getElementById('pv-lab'),pvTitle=document.getElementById('pv-title'),pvText=document.getElementById('pv-text'),pvBgv=document.getElementById('pv-bgv');
 var pvGenericBody=document.getElementById('pv-generic-body'),pvBotContent=document.getElementById('pv-bot-content'),pvVideoContent=document.getElementById('pv-video-content'),pvSitesContent=document.getElementById('pv-sites-content'),pvTrafegoContent=document.getElementById('pv-trafego-content'),pvMktContent=document.getElementById('pv-mkt-content');
-var pvLightbox=document.getElementById('pv-lightbox'),pvLightboxVideo=document.getElementById('pv-lightbox-video'),pvLightboxImg=document.getElementById('pv-lightbox-img'),pvLightboxTitle=document.getElementById('pv-lightbox-title'),pvLightboxDesc=document.getElementById('pv-lightbox-desc'),pvLightboxWa=document.getElementById('pv-lightbox-wa'),pvLightboxClose=document.getElementById('pv-lightbox-close'),pvLightboxBackdrop=document.getElementById('pv-lightbox-backdrop');
+var pvLightbox=document.getElementById('pv-lightbox'),pvLightboxVideo=document.getElementById('pv-lightbox-video'),pvLightboxImg=document.getElementById('pv-lightbox-img'),pvLightboxTitle=document.getElementById('pv-lightbox-title'),pvLightboxDesc=document.getElementById('pv-lightbox-desc'),pvLightboxWa=document.getElementById('pv-lightbox-wa'),pvLightboxClose=document.getElementById('pv-lightbox-close'),pvLightboxBackdrop=document.getElementById('pv-lightbox-backdrop'),pvLightboxLive=document.getElementById('pv-lightbox-live');
 
-function openLightbox(src, title, desc, mode){
+function openLightbox(src, title, desc, mode, liveUrl){
  if(!pvLightbox)return;
  if(mode==='img'||mode===true){
   if(pvLightboxVideo){pvLightboxVideo.pause&&pvLightboxVideo.pause();pvLightboxVideo.style.display='none';}
@@ -67,12 +67,21 @@ function openLightbox(src, title, desc, mode){
  }
  if(pvLightboxTitle) pvLightboxTitle.textContent=title||'';
  if(pvLightboxDesc) pvLightboxDesc.textContent=desc||'';
+ if(pvLightboxLive){
+  if(liveUrl){
+   pvLightboxLive.href=liveUrl;
+   pvLightboxLive.style.display='inline-flex';
+  }else{
+   pvLightboxLive.style.display='none';
+  }
+ }
  pvLightbox.hidden=false;
 }
 
 function closeLightbox(){
  if(!pvLightbox)return;
  pvLightbox.hidden=true;
+ if(pvLightboxLive) pvLightboxLive.style.display='none';
  if(pvLightboxVideo){
   if(pvLightboxVideo.pause) pvLightboxVideo.pause();
   pvLightboxVideo.removeAttribute('src');
@@ -111,11 +120,26 @@ videoCards.forEach(function(card){
 
 var siteCards=document.querySelectorAll('.pvs-card');
 siteCards.forEach(function(card){
- card.addEventListener('click',function(){
-  var src=card.getAttribute('data-img-src');
-  var title=card.getAttribute('data-title');
-  var desc=card.getAttribute('data-desc');
-  if(src) openLightbox(src, title, desc, 'site');
+ var liveUrl=card.getAttribute('data-live-url');
+ var actBtn=card.querySelector('[data-role="live-action"]');
+ if(actBtn && liveUrl && liveUrl.trim()!==''){
+  actBtn.classList.remove('pvs-btn-empty');
+  var spanText=actBtn.querySelector('span');
+  if(spanText) spanText.textContent='Acessar site no ar';
+ }
+
+ card.addEventListener('click',function(e){
+  if(e.target.closest('a')){
+   return;
+  }
+  var url=card.getAttribute('data-live-url');
+  if(url && url.trim()!==''){
+   window.open(url, '_blank', 'noopener,noreferrer');
+  } else {
+   var title=card.getAttribute('data-title') || 'site institucional';
+   var msg='Olá Felipe, vi o modelo "' + title + '" no portfólio da Feerless e gostaria de solicitar um projeto similar!';
+   window.open('https://wa.me/5512987089203?text=' + encodeURIComponent(msg), '_blank', 'noopener,noreferrer');
+  }
  });
 });
 
@@ -149,8 +173,9 @@ function setupFilter(btnSelector, cardSelector){
    btn.classList.add('active');
    var f=btn.getAttribute('data-filter');
    cards.forEach(function(c){
-    var cat=c.getAttribute('data-category');
-    if(f==='all'||cat===f){
+    var cat=c.getAttribute('data-category')||'';
+    var catList=cat.split(' ');
+    if(f==='all'||catList.indexOf(f)!==-1||cat===f){
      c.style.display='';
     }else{
      c.style.display='none';
@@ -160,9 +185,33 @@ function setupFilter(btnSelector, cardSelector){
  });
 }
 setupFilter('.pvv-filter-btn', '.pvv-card');
-setupFilter('.pvs-filter-btn', '.pvs-card');
 setupFilter('.pvt-filter-btn', '.pvt-card');
 setupFilter('.pvm-filter-btn', '.pvm-card');
+
+// Carousel horizontal de Sites / Parceiros
+var pvsTrack=document.getElementById('pvs-carousel-track');
+var pvsPrev=document.getElementById('pvs-arrow-prev');
+var pvsNext=document.getElementById('pvs-arrow-next');
+if(pvsTrack&&pvsPrev&&pvsNext){
+ function getPvsStep(){
+  var c=pvsTrack.querySelector('.pvs-carousel-card');
+  return c ? (c.offsetWidth + 24) : 340;
+ }
+ pvsPrev.addEventListener('click',function(){
+  pvsTrack.scrollBy({left:-getPvsStep(),behavior:'smooth'});
+ });
+ pvsNext.addEventListener('click',function(){
+  pvsTrack.scrollBy({left:getPvsStep(),behavior:'smooth'});
+ });
+ function updatePvsArrows(){
+  var sl=pvsTrack.scrollLeft;
+  var max=pvsTrack.scrollWidth-pvsTrack.clientWidth-5;
+  pvsPrev.disabled=(sl<=5);
+  pvsNext.disabled=(sl>=max);
+ }
+ pvsTrack.addEventListener('scroll',updatePvsArrows,{passive:true});
+ setTimeout(updatePvsArrows,300);
+}
 
 // Smooth scroll inside modal
 var internalAnchors=document.querySelectorAll('.pv-vpage a[href^="#pvb-"], .pv-vpage a[href^="#pvv-"], .pv-vpage a[href^="#pvs-"], .pv-vpage a[href^="#pvt-"], .pv-vpage a[href^="#pvm-"], .pv-vpage a[href^="#servico-"]');
@@ -210,6 +259,7 @@ function route(){
    pv.classList.add('pv-theme-volt');
    if(pvVideoContent) pvVideoContent.hidden=false;
   }else if(location.hash==='#/servico/sites'){
+   pv.classList.add('pv-theme-volt');
    if(pvSitesContent) pvSitesContent.hidden=false;
   }else if(location.hash==='#/servico/trafego-pago'){
    pv.classList.add('pv-theme-trafego');
@@ -307,5 +357,131 @@ upd();
   // Inicia o primeiro texto e ativa o loop infinito ininterrupto
   show(0);
   scheduleNext();
+})();
+
+// Marcas com quem trabalho: Carrossel Horizontal com Auto-Scroll no Hover nas 2 últimas empresas
+(function(){
+  var grid = document.getElementById('brands-grid');
+  var prevBtn = document.getElementById('brands-arrow-prev');
+  var nextBtn = document.getElementById('brands-arrow-next');
+  var wrapper = document.getElementById('brands-wrapper');
+  if(!grid) return;
+
+  var scrollAnimId = null;
+  var scrollSpeed = 0;
+  var lastMouseX = 0;
+  var lastMouseY = 0;
+  var isHovering = false;
+
+  function stepScroll(){
+    if(scrollSpeed !== 0){
+      grid.scrollLeft += scrollSpeed;
+      updateArrows();
+      checkHoverPosition();
+      if(scrollSpeed !== 0){
+        scrollAnimId = requestAnimationFrame(stepScroll);
+      }
+    }
+  }
+
+  function startScroll(speed){
+    if(scrollSpeed === speed) return;
+    scrollSpeed = speed;
+    if(!scrollAnimId){
+      scrollAnimId = requestAnimationFrame(stepScroll);
+    }
+  }
+
+  function stopScroll(){
+    scrollSpeed = 0;
+    if(scrollAnimId){
+      cancelAnimationFrame(scrollAnimId);
+      scrollAnimId = null;
+    }
+  }
+
+  function getStep(){
+    var firstCard = grid.querySelector('.brand-card');
+    return firstCard ? (firstCard.offsetWidth + 24) : 280;
+  }
+
+  function updateArrows(){
+    var sl = grid.scrollLeft;
+    var max = grid.scrollWidth - grid.clientWidth - 4;
+    if(prevBtn) prevBtn.disabled = (sl <= 4);
+    if(nextBtn) nextBtn.disabled = (sl >= max);
+    if(wrapper){
+      wrapper.classList.toggle('can-scroll-right', sl < max);
+      wrapper.classList.toggle('can-scroll-left', sl > 4);
+    }
+  }
+
+  if(prevBtn){
+    prevBtn.addEventListener('click', function(){
+      grid.scrollBy({ left: -getStep(), behavior: 'smooth' });
+    });
+  }
+  if(nextBtn){
+    nextBtn.addEventListener('click', function(){
+      grid.scrollBy({ left: getStep(), behavior: 'smooth' });
+    });
+  }
+
+  grid.addEventListener('scroll', updateArrows, { passive: true });
+
+  function checkHoverPosition(){
+    if(!isHovering) return;
+    var target = document.elementFromPoint(lastMouseX, lastMouseY);
+    if(!target || !grid.contains(target)){
+      stopScroll();
+      return;
+    }
+
+    var gridRect = grid.getBoundingClientRect();
+    var cards = Array.from(grid.querySelectorAll('.brand-card'));
+
+    var visibleCards = cards.filter(function(card){
+      var r = card.getBoundingClientRect();
+      return (r.right > gridRect.left + 25) && (r.left < gridRect.right - 25);
+    });
+
+    if(visibleCards.length < 2){
+      stopScroll();
+      return;
+    }
+
+    var lastTwo = visibleCards.slice(-2);
+    var firstTwo = visibleCards.slice(0, 2);
+
+    var cardUnderMouse = target.closest('.brand-card');
+    var isOverLastTwo = cardUnderMouse && lastTwo.indexOf(cardUnderMouse) !== -1;
+    var isOverFirstTwo = cardUnderMouse && firstTwo.indexOf(cardUnderMouse) !== -1;
+    var max = grid.scrollWidth - grid.clientWidth - 4;
+
+    if(isOverLastTwo && grid.scrollLeft < max){
+      startScroll(4);
+    } else if(isOverFirstTwo && grid.scrollLeft > 4){
+      startScroll(-4);
+    } else {
+      stopScroll();
+    }
+  }
+
+  grid.addEventListener('mouseenter', function(){
+    isHovering = true;
+  });
+
+  grid.addEventListener('mouseleave', function(){
+    isHovering = false;
+    stopScroll();
+  });
+
+  grid.addEventListener('mousemove', function(e){
+    lastMouseX = e.clientX;
+    lastMouseY = e.clientY;
+    checkHoverPosition();
+  });
+
+  setTimeout(updateArrows, 300);
 })();
 })();
