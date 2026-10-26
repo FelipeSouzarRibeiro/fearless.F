@@ -213,6 +213,140 @@ if(pvsTrack&&pvsPrev&&pvsNext){
  setTimeout(updatePvsArrows,300);
 }
 
+// Vídeo Atmosférico em Câmera Lenta sem som (Cyclist Pedaling na seção Parceiros)
+(function(){
+  var partnerVideo = document.getElementById('pvs-partner-video');
+  if(!partnerVideo) return;
+
+  function initPartnerVideo(){
+    partnerVideo.playbackRate = 0.55; // Câmera lenta elegante
+    partnerVideo.muted = true;
+    var playPromise = partnerVideo.play();
+    if(playPromise && playPromise.catch){
+      playPromise.catch(function(){});
+    }
+  }
+
+  partnerVideo.addEventListener('loadedmetadata', initPartnerVideo);
+  partnerVideo.addEventListener('play', function(){
+    partnerVideo.playbackRate = 0.55;
+  });
+
+  window.addEventListener('hashchange', function(){
+    if(location.hash === '#/servico/sites' || location.hash === '#pvs-portfolio'){
+      setTimeout(initPartnerVideo, 80);
+    }
+  });
+
+  initPartnerVideo();
+  setTimeout(initPartnerVideo, 300);
+})();
+
+// Fundo Dinâmico Ultra-Fluido com Canvas Image Sequence (Padrão Apple 60/120fps sem travamento)
+(function(){
+  var metodologiaSec = document.getElementById('pvs-metodologia');
+  var canvas = document.getElementById('pvs-metodologia-canvas');
+  if(!metodologiaSec || !canvas) return;
+
+  var ctx = canvas.getContext('2d');
+  var frameCount = 97;
+  var images = [];
+  var currentFrame = 1;
+  var targetFrame = 1;
+  var rafId = null;
+
+  function pad(num) {
+    return String(num).padStart(3, '0');
+  }
+
+  function getFrameSrc(index) {
+    return 'video/frames/frame_' + pad(index) + '.webp';
+  }
+
+  // Renderização instantânea do frame no canvas (0ms de atraso, acelerado por hardware)
+  function renderFrame(index) {
+    var img = images[index - 1];
+    if (img && img.complete && img.naturalWidth > 0) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    }
+  }
+
+  // Loop contínuo com física amortecida suave (lerp)
+  function renderLoop() {
+    var diff = targetFrame - currentFrame;
+    if (Math.abs(diff) > 0.05) {
+      currentFrame += diff * 0.35;
+      var drawIndex = Math.max(1, Math.min(frameCount, Math.round(currentFrame)));
+      renderFrame(drawIndex);
+      rafId = requestAnimationFrame(renderLoop);
+    } else {
+      currentFrame = targetFrame;
+      renderFrame(Math.round(currentFrame));
+      rafId = null;
+    }
+  }
+
+  function onScrollScrub() {
+    if (!metodologiaSec || metodologiaSec.offsetParent === null) return;
+    var rect = metodologiaSec.getBoundingClientRect();
+    var vh = window.innerHeight || 800;
+
+    // Janela de scroll confortável através da seção Metodologia
+    var start = vh * 0.88;
+    var end = -rect.height * 0.35;
+    var progress = (start - rect.top) / (start - end);
+    progress = Math.max(0, Math.min(1, progress));
+
+    targetFrame = 1 + progress * (frameCount - 1);
+    if (!rafId) {
+      rafId = requestAnimationFrame(renderLoop);
+    }
+  }
+
+  // 1. Carrega imediatamente o frame 1 para exibição instantânea sem delay
+  var firstImg = new Image();
+  firstImg.src = getFrameSrc(1);
+  firstImg.onload = function() {
+    images[0] = firstImg;
+    renderFrame(1);
+    onScrollScrub();
+  };
+
+  // 2. Pré-carrega os demais frames em segundo plano para resposta instantânea
+  for (var i = 1; i <= frameCount; i++) {
+    (function(idx) {
+      if (idx === 1) {
+        images[0] = firstImg;
+        return;
+      }
+      var img = new Image();
+      img.src = getFrameSrc(idx);
+      img.onload = function() {
+        images[idx - 1] = img;
+        if (Math.round(currentFrame) === idx) {
+          renderFrame(idx);
+        }
+      };
+    })(i);
+  }
+
+  if (pv) {
+    pv.addEventListener('scroll', onScrollScrub, { passive: true });
+  }
+  window.addEventListener('scroll', onScrollScrub, { passive: true });
+  window.addEventListener('resize', onScrollScrub, { passive: true });
+
+  window.addEventListener('hashchange', function() {
+    if (location.hash === '#/servico/sites' || location.hash === '#pvs-metodologia') {
+      setTimeout(onScrollScrub, 80);
+      setTimeout(onScrollScrub, 300);
+    }
+  });
+
+  setTimeout(onScrollScrub, 150);
+})();
+
 // Smooth scroll inside modal
 var internalAnchors=document.querySelectorAll('.pv-vpage a[href^="#pvb-"], .pv-vpage a[href^="#pvv-"], .pv-vpage a[href^="#pvs-"], .pv-vpage a[href^="#pvt-"], .pv-vpage a[href^="#pvm-"], .pv-vpage a[href^="#servico-"]');
 internalAnchors.forEach(function(a){
@@ -359,6 +493,8 @@ upd();
   scheduleNext();
 })();
 
+
+
 // Marcas com quem trabalho: Carrossel Horizontal com Auto-Scroll no Hover nas 2 últimas empresas
 (function(){
   var grid = document.getElementById('brands-grid');
@@ -484,4 +620,37 @@ upd();
 
   setTimeout(updateArrows, 300);
 })();
+
+// Gerenciador Inteligente de Vídeos (Pausa vídeos fora da tela para poupar 100% da GPU)
+(function(){
+  if(!('IntersectionObserver' in window)) return;
+
+  var bgVideos = document.querySelectorAll('.pin .bgv, #partners-dino-video, #feature-smoke-video');
+  if(!bgVideos.length) return;
+
+  var videoObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      var vid = entry.target;
+      if(entry.isIntersecting){
+        vid.muted = true;
+        if(vid.id === 'feature-smoke-video'){
+          vid.playbackRate = 0.85; // Fluidez cinematográfica suave sem queda de taxa de quadros
+        }
+        if(vid.play){
+          var p = vid.play();
+          if(p && p.catch) p.catch(function(){});
+        }
+      } else {
+        if(vid.pause){
+          vid.pause();
+        }
+      }
+    });
+  }, { threshold: 0.08 });
+
+  bgVideos.forEach(function(vid){
+    videoObserver.observe(vid);
+  });
 })();
+})();
+

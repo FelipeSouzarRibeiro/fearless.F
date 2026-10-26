@@ -100,8 +100,10 @@ Todas as 5 abas de serviços foram transformadas de simples textos genéricos pa
 
 - **`index.html`**:
   - Contém a página inicial + hero interativo com alternância dinâmica (**Hero Rotator**):
+    - **Fundo Atmosférico em Vídeo (`video/fumaça-fundo.mp4`):** Vídeo de fumaça **colado na margem direita** (`right: 0`), fluindo em direção à esquerda (800x900 a 30 FPS estável com color grading nativo), decodificação direta por aceleração de hardware GPU (sem máscara pesada na tag de vídeo), dissolução estática via overlay `.hero-video-dissolve` e pausa inteligente via `IntersectionObserver` quando fora da tela para garantir zero travamentos.
     - **Slide 1 (Presença Digital):** *"Entre agora no mundo da internet."* + Subtítulo original + CTA WhatsApp.
     - **Slide 2 (Automações & Bot):** *"Controle financeiro inteligente & estratégia digital."* + Subtítulo de finanças + CTA Bot Financeiro.
+    - **Slide 3 (Sites & Identidade Digital):** *"Crie seu site e tenha uma identidade na internet!"* com 'Crie' e 'site' em volt `#D4FF32` + Subtítulo de estrutura do negócio + CTA Criar meu site.
     - Transição suave em loop contínuo a cada **10 segundos** com crossfade, blur e barras de contagem (`.heroDots`).
   - **Vitrine Sticky (.pin):**
     - **Slide 1:** *"Automatização de microsserviços"* (Aplicações, microsserviços e automações sob medida).
@@ -214,6 +216,31 @@ O Design System foi integralmente extraído e padronizado em `.stitch/DESIGN.md`
     - Na seção *"O que está incluso no seu site"*, a tag *"PADRÃO DE QUALIDADE"* agora fica em **Branco Puro (`#FFFFFF`)** limpo sobre o fundo preto, sem qualquer faixa verde.
   - **Botão de E-mail Padronizado em Volt Lime (`#D4FF32`):**
     - O botão de contato via e-mail no banner final de CTA foi totalmente alinhado com o botão principal do WhatsApp: formato pill com ícone SVG de e-mail, preenchimento em **Volt Lime (`#D4FF32`)**, tipografia em preto (`#080B08`) e transição em hover para branco (`#FFFFFF`).
+
+- **Hero Full — Slide 3:**
+  - **3º Slide no Hero Rotator:**
+    - Kicker: `Sites & Identidade Digital`
+    - Título: `Crie seu site e tenha uma identidade na internet!` (com as palavras *"Crie"* e *"site"* destacadas no tom Volt Lime `#D4FF32`).
+    - Subtítulo: `Tenha seu negócio estruturado para aparecer para o mundo!`.
+    - CTA: *"Criar meu site"* direcionando para `#/servico/sites`.
+    - 3º botão indicador (dot) adicionado e perfeitamente sincronizado com o loop infinito do carrossel.
+  - **Estrutura Limpa no Hero:**
+    - O fundo em vídeo de fumaça foi removido do Hero a pedido do cliente, mantendo o fundo preto original `#080B08` com foco total nos textos dinâmicos e na animação vetorial do "F".
+
+- **Seção "Atendimento Direto / Menos Promessa, Mais Resultado" (`.feature`) — Vídeo de Fumaça em Alta Resolução:**
+  - **Posicionamento Colado na Margem Direita e Inferior:**
+    - O vídeo foi configurado com `bottom: 0; right: 0; left: auto; top: auto;`, ficando fixado com precisão no canto inferior direito da seção, diretamente sob a marca d'água "F." e ao lado do bloco de texto.
+  - **Alta Resolução & Preservação Total da Qualidade:**
+    - O vídeo foi regenerado a partir do arquivo master original 1080p (`fumaça-fundo.mp4`), preservando a nitidez cristalina com codificação H.264 em `CRF 17`.
+    - As dimensões na tela foram compactadas (`width: min(560px, 46vw)`, `max-height: 94%`) para garantir alta densidade de pixels (supersampling natural) sem esticar a imagem, entregando máxima nitidez visual.
+  - **Sentido Invertido (De Baixo para Cima):**
+    - Inversão vertical nativa nos quadros (`vflip`), fazendo a fumaça emergir rente à margem inferior e subir organicamente.
+  - **Loop Contínuo e Fluido (Sem Interação / Sem Pausas):**
+    - Configurado com `autoplay loop muted playsinline` e `playbackRate = 0.85` para movimento cinematográfico contínuo sem queda de FPS.
+    - Pausa automática inteligente via `IntersectionObserver` quando a seção sai do campo de visão.
+  - **Dissolução Total com Fundo Preto `#080B08`:**
+    - Bordas tratadas em preto estrito `RGB(0, 0, 0)` com `mix-blend-mode: screen` e gradientes de vinheta no topo e lateral esquerda para transição imperceptível.
+
 
 
 ---

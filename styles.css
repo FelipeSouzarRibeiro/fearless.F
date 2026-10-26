@@ -280,14 +280,60 @@ h1,h2,h3,h4,h5,h6{
 @media (max-width:640px){.vert{display:none}.cue{top:auto;bottom:22px;left:28px;right:auto}.num{right:2%}}
 @media (prefers-reduced-motion:reduce){.lab,.slide h2,.slide p,.ghost,.num{transition:none!important}}
 
-/* Destaque (Terceira Seção) - Fundo Preto Obsidian #080B08 */
+/* Destaque (Terceira Seção) - Fundo Preto Obsidian #080B08 com Vídeo de Fumaça Invertida (De Baixo para Cima) */
 .feature{
   background:#080B08;
   padding:100px 0;
   position:relative;
+  overflow:hidden;
   border-top:1px solid rgba(255,255,255,0.06);
 }
-.feature .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+.feature .wrap{
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:48px;
+  align-items:center;
+  position:relative;
+  z-index:2;
+}
+
+/* Fundo em Vídeo de Fumaça Invertida: De Baixo para Cima em Loop Contínuo */
+.feature-video-wrap{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  pointer-events:none;
+  z-index:1;
+  background:#080B08;
+}
+
+.feature-video-bg{
+  position:absolute;
+  bottom:0;
+  right:0;
+  left:auto;
+  top:auto;
+  width:min(560px, 46vw);
+  height:auto;
+  max-height:94%;
+  aspect-ratio:1 / 1;
+  object-fit:contain;
+  object-position:right bottom;
+  pointer-events:none;
+  opacity:0.85;
+  mix-blend-mode:screen; /* O preto torna-se 100% transparente sobre o tema Obsidian */
+}
+
+.feature-video-dissolve{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(to right, #080B08 0%, #080B08 42%, rgba(8,11,8,0.3) 68%, transparent 92%),
+    linear-gradient(to bottom, #080B08 0%, transparent 22%);
+  pointer-events:none;
+}
 .feature h2{font-family:var(--font-headline);font-size:clamp(2.6rem,7vw,5.2rem);line-height:.98;letter-spacing:-.04em;font-weight:700;margin:14px 0 22px;color:#FFFFFF}
 .feature p{max-width:40ch;margin:0 0 30px;color:rgba(255,255,255,0.8)}
 .feature .line{
@@ -310,7 +356,11 @@ h1,h2,h3,h4,h5,h6{
 .feature.inview h2 .w{opacity:1;transform:translateY(0);filter:blur(0)}
 .feature .fblur{opacity:0;filter:blur(10px);transition:opacity .8s ease,filter .8s ease;transition-delay:1.05s}
 .feature.inview .fblur{opacity:1;filter:blur(0)}
-@media (max-width:820px){.feature .wrap{grid-template-columns:1fr}.feature .line{height:200px;justify-self:start}}
+@media (max-width:820px){
+  .feature .wrap{grid-template-columns:1fr}
+  .feature .line{height:200px;justify-self:start}
+  .feature-video-bg{width:min(340px, 70vw);bottom:0;right:0}
+}
 
 /* Processo (Como trabalhamos) - Alto Contraste Volt Lime */
 .proc{
@@ -2386,6 +2436,17 @@ footer .f{
   color: #080B08 !important;
 }
 
+/* Fundo SVG em alta resolução para a seção Hero de Sites */
+.pageview:has(#pv-sites-content:not([hidden])) .pvs-page .pvv-hero {
+  background-color: #D4FF32;
+  background-image: url('img/fundo_aba_sites.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+
 .pageview.pv-theme-volt:has(#pv-sites-content:not([hidden])) .pv-top,
 .pageview:has(#pv-sites-content:not([hidden])) .pv-top {
   background: #000000 !important;
@@ -2479,34 +2540,210 @@ footer .f{
   color: rgba(255, 255, 255, 0.78) !important;
 }
 
-/* Seção Parceiros (Textos & Setas no Fundo Volt) */
-.pageview:has(#pv-sites-content:not([hidden])) #pv-sites-content .pvv-sec-tag {
-  color: #080B08 !important;
+/* ===================================================
+   Seção Parceiros com Fundo em Vídeo Atmosférico (Cyclist Pedaling)
+   Câmera lenta, desfoque sutil e máxima imersão sem ser protagonista
+   =================================================== */
+.pageview:has(#pv-sites-content:not([hidden])) #pv-sites-content .pvs-carousel-sec,
+.pvs-carousel-sec {
+  position: relative;
+  overflow: hidden;
+  padding: 80px 0 92px;
+  background: #080B08;
+}
+
+/* Container do Vídeo de Fundo */
+.pvs-partner-video-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+  background: #080B08;
+}
+
+.pvs-partner-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  /* Trava matemática na proporção nativa 16:9 - impede esticar ou achatar */
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center center;
+  pointer-events: none;
+  /* Desfoque suave e elegante (2px) para manter a qualidade Full HD sem competir com os cards */
+  filter: blur(2px) brightness(0.68) contrast(1.05);
+  will-change: transform;
+}
+
+/* Overlay Cinematográfico para Máxima Legibilidade dos Textos e Cards do Carrossel */
+.pvs-partner-video-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center, rgba(8, 11, 8, 0.42) 0%, rgba(8, 11, 8, 0.82) 100%),
+    linear-gradient(180deg, rgba(8, 11, 8, 0.85) 0%, transparent 20%, transparent 80%, rgba(8, 11, 8, 0.88) 100%);
+  pointer-events: none;
+}
+
+/* Textos e Controles de Parceiros sobre o Vídeo */
+.pageview:has(#pv-sites-content:not([hidden])) #pv-sites-content .pvs-carousel-sec .pvv-container {
+  position: relative;
+  z-index: 2;
+}
+
+.pageview:has(#pv-sites-content:not([hidden])) #pv-sites-content .pvs-carousel-sec .pvv-sec-tag {
+  color: #D4FF32 !important;
   font-weight: 800 !important;
   border: none !important;
   background: transparent !important;
-  background-color: transparent !important;
   box-shadow: none !important;
   padding: 0 !important;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 8px;
 }
-.pageview:has(#pv-sites-content:not([hidden])) #pv-sites-content .pvv-sec-title {
-  color: #080B08 !important;
-}
-.pageview:has(#pv-sites-content:not([hidden])) #pv-sites-content .pvv-sec-sub {
-  color: rgba(8, 11, 8, 0.86) !important;
-}
-.pageview:has(#pv-sites-content:not([hidden])) #pv-sites-content .pvs-arrow-btn {
-  background: #080B08 !important;
+.pageview:has(#pv-sites-content:not([hidden])) #pv-sites-content .pvs-carousel-sec .pvv-sec-title {
   color: #FFFFFF !important;
-  border-color: #080B08 !important;
-  box-shadow: 0 6px 18px rgba(8, 11, 8, 0.2);
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.9);
 }
-.pageview:has(#pv-sites-content:not([hidden])) #pv-sites-content .pvs-arrow-btn:hover:not(:disabled) {
-  background: #FFFFFF !important;
+.pageview:has(#pv-sites-content:not([hidden])) #pv-sites-content .pvs-carousel-sec .pvv-sec-sub {
+  color: rgba(255, 255, 255, 0.88) !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85);
+}
+.pageview:has(#pv-sites-content:not([hidden])) #pv-sites-content .pvs-carousel-sec .pvs-arrow-btn {
+  background: rgba(8, 11, 8, 0.85) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+.pageview:has(#pv-sites-content:not([hidden])) #pv-sites-content .pvs-carousel-sec .pvs-arrow-btn:hover:not(:disabled) {
+  background: #D4FF32 !important;
   color: #080B08 !important;
-  border-color: #080B08 !important;
+  border-color: #D4FF32 !important;
   transform: scale(1.1);
-  box-shadow: 0 10px 24px rgba(8, 11, 8, 0.3);
+  box-shadow: 0 10px 28px rgba(212, 255, 50, 0.4);
+}
+
+/* ===================================================
+   Seção Metodologia com Fundo em Vídeo Dinâmico (Vintage Car Flying)
+   =================================================== */
+.pageview:has(#pv-sites-content:not([hidden])) #pv-sites-content .pvs-metodologia-sec,
+.pvs-metodologia-sec {
+  position: relative;
+  overflow: hidden;
+  padding: 84px 0 100px;
+  background: #080B08 !important;
+  border-top: none;
+}
+
+/* Container do Vídeo de Fundo em proporção perfeita 16:9 sem perda de qualidade */
+.pvs-metodologia-sec .pvs-video-bg-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+  background: #080B08;
+}
+
+.pvs-metodologia-sec .pvs-video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateZ(0);
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  pointer-events: none;
+  filter: brightness(0.68) contrast(1.08);
+  will-change: transform;
+}
+
+/* Overlay Cinematográfico para Máxima Legibilidade dos Textos e Cards */
+.pvs-metodologia-sec .pvs-video-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center, rgba(8, 11, 8, 0.42) 0%, rgba(8, 11, 8, 0.85) 100%),
+    linear-gradient(180deg, rgba(8, 11, 8, 0.88) 0%, transparent 20%, transparent 80%, rgba(8, 11, 8, 0.9) 100%);
+  pointer-events: none;
+}
+
+/* Conteúdo e Textos sobre o Vídeo na Metodologia */
+.pageview:has(#pv-sites-content:not([hidden])) #pv-sites-content .pvs-metodologia-sec .pvv-container {
+  position: relative;
+  z-index: 2;
+}
+
+.pageview:has(#pv-sites-content:not([hidden])) #pv-sites-content .pvs-metodologia-sec .pvv-sec-tag {
+  color: #D4FF32 !important;
+  font-weight: 800 !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.pageview:has(#pv-sites-content:not([hidden])) #pv-sites-content .pvs-metodologia-sec .pvv-sec-title {
+  color: #FFFFFF !important;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.9);
+}
+
+.pageview:has(#pv-sites-content:not([hidden])) #pv-sites-content .pvs-metodologia-sec .pvv-sec-sub {
+  color: rgba(255, 255, 255, 0.88) !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85);
+}
+
+/* Cards dos 4 Passos da Metodologia com Alto Relevo 3D Tátil sobre o Vídeo */
+.pageview:has(#pv-sites-content:not([hidden])) #pv-sites-content .pvs-metodologia-sec .pvv-step-card {
+  background: #080B08 !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 20px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.8),
+    0 16px 36px rgba(0, 0, 0, 0.5) !important;
+  transition: all .32s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.pageview:has(#pv-sites-content:not([hidden])) #pv-sites-content .pvs-metodologia-sec .pvv-step-card:hover {
+  transform: translateY(-8px) scale(1.025) !important;
+  border-color: rgba(212, 255, 50, 0.55) !important;
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.6),
+    0 24px 48px rgba(0, 0, 0, 0.65),
+    0 0 24px rgba(212, 255, 50, 0.25) !important;
+}
+
+.pageview:has(#pv-sites-content:not([hidden])) #pv-sites-content .pvs-metodologia-sec .pvv-step-num {
+  color: #D4FF32 !important;
+  opacity: 0.9;
+}
+
+.pageview:has(#pv-sites-content:not([hidden])) #pv-sites-content .pvs-metodologia-sec .pvv-step-card h4 {
+  color: #FFFFFF !important;
+}
+
+.pageview:has(#pv-sites-content:not([hidden])) #pv-sites-content .pvs-metodologia-sec .pvv-step-card p {
+  color: rgba(255, 255, 255, 0.8) !important;
 }
 
 /* Cards de Sites em Preto com Efeito de Alto Relevo ao passar o mouse */
@@ -2988,16 +3225,80 @@ footer .f{
 @media (prefers-reduced-motion:reduce){.nline,.nline line,.nline text{animation:none;opacity:.6}}
 .heroVisual:hover .heroF{animation:fflip 4s ease-in-out infinite;filter:drop-shadow(0 0 10px #FFFFFF) drop-shadow(0 0 28px rgba(212,255,50,0.4))}
 @keyframes fflip{0%,100%{transform:rotateY(0deg)}50%{transform:rotateY(180deg)}}
-.heroFull{min-height:100vh;min-height:100svh;display:flex;align-items:center}
-.heroFull .heroGrid{padding:32px 0;width:100%}
+/* Hero Full */
+.heroFull{
+  min-height:100vh;
+  min-height:100svh;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  background:#080B08;
+}
+.heroFull .heroGrid{
+  padding:32px 0;
+  width:100%;
+  position:relative;
+  z-index:2;
+}
 /* Seção Marcas com quem trabalho */
 .partners{
   padding:100px 0 90px;
   background:#080B08;
   position:relative;
+  overflow:hidden;
   border-top:1px solid rgba(255,255,255,0.06);
 }
+
+/* Fundo em Vídeo Pixelated Dinosaur com 75% de Opacidade e Bordas em Dissolução */
+.partners-video-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+  background: #080B08;
+}
+
+.partners-video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center center;
+  pointer-events: none;
+  opacity: 0.75; /* Opacidade de 75% */
+  /* Máscara de dissolução suave nas bordas superior, inferior e laterais */
+  -webkit-mask-image:
+    linear-gradient(to bottom, transparent 0%, black 14%, black 86%, transparent 100%),
+    linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image:
+    linear-gradient(to bottom, transparent 0%, black 14%, black 86%, transparent 100%),
+    linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+/* Camada extra de dissolução para transição perfeita com o fundo #080B08 */
+.partners-video-dissolve {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at center, rgba(8, 11, 8, 0.1) 25%, rgba(8, 11, 8, 0.7) 75%, #080B08 100%),
+    linear-gradient(180deg, #080B08 0%, transparent 18%, transparent 82%, #080B08 100%),
+    linear-gradient(90deg, #080B08 0%, transparent 12%, transparent 88%, #080B08 100%);
+}
+
 .partners .wrap{
+  position: relative;
+  z-index: 2;
   padding-bottom:12px;
 }
 .partners-head{
@@ -3099,27 +3400,25 @@ footer .f{
   display:none;
 }
 
-/* Cartão da Marca: Horizontal com Efeito Alto Relevo & Inflar no Hover */
+/* Cartão da Marca: Quadro com Foto da Empresa Cobrindo Inteiramente */
 .brand-card{
   flex:0 0 calc((100% - 72px) / 4);
   min-width:250px;
+  aspect-ratio:4 / 3;
   position:relative;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  padding:32px 24px;
+  display:block;
+  padding:0;
   text-decoration:none;
   border-radius:20px;
-  background:linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.015) 100%);
-  border:1px solid rgba(255,255,255,0.09);
+  overflow:hidden;
+  background:#0D120E;
+  border:1px solid rgba(255,255,255,0.14);
   color:#FFFFFF;
   cursor:pointer;
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.1),
-    inset 0 -1px 0 rgba(0,0,0,0.5),
-    0 8px 24px rgba(0,0,0,0.4);
-  transition:all .32s cubic-bezier(0.34, 1.56, 0.64, 1);
+    inset 0 1px 0 rgba(255,255,255,0.18),
+    0 12px 30px rgba(0,0,0,0.65);
+  transition:all .34s cubic-bezier(0.34, 1.56, 0.64, 1);
   will-change:transform, box-shadow;
 }
 
@@ -3150,98 +3449,35 @@ footer .f{
   }
 }
 
-.brand-badge-inner{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:14px;
-  text-align:center;
+/* Foto da Empresa cobrindo 100% do quadro */
+.brand-card-cover-img{
   width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+  border-radius:inherit;
+  transition:transform .45s cubic-bezier(0.2, 0.8, 0.2, 1), filter .35s ease;
 }
 
-.brand-icon{
-  width:56px;
-  height:56px;
-  display:grid;
-  place-items:center;
-  border-radius:14px;
-  background:rgba(255,255,255,0.05);
-  border:1px solid rgba(255,255,255,0.12);
-  color:rgba(255,255,255,0.75);
-  transition:all .3s ease;
-}
-
-.brand-name{
-  font-family:var(--font-headline);
-  font-size:1.18rem;
-  font-weight:700;
-  letter-spacing:-.01em;
-  color:rgba(255,255,255,0.85);
-  transition:color .25s ease;
-}
-
-.brand-link-hint{
-  font-family:var(--font-label);
-  font-size:.74rem;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  font-weight:600;
-  color:rgba(255,255,255,0.4);
-  display:inline-flex;
-  align-items:center;
-  gap:4px;
-  transition:all .25s ease;
-}
-
-/* ESTADO HOVER: "INFLAR" + "ALTO RELEVO" TÁTIL 3D */
+/* ESTADO HOVER: "INFLAR" + BRILHO VOLT LIME */
 .brand-card:hover,
 .brand-card:focus-visible{
-  /* "Infle um pouco" (expansão suave com elasticidade) */
   transform:translateY(-8px) scale(1.05);
-  
-  /* "Alto Relevo": Iluminação superior, borda acentuada e camadas de sombra 3D */
-  background:linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.03) 100%);
-  border-color:rgba(212,255,50,0.45);
+  border-color:rgba(212,255,50,0.65);
   box-shadow:
-    inset 0 1px 1px rgba(255,255,255,0.5), /* Borda de luz no topo do alto relevo */
-    inset 0 -2px 4px rgba(0,0,0,0.8),       /* Chanfro de sombra inferior */
-    0 18px 38px rgba(0,0,0,0.75),           /* Elevação flutuante */
-    0 0 24px rgba(212,255,50,0.22);          /* Brilho halo Volt Lime */
+    inset 0 1px 1px rgba(255,255,255,0.45),
+    0 20px 42px rgba(0,0,0,0.85),
+    0 0 28px rgba(212,255,50,0.3);
 }
 
-.brand-card:hover .brand-icon{
-  background:rgba(212,255,50,0.12);
-  border-color:rgba(212,255,50,0.6);
-  color:#D4FF32;
-  transform:scale(1.1);
-  box-shadow:0 0 18px rgba(212,255,50,0.3);
-}
-
-.brand-card:hover .brand-name{
-  color:#FFFFFF;
-}
-
-.brand-card:hover .brand-link-hint{
-  color:#D4FF32;
-  transform:translateX(2px);
+.brand-card:hover .brand-card-cover-img{
+  transform:scale(1.07);
 }
 
 /* Parceiro Oficial na Home: Espaço Íris */
 .brand-card-partner{
-  border-color:rgba(212,255,50,0.28);
-  background:linear-gradient(180deg, rgba(212,255,50,0.06) 0%, rgba(255,255,255,0.02) 100%);
-}
-.brand-icon-has-logo{
-  background:#FAF7F2 !important;
-  border-color:rgba(255,255,255,0.4) !important;
-  padding:6px !important;
-  box-shadow:0 4px 14px rgba(0,0,0,0.35);
-}
-.brand-img-logo{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  display:block;
+  border-color:rgba(212,255,50,0.38);
 }
 
 

@@ -547,6 +547,12 @@
 
     <!-- Seção Parceiros & Estruturas Digitais -->
     <section class="pvv-portfolio-sec pvs-carousel-sec" id="pvs-portfolio">
+      <!-- Fundo em Vídeo Atmosférico (Cyclist Pedaling em Câmera Lenta com Desfoque) -->
+      <div class="pvs-partner-video-wrap" aria-hidden="true">
+        <video class="pvs-partner-video" id="pvs-partner-video" src="video/Cyclist_pedaling.mp4" width="1920" height="1080" autoplay loop muted playsinline preload="auto"></video>
+        <div class="pvs-partner-video-overlay"></div>
+      </div>
+
       <div class="pvv-container">
         <div class="pvv-sec-head pvs-sec-head-flex">
           <div>
@@ -731,8 +737,14 @@
       </div>
     </section>
 
-    <!-- Metodologia (Como Funciona o Desenvolvimento) -->
-    <section class="pvv-process-sec" style="background:transparent;border-top:none">
+    <!-- Metodologia (Como Funciona o Desenvolvimento com Fundo em Vídeo Dinâmico) -->
+    <section class="pvv-process-sec pvs-metodologia-sec" id="pvs-metodologia">
+      <!-- Fundo em Canvas de Alta Performance Controlado por Scroll (Vintage Car Flying) -->
+      <div class="pvs-video-bg-wrap" aria-hidden="true">
+        <canvas class="pvs-video-bg" id="pvs-metodologia-canvas" width="1920" height="1080"></canvas>
+        <div class="pvs-video-overlay"></div>
+      </div>
+
       <div class="pvv-container">
         <div class="pvv-sec-head">
           <span class="pvv-sec-tag">Metodologia</span>
@@ -1651,11 +1663,22 @@
               <a class="ghost2" href="#servicos">Explorar serviços <span aria-hidden="true">&rarr;</span></a>
             </div>
           </div>
+
+          <div class="heroSlide heroSlide-3" id="hero-slide-3">
+            <span class="lab heroKicker">Sites & Identidade Digital</span>
+            <h1 class="heroTitle"><span class="volt-text">Crie</span> seu <span class="volt-text">site</span> e tenha uma<br>identidade na internet!</h1>
+            <p class="heroSub">Tenha seu negócio estruturado para aparecer para o mundo!</p>
+            <div class="heroActs">
+              <a class="btn" href="#/servico/sites">Criar meu site</a>
+              <a class="ghost2" href="#servicos">Explorar serviços <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </div>
         </div>
 
         <div class="heroDots" role="tablist" aria-label="Alternar destaque">
           <button class="heroDot active" type="button" aria-label="1: Entrar no mundo da internet" data-slide="0"><span class="heroDotBar"></span></button>
           <button class="heroDot" type="button" aria-label="2: Controle financeiro inteligente" data-slide="1"><span class="heroDotBar"></span></button>
+          <button class="heroDot" type="button" aria-label="3: Crie seu site e tenha uma identidade" data-slide="2"><span class="heroDotBar"></span></button>
         </div>
       </div>
       <div class="heroVisual" aria-hidden="true">
@@ -1689,6 +1712,15 @@
 </section>
 
   <section class="feature">
+    <!-- Fundo em Vídeo Dinâmico (Fumaça Invertida: De Baixo para Cima em Loop Contínuo) -->
+    <div class="feature-video-wrap" aria-hidden="true">
+      <video class="feature-video-bg" id="feature-smoke-video" autoplay loop muted playsinline preload="auto">
+        <source src="video/fumaça-fundo.mp4" type="video/mp4">
+        <source src="video/fumaca-fundo.mp4" type="video/mp4">
+      </video>
+      <div class="feature-video-dissolve"></div>
+    </div>
+
     <div class="wrap">
       <div>
         <span class="small">Atendimento direto</span>
@@ -1714,6 +1746,12 @@
   </section>
 
   <section class="partners" id="parceiros">
+    <!-- Fundo em Vídeo Dinâmico (Pixelated Dinosaur) com Bordas em Dissolução e Opacidade 75% -->
+    <div class="partners-video-wrap" aria-hidden="true">
+      <video class="partners-video-bg" id="partners-dino-video" src="video/Pixelated_dinosaur.mp4" width="1920" height="1080" autoplay loop muted playsinline preload="auto"></video>
+      <div class="partners-video-dissolve"></div>
+    </div>
+
     <div class="wrap">
       <div class="partners-head partners-head-flex">
         <div>
@@ -1732,64 +1770,28 @@
       </div>
       <div class="brands-wrapper" id="brands-wrapper">
         <div class="brands-grid" id="brands-grid">
-          <a class="brand-card brand-card-partner" href="https://felipesouzarribeiro.github.io/espe-o_iris/" target="_blank" rel="noopener" aria-label="Visitar site do Espaço Íris">
-            <div class="brand-badge-inner">
-              <div class="brand-icon brand-icon-has-logo">
-                <img src="img/logo-espaco-iris-oficial.png" alt="Logo Espaço Íris" class="brand-img-logo">
-              </div>
-              <span class="brand-name">Espaço Íris</span>
-              <span class="brand-link-hint">Acessar site <span aria-hidden="true">&nearr;</span></span>
-            </div>
+          <a class="brand-card brand-card-partner" href="https://felipesouzarribeiro.github.io/espe-o_iris/" target="_blank" rel="noopener" aria-label="Visitar Espaço Íris" title="Espaço Íris">
+            <img class="brand-card-cover-img" src="img/site-espaco-iris-hero.png" alt="Espaço Íris - Haute Coiffure & Atelier de Beleza" loading="lazy">
           </a>
 
-          <a class="brand-card" href="https://empresa2.com.br" target="_blank" rel="noopener" aria-label="Visitar site da Empresa B">
-            <div class="brand-badge-inner">
-              <div class="brand-icon">
-                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              </div>
-              <span class="brand-name">Empresa B</span>
-              <span class="brand-link-hint">Acessar site <span aria-hidden="true">&nearr;</span></span>
-            </div>
+          <a class="brand-card" href="https://felipesouzarribeiro.github.io/espe-o_iris/" target="_blank" rel="noopener" aria-label="Visitar Elara Aesthetics" title="Elara Aesthetics">
+            <img class="brand-card-cover-img" src="img/site-clinic.jpg" alt="Elara Aesthetics - Dermatologia e Estética" loading="lazy">
           </a>
 
-          <a class="brand-card" href="https://empresa3.com.br" target="_blank" rel="noopener" aria-label="Visitar site da Empresa C">
-            <div class="brand-badge-inner">
-              <div class="brand-icon">
-                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
-              </div>
-              <span class="brand-name">Empresa C</span>
-              <span class="brand-link-hint">Acessar site <span aria-hidden="true">&nearr;</span></span>
-            </div>
+          <a class="brand-card" href="#" target="_blank" rel="noopener" aria-label="Tech & SaaS" title="Tech & SaaS">
+            <img class="brand-card-cover-img" src="img/site-saas.jpg" alt="Tech & SaaS" loading="lazy">
           </a>
 
-          <a class="brand-card" href="https://empresa4.com.br" target="_blank" rel="noopener" aria-label="Visitar site da Empresa D">
-            <div class="brand-badge-inner">
-              <div class="brand-icon">
-                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-              </div>
-              <span class="brand-name">Empresa D</span>
-              <span class="brand-link-hint">Acessar site <span aria-hidden="true">&nearr;</span></span>
-            </div>
+          <a class="brand-card" href="#" target="_blank" rel="noopener" aria-label="Nexus Corp" title="Nexus Corp">
+            <img class="brand-card-cover-img" src="img/site-corporate.jpg" alt="Nexus Corp" loading="lazy">
           </a>
 
-          <a class="brand-card" href="https://empresa5.com.br" target="_blank" rel="noopener" aria-label="Visitar site da Empresa E">
-            <div class="brand-badge-inner">
-              <div class="brand-icon">
-                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-              </div>
-              <span class="brand-name">Empresa E</span>
-              <span class="brand-link-hint">Acessar site <span aria-hidden="true">&nearr;</span></span>
-            </div>
+          <a class="brand-card" href="#" target="_blank" rel="noopener" aria-label="Aura Store" title="Aura Store">
+            <img class="brand-card-cover-img" src="img/site-ecommerce.jpg" alt="Aura Store" loading="lazy">
           </a>
 
-          <a class="brand-card" href="https://empresa6.com.br" target="_blank" rel="noopener" aria-label="Visitar site da Empresa F">
-            <div class="brand-badge-inner">
-              <div class="brand-icon">
-                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-              </div>
-              <span class="brand-name">Empresa F</span>
-              <span class="brand-link-hint">Acessar site <span aria-hidden="true">&nearr;</span></span>
-            </div>
+          <a class="brand-card" href="#" target="_blank" rel="noopener" aria-label="Creator Studio" title="Creator Studio">
+            <img class="brand-card-cover-img" src="img/thumb-creator.jpg" alt="Creator Studio" loading="lazy">
           </a>
         </div>
       </div>
