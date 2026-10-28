@@ -4,7 +4,7 @@
   <p><strong>Automação de Microsserviços · Audiovisual & Motion · Gestão de Tráfego Pago · Sites de Alta Conversão</strong></p>
   <p>
     <a href="https://wa.me/5512987089203" target="_blank"><img src="https://img.shields.io/badge/WhatsApp-(12)_98708--9203-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp"></a>
-    <a href="https://instagram.com/felipe.srll" target="_blank"><img src="https://img.shields.io/badge/Instagram-@felipe.srll-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
+    <a href="https://www.instagram.com/fearless.fsr/" target="_blank"><img src="https://img.shields.io/badge/Instagram-@fearless.fsr-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
     <img src="https://img.shields.io/badge/Design_System-Stitch-D4FF32?style=for-the-badge&logoColor=black" alt="Design System">
   </p>
 </div>
@@ -83,5 +83,5 @@ Para hospedar o site publicamente:
 ## 📬 Contato
 
 * **WhatsApp Comercial:** [(12) 98708-9203](https://wa.me/5512987089203)
-* **Instagram:** [@felipe.srll](https://instagram.com/felipe.srll)
+* **Instagram:** [@fearless.fsr](https://www.instagram.com/fearless.fsr/)
 * **E-mail:** [felipe.srll@hotmail.com](mailto:felipe.srll@hotmail.com)

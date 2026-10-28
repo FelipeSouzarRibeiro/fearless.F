@@ -8,7 +8,7 @@ Este documento registra o estado completo do projeto, decisões de arquitetura e
 - **Cliente / Autor:** Felipe (@felipe.srll)
 - **Marca:** FEERLESS
 - **Contato Comercial WhatsApp:** `(12) 98708-9203` (links pré-configurados e dinâmicos)
-- **Instagram:** `instagram.com/felipe.srll`
+- **Instagram:** `https://www.instagram.com/fearless.fsr/` (@fearless.fsr)
 - **E-mail:** `felipe.srll@hotmail.com`
 - **Repositório / Diretório Local:** `c:\Users\felip\Documents\Feerless.F\site\feerless-site`
 
