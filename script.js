@@ -621,11 +621,28 @@ upd();
   setTimeout(updateArrows, 300);
 })();
 
+// Interatividade do Fundo em Vídeo (White Smoke) na seção Parceiros (colado na margem inferior, sem zoom)
+(function(){
+  var partnersSec = document.getElementById('parceiros');
+  var flareFrame = document.getElementById('partners-video-frame');
+  if(!partnersSec || !flareFrame) return;
+
+  partnersSec.addEventListener('mousemove', function(e){
+    var rect = partnersSec.getBoundingClientRect();
+    var nx = ((e.clientX - rect.left) / rect.width) - 0.5;
+    flareFrame.style.setProperty('--flare-x', (nx * 24).toFixed(1) + 'px');
+  }, { passive: true });
+
+  partnersSec.addEventListener('mouseleave', function(){
+    flareFrame.style.setProperty('--flare-x', '0px');
+  });
+})();
+
 // Gerenciador Inteligente de Vídeos (Pausa vídeos fora da tela para poupar 100% da GPU)
 (function(){
   if(!('IntersectionObserver' in window)) return;
 
-  var bgVideos = document.querySelectorAll('.pin .bgv, #partners-dino-video, #feature-smoke-video');
+  var bgVideos = document.querySelectorAll('.pin .bgv, #partners-flare-video, #feature-smoke-video');
   if(!bgVideos.length) return;
 
   var videoObserver = new IntersectionObserver(function(entries){
